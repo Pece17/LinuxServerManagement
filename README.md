@@ -63,6 +63,11 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 - For the second port, add ```22``` ```22``` to ```Private Port``` and ```1002``` ```1002``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```bustergraafinen```, and press ```Apply```
 - Fort the third port, add ```3389``` ```3389``` to ```Private Port``` and ```1003``` ```1003``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```bustergraafinen```, and press ```Apply```
 
+The instances ```bustergraafinen``` and ```ubuntussh``` should be working correctly now, as well as the network ```pekanverkko```
+
+
+# Remote connection to the instances ```bustergraafinen```
+
 Open Remote Desktop Connection to bustergraafinen
 - Show Options 
 - Computer 10.207.5.193:1003
