@@ -56,18 +56,12 @@ Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addre
 - Add ```1009``` to ```End Port```
 - Press ```Add```
 
-- Source CIDR 0.0.0.0/0, Protocol TCP, Start Port 1001, and End port 1009, and Add
+Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```10.207.5.193 [Source NAT]```, press ```Configuration```, choose ```Port Forwarding```, and configure the following parameters for three different ports
 
-Navigate to Network and choose pekanverkko
-- View IP addresses
-- Choose 10.207.5.193
-- Choose Configuration Tab
-- Choose Port Forwarding
-- Add Port 22-22 1001-1001 TCP active add to ubuntussh
+
+- Add ```22``` ```22``` to ```Private Port``` and ```1001``` ```1001``` to ```Public Port```, change ```Protocol``` to ```TCP``` active add to ubuntussh
 - Add Port 22-22 1002-1002 TCP active add to bustergraafinen
 - Add Port 3389-3389 1003-1003 TCP Active add to bustergraafinen
-
-
 
 Open Remote Desktop Connection to bustergraafinen
 - Show Options 
