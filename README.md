@@ -40,7 +40,14 @@ Configure the following settings for the second instance that will be an Ubuntu 
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntussh```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Navigate to Network and choose pekanverkko
+Navigate to ```Network```, choose ```pekanverkko```, press ```Egress rules```, and configure the following parameters
+
+- Type address ```10.208.0.0/24``` to ```Source CIDR```
+- Type address ```0.0.0.0/0``` to ```Destination CIDR```
+- Change ```Protocol``` to ```All```
+- Leave ```Start Port``` and ```End Port``` empty
+- Press ```Add```
+
 - View IP addresses
 - Choose 10.207.5.193
 - Choose Configuration tab
@@ -55,7 +62,7 @@ Navigate to Network and choose pekanverkko
 - Add Port 22-22 1002-1002 TCP active add to bustergraafinen
 - Add Port 3389-3389 1003-1003 TCP Active add to bustergraafinen
 
-Egress rules
+
 
 Open Remote Desktop Connection to bustergraafinen
 - Show Options 
