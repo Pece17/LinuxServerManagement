@@ -29,16 +29,16 @@ Configure the following settings for the first instance that will be a graphical
 7. Press ```Next```
 8. Change ```Name``` to ```bustergraafinen```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Configure the following settings for the second instance that will be an Ubuntu server
+Configure the following settings for the second instance that will be an Ubuntu server used via SSH (Secure Shell)
 
-- Choose HH01 and Template and press Next
-- Press Community tab and choose saltedLabExamUBU1804srv_HA2019s
-- Choose Linux Normal and press Next
-- Choose No thanks and press Next
-- Press Next
-- Choose pekanverkko and press Next
-- Press Next
-- Change Name to ubuntussh and choose Standard (US) keyboard and press Launch VM
+1. Choose ```HH01```,  ```Template```, and press ```Next```
+2. Press ```Community``` tab, choose ```saltedLabExamUBU1804srv_HA2019s```, and press ```Next```
+3. Choose ```Linux Normal``` and press ```Next```
+4. Choose ```No thanks``` and press ```Next```
+5. Press ```Next```
+6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
+7. Press ```Next```
+8. Change ```Name``` to ```ubuntussh```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 Navigate to Network and choose pekanverkko
 - View IP addresses
