@@ -66,13 +66,14 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 The instances ```bustergraafinen``` and ```ubuntussh``` should be working correctly now, as well as the network ```pekanverkko```
 
 
-# Remote connection to the instances ```bustergraafinen```
+# Remote connection to the instances
 
-Open Remote Desktop Connection to bustergraafinen
-- Show Options 
-- Computer 10.207.5.193:1003
-- Connect and press Yes
-- Username oppilas and enter password
+First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
+
+- Open ```Remote Desktop Connection``` application and press ```Show Options```
+- Type ```10.207.5.193:1003``` to ```Computer:``` and press ```Connect```
+- A warning prompt will pop for which press ```Yes```
+- In the login window, keep ```Session``` as ```Xorg```, type ```oppilas``` for ```username```, type ```salainen``` for ```password```, and press ```OK```
 
 Open PuTTY to ubuntussh
 - Host Name 10.207.5.193 and Port 1001
