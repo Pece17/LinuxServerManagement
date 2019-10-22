@@ -42,15 +42,20 @@ Configure the following settings for the second instance that will be an Ubuntu 
 
 Navigate to ```Network```, choose ```pekanverkko```, press ```Egress rules```, and configure the following parameters
 
-- Type address ```10.208.0.0/24``` to ```Source CIDR```
-- Type address ```0.0.0.0/0``` to ```Destination CIDR```
+- Add address ```10.208.0.0/24``` to ```Source CIDR```
+- Add address ```0.0.0.0/0``` to ```Destination CIDR```
 - Change ```Protocol``` to ```All```
 - Leave ```Start Port``` and ```End Port``` empty
 - Press ```Add```
 
-- View IP addresses
-- Choose 10.207.5.193
-- Choose Configuration tab
+Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```10.207.5.193 [Source NAT]```, press ```Configuration```, choose ```Firewall```, and configure the following parameters
+
+- Add address ```0.0.0.0/0``` to ```Source CIDR```
+- Change ```Protocol``` to ```TCP```
+- Add ```1001``` to ```Start Port```
+- Add ```1009``` to ```End Port```
+- Press ```Add```
+
 - Source CIDR 0.0.0.0/0, Protocol TCP, Start Port 1001, and End port 1009, and Add
 
 Navigate to Network and choose pekanverkko
