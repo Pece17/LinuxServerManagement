@@ -10,16 +10,18 @@ Pekka Hämäläinen
 
 # Rovius CP
 
-Navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/ - open VDI from https://vdi.haaga-helia.fi before Rovius CP if you are working outside of Haaga-Helia
+Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
-Give your ```Username```, ```Password```, ```Domain```, after which press ```Login```
+Type your ```Username```, ```Password```, and ```Domain```, after which press ```Login``` - ```Username``` and ```Password``` are the same as your student ID, and ```Domain``` is ```ITLAB```
 
 Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
 
 Navigate to ```Instances``` and press ```Add Instance```
 
-Configure the following setup to the first instance
+Configure the following setup to the first instance that will be for the graphical 
+
 - Choose HH01 and Template and press Next
+
 - Choose BUSTERxrpAdminws1AH and press Next
 - Choose Linux Normal and press Next
 - Choose No thanks and press Next
