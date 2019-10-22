@@ -77,12 +77,23 @@ First, we will establish a remote desktop connection to the RDP instance ```bust
 
 Next, we will establish an SSH connection to the Ubuntu server instance ```ubuntussh``` using the terminal in ```bustergraafinen```
 
-- Open the terminal with ```Ctrl + Alt + T```
-- Establish an SSH connection ```ssh -I oppilas -p 1001 10.207.5.193```
+Open the terminal with ```Ctrl + Alt + T```
 
+Establish an SSH connection and give the password
 
+```
+ssh -I oppilas -p 1001 10.207.5.193
+```
 
-Open PuTTY to ubuntussh
+After giving the correct password, you should be in ```ubuntussh``` terminal
+
+Exit back to local ```bustergraafinen``` terminal
+
+```
+exit
+```
+
+Alternatively, you can use PuTTY to establish an SSH connection to ```ubuntussh```
 - Host Name 10.207.5.193 and Port 1001
 - Press Yes
 - Username oppilas and enter password
