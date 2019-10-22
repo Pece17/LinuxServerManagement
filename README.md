@@ -62,6 +62,8 @@ Navigate to Network and choose pekanverkko
 - Add Port 22-22 1002-1002 TCP active add to bustergraafinen
 - Add Port 3389-3389 1003-1003 TCP Active add to bustergraafinen
 
+Egress rules
+
 Open Remote Desktop Connection to bustergraafinen
 - Show Options 
 - Computer 10.207.5.193:1003
@@ -147,7 +149,7 @@ sudo add-apt-repository \
 ```
 
 ```
-/etc/apt/sources.list
+sudo nano /etc/apt/sources.list
 ```
 
 Copy line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the sources.list file
@@ -198,6 +200,12 @@ curl -s https://api.github.com/repos/docker/compose/releases/latest \
   | cut -d '"' -f 4 \
   | wget -qi -
 ```
+
+chmod +x docker-compose-Linux-x86_64
+
+sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+
+docker-compose version
 
 # Docker
 
