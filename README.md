@@ -75,8 +75,30 @@ Open PuTTY to ubuntussh
 - exit
 
 Open terminal in bustergraafinen
-- ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh
-- 
+- ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh and login
+- sudo hostnamectl set-hostname salt_hamalainen and give password
+- hostname
+- sudo nano /etc/hosts
+
+Change the new name salt_hamalainen in place of saltminionweb1
+
+```
+27.0.0.1 localhost
+127.0.1.1 salt_hamalainen
+10.207.5.78 salt
+10.207.5.78 saltgrandmaster1
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
+
+Exit and save Ctrl + X + Y + Enter
+
+sudo reboot
 
 # Docker
 
