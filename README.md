@@ -209,9 +209,13 @@ docker-compose version
 
 sudo curl -L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
+```
 source /etc/bash_completion.d/docker-compose
+```
 
+```
 sudo nano docker-compose.yml
+```
 
 Copy following text
 
@@ -228,6 +232,17 @@ services:
     image: php:7-fpm
 ```
 
+cat docker-compose.yml
+
+docker-compose --help|less
+
+sudo docker-compose -f ./docker-compose.yml up -d
+
+wget localhost:8080
+
+ct index.html
+
+sudo docker-compose -f ./docker-compose.yml down
 
 # Docker
 
