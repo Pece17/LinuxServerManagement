@@ -8,24 +8,15 @@ Linux notes and instructions for a course about Linux server management in Haaga
 Pekka Hämäläinen
 
 
-# Linux Basics
+# Rovius CP
 
-- Linux USB stick
-- Xubuntu initialization
-- Testing and installing example programs
-- Causing log entries and reading them 
-- Dream apt-get command
-- 
+Navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/ - open VDI from https://vdi.haaga-helia.fi before Rovius CP if you are working outside of Haaga-Helia
 
-# Rovious CP
+Give your ```Username```, ```Password```, ```Domain```, after which press ```Login```
 
-Navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/, or https://vdi.haaga-helia.fi” if you are outside school internet
+Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
 
-Type your username, password, domain, and press login
-
-Change project to ICT4TN 022-3006 Pekka Hämäläinen
-
-Navigate to Instances and Add Instance
+Navigate to ```Instances``` and press ```Add Instance```
 
 Configure the following setup to the first instance
 - Choose HH01 and Template and press Next
