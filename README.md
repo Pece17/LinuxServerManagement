@@ -76,7 +76,7 @@ Open PuTTY to ubuntussh
 
 https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
 
-Open terminal in bustergraafinen
+Open terminal in bustergraafinen and establish SSH connection to ubuntussh
 - ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh and login
 - sudo hostnamectl set-hostname salt_hamalainen and give password
 - hostname
@@ -120,6 +120,27 @@ SALTID=$(getent passwd $USER| cut -d ':' -f 5 | cut -d ',' -f 1|tr -c '[a-zA-Z]'
 sudo systemctl restart salt-minion
 ```
 
+Exit ubuntussh
+
+```
+exit
+```
+
+https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
+
+Continue using bustergraafinen terminal
+
+```
+sudo apt update
+sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+```
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
 
 # Docker
 
