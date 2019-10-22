@@ -12,25 +12,25 @@ Pekka Hämäläinen
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
-Type your ```Username```, ```Password```, and ```Domain```, after which press ```Login``` - ```Username``` and ```Password``` are the same as your student ID, and ```Domain``` is ```ITLAB```
+Type your ```Username```, ```Password```, and ```Domain```, after which press ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
 
 Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
 
 Navigate to ```Instances``` and press ```Add Instance```
 
-Configure the following setup to the first instance that will be for the graphical 
+Configure the following settings for the first instance that will be a graphical RDP (Remote Desktop Protocol) Linux workstation
 
-- Choose HH01 and Template and press Next
+1. Choose ```HH01```, ```Template```, and press ```Next```
+2. Choose ```BUSTERxrpAdminws1AH``` and press ```Next```
+3. Choose ```Linux Normal``` and press ```Next```
+4. Choose ```No thanks``` and press ```Next```
+5. Press ```Next```
+6. Change ```Name``` to ```pekanverkko```, keep ```Network Offering``` as ```DefaultIslatedNetworkOfferingWithSourceNatService```, and press ```Next```
+7. Press ```Next```
+8. Change ```Name``` to ```bustergraafinen```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-- Choose BUSTERxrpAdminws1AH and press Next
-- Choose Linux Normal and press Next
-- Choose No thanks and press Next
-- Press Next
-- Change Name to pekanverkko and keep Network Offering as DefaultIslatedNetworkOfferingWithSourceNatService and press Next
-- Press Next
-- Change Name to bustergraafinen and choose Standard (US) keyboard and press Launch VM
+Configure the following settings for the second instance that will be an Ubuntu server
 
-Add Instance again and configure the following setup to the second instance
 - Choose HH01 and Template and press Next
 - Press Community tab and choose saltedLabExamUBU1804srv_HA2019s
 - Choose Linux Normal and press Next
