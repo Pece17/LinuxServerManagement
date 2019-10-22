@@ -137,10 +137,45 @@ sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-pro
 
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
+```
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
+```
+
+```
+/etc/apt/sources.list
+```
+
+Copy line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the sources.list file
+
+```
+# 
+
+# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/$
+
+# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/$
+
+deb http://www.nic.funet.fi/debian/ buster main
+deb-src http://www.nic.funet.fi/debian/ buster main
+
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+
+# buster-updates, previously known as 'volatile'
+deb http://www.nic.funet.fi/debian/ buster-updates main contrib non-free
+deb-src http://www.nic.funet.fi/debian/ buster-updates main contrib non-free
+deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+deb [arch=amd64] https://download.docker.com/linux/debian buster stable
+# deb-src [arch=amd64] https://download.docker.com/linux/debian buster stable
+# see the sources.list(5) manual.
+```
 
 # Docker
 
