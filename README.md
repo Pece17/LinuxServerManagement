@@ -74,6 +74,8 @@ Open PuTTY to ubuntussh
 - Username oppilas and enter password
 - exit
 
+https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
+
 Open terminal in bustergraafinen
 - ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh and login
 - sudo hostnamectl set-hostname salt_hamalainen and give password
@@ -99,6 +101,25 @@ ff02::2 ip6-allrouters
 Exit and save Ctrl + X + Y + Enter
 
 sudo reboot
+
+ssh -I oppilas -p 1001 10.207.5.193
+
+http://10.207.5.78/
+
+Install Salt minion
+
+```
+sudo apt-get -y install salt-minion
+```
+
+```
+SALTID=$(getent passwd $USER| cut -d ':' -f 5 | cut -d ',' -f 1|tr -c '[a-zA-Z]' '_'; echo -n "_$(hostname)_"; date +'%H%M%S') echo -e "master: 10.207.5.78\nid: $SALTID"|sudo tee /etc/salt/minion
+```
+
+```
+sudo systemctl restart salt-minion
+```
+
 
 # Docker
 
