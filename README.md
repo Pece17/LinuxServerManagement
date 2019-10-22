@@ -135,7 +135,9 @@ sudo apt update
 sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
 
+```
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+```
 
 ```
 sudo add-apt-repository \
@@ -175,6 +177,26 @@ deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 # deb-src [arch=amd64] https://download.docker.com/linux/debian buster stable
 # see the sources.list(5) manual.
+```
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt -y install docker-ce docker-ce-cli containerd.io
+```
+
+https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/
+
+sudo apt install -y curl
+
+```
+curl -s https://api.github.com/repos/docker/compose/releases/latest \
+  | grep browser_download_url \
+  | grep docker-compose-Linux-x86_64 \
+  | cut -d '"' -f 4 \
+  | wget -qi -
 ```
 
 # Docker
