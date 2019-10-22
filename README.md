@@ -66,7 +66,7 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 The instances ```bustergraafinen``` and ```ubuntussh``` should be working correctly now, as well as the network ```pekanverkko```
 
 
-# Remote connection to the instances
+# Remote connections to the instances
 
 First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
 
@@ -79,7 +79,7 @@ Next, we will establish an SSH connection to the Ubuntu server instance ```ubunt
 
 Open the terminal with ```Ctrl + Alt + T```
 
-Establish an SSH connection and give the password
+Establish an SSH connection to ```ubuntussh```
 
 ```
 ssh -I oppilas -p 1001 10.207.5.193
@@ -93,24 +93,45 @@ Exit back to local ```bustergraafinen``` terminal
 exit
 ```
 
-Alternatively, you can use PuTTY to establish an SSH connection to ```ubuntussh```
-- Host Name 10.207.5.193 and Port 1001
-- Press Yes
-- Username oppilas and enter password
-- exit
+Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubuntussh```
 
-https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
+- Open ```PuTTY``` application and select ```Session```
+- Type ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
+- Type ```oppilas``` in ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password```, after which the terminal to ```ubuntussh``` should unlock
 
-Open terminal in bustergraafinen and establish SSH connection to ubuntussh
-- ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh and login
-- sudo hostnamectl set-hostname salt_hamalainen and give password
-- hostname
-- sudo nano /etc/hosts
 
-Change the new name salt_hamalainen in place of saltminionweb1
+# Changing the Ubuntu server hostname permanently
+
+Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
 ```
-27.0.0.1 localhost
+ssh -I oppilas -p 1001 10.207.5.193
+```
+
+Replace the old hostname ```saltminionweb1``` with ```salt_hamalainen``` - the new hostname is derived from your surname, but remember to replace all Scandinavian letters with English letters
+
+```
+sudo hostnamectl set-hostname salt_hamalainen
+```
+
+Check the new hostname
+
+```
+hostname
+```
+
+Navigate inside /etc/hosts file for editing
+
+```
+sudo nano /etc/hosts
+```
+
+Replace the old hostname ```saltminionweb1``` after the line ```127.0.1.1``` with the new hostname ```salt_hamalainen```
+
+```
+127.0.0.1 localhost
 127.0.1.1 salt_hamalainen
 10.207.5.78 salt
 10.207.5.78 saltgrandmaster1
@@ -123,9 +144,16 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-Exit and save Ctrl + X + Y + Enter
+Exit and save with ```Ctrl + X + Y + Enter```
 
+Reboot the system
+
+```
 sudo reboot
+```
+
+
+# Installing Salt Minion (Work in progress)
 
 ssh -I oppilas -p 1001 10.207.5.193
 
@@ -150,6 +178,9 @@ Exit ubuntussh
 ```
 exit
 ```
+
+
+# Installing Docker (Work in progress)
 
 https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
 
@@ -266,11 +297,6 @@ wget localhost:8080
 ct index.html
 
 sudo docker-compose -f ./docker-compose.yml down
-
-# Docker
-
-
-# Salt
 
 
 # WordPress
