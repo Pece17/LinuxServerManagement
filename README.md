@@ -207,7 +207,26 @@ sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
 docker-compose version
 
+sudo curl -L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
+source /etc/bash_completion.d/docker-compose
+
+sudo nano docker-compose.yml
+
+Copy following text
+
+```
+version: '3'  
+services:
+  web:
+    image: nginx:latest
+    ports:
+     - "8080:80"
+    links:
+     - php
+  php:
+    image: php:7-fpm
+```
 
 
 # Docker
