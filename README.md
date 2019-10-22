@@ -75,6 +75,20 @@ First, we will establish a remote desktop connection to the RDP instance ```bust
 - A warning prompt will pop for which press ```Yes```
 - In the login window, keep ```Session``` as ```Xorg```, type ```oppilas``` for ```username```, type ```salainen``` for ```password```, and press ```OK```
 
+Next, we will establish an SSH connection to the Ubuntu server instance ```ubuntussh``` using the terminal in ```bustergraafinen```
+
+Open the terminal
+
+```
+Ctrl + Alt + T
+```
+
+Establish an SSH connection
+
+```
+ssh -I oppilas -p 1001 10.207.5.193
+```
+
 Open PuTTY to ubuntussh
 - Host Name 10.207.5.193 and Port 1001
 - Press Yes
