@@ -47,6 +47,36 @@ Add Instance again and configure the following setup to the second instance
 - Press Next
 - Change Name to ubuntussh and choose Standard (US) keyboard and press Launch VM
 
+Navigate to Network and choose pekanverkko
+- View IP addresses
+- Choose 10.207.5.193
+- Choose Configuration tab
+- Source CIDR 0.0.0.0/0, Protocol TCP, Start Port 1001, and End port 1009, and Add
+
+Navigate to Network and choose pekanverkko
+- View IP addresses
+- Choose 10.207.5.193
+- Choose Configuration Tab
+- Choose Port Forwarding
+- Add Port 22-22 1001-1001 TCP active add to ubuntussh
+- Add Port 22-22 1002-1002 TCP active add to bustergraafinen
+- Add Port 3389-3389 1003-1003 TCP Active add to bustergraafinen
+
+Open Remote Desktop Connection to bustergraafinen
+- Show Options 
+- Computer 10.207.5.193:1003
+- Connect and press Yes
+- Username oppilas and enter password
+
+Open PuTTY to ubuntussh
+- Host Name 10.207.5.193 and Port 1001
+- Press Yes
+- Username oppilas and enter password
+- exit
+
+Open terminal in bustergraafinen
+- ssh -I oppilas -p 1001 10.207.5.193 command to open ubuntussh
+- 
 
 # Docker
 
