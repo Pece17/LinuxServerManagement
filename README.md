@@ -1,6 +1,6 @@
 # Linux Server Management
 
-Linux notes and instructions for Haaga-Helia University course
+Linux notes and instructions for a course about Linux server management in Haaga-Helia University of Applied Sciences
 
 
 ## Author
