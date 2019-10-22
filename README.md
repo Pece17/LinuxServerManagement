@@ -9,3 +9,5 @@ Pekka Hämäläinen
 
 
 # Docker
+
+# Salt
