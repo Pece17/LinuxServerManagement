@@ -93,7 +93,7 @@ Exit back to local ```bustergraafinen``` terminal
 exit
 ```
 
-Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubuntussh```
+Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubuntussh``` using the following steps
 
 - Open ```PuTTY``` application and select ```Session```
 - Type ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
