@@ -207,6 +207,9 @@ sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
 docker-compose version
 
+
+
+
 # Docker
 
 
