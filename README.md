@@ -193,7 +193,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing Docker (Work in progress)
+# Installing Docker
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
@@ -308,7 +308,7 @@ Exit the container
 exit
 ```
 
-Docker is now installed on ```bustergraafinen```
+Docker is now installed and tested on ```bustergraafinen```
 
 
 # Installing Docker Compose
@@ -436,7 +436,7 @@ Remove stopped service containers
 docker-compose rm -f
 ```
 
-Destroy the ```index.html``` file
+Remove the ```index.html``` file
 
 ```
 rm -r index.html
