@@ -65,7 +65,7 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 The instances ```bustergraafinen``` and ```ubuntussh``` are be now working correctly, as well as the network ```pekanverkko```
 
 
-# Remote connections to the instances
+# Remote connections to Buster and Ubuntu
 
 First, we will establish a remote desktop connection to the RDP  instance ```bustergraafinen``` using the following steps
 
@@ -101,7 +101,7 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
 
-# Changing the Ubuntu server hostname permanently
+# Changing the hostname permanently on Ubuntu
 
 Navigate to address http://10.207.5.78/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
@@ -156,7 +156,7 @@ sudo reboot
 The hostname is now changed permanently on ```ubuntussh```
 
 
-# Installing Salt Minion
+# Installing Salt Minion on Ubuntu
 
 Navigate to address http://10.207.5.78/ to view the instructions for installing Salt Minion
 
@@ -193,7 +193,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing Docker
+# Installing Docker on Buster
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
@@ -311,7 +311,7 @@ exit
 Docker is now installed and tested on ```bustergraafinen```
 
 
-# Installing Docker Compose
+# Installing Docker Compose on Buster
 
 Navigate to address https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/ to view the instructions for installing latest Docker Compose on ```bustergraafinen```
 
@@ -445,7 +445,7 @@ rm -r index.html
 Docker Compose is now installed and tested on ```bustergraafinen```
 
 
-# Installing Portainer (Work in progress)
+# Installing Portainer on Buster (Work in progress)
 
 Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
 
@@ -498,16 +498,28 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 - Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formerly ```Engine```) section will give you all the information you need to know about your Docker engine
 - ```App Templates``` section in Portainer tries to make the deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
 
+Portainer is now installed on ```bustergraafinen```
+
+
+# Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress)
+
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
+
+Download the image and store it locally to ```bustergraafinen```
 
 ```
 docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
-Portainer is now installed on ```bustergraafinen```
+
+# Installing Geany on Buster
 
 
-# Installing Geany
+# Installing WordPress on Ubuntu
 
 
-# Installing WordPress
+
+# Installing SSH-key-based auth on
+
+
+# Installing LAMP on Ubuntu
