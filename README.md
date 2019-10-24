@@ -452,13 +452,13 @@ sudo docker run -d -p 9000:9000 \
 portainer
 ```
 
-Access the web dashboard on address http://127.0.0.1:9000 and do the following steps
+Access the web dashboard on address http://127.0.0.1:9000 and perform the following steps
 
-- You’ll be asked to create an admin user and provide ```Username``` and ```Password```, for which I use the same credentials as in all the previous times, and then click ```Create user```
-- You’ll then be asked to add Docker environment, this can be ```Local``` Docker engine or ```Remote``` - for my case, I’m using it to manage ```Local``` docker engine so I choose that and press ```Connect```
-- You’ll be directed to  Portainer dashboard where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, docker version, volumes, networks etc.
-- Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formely ```Engine```) section will give you all the information you need to know about your Docker engine
-- Another interesting section is the ```App Templates``` - Portainer tries to make deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
+- Create an admin user and provide ```Username``` and ```Password``` - I use the same credentials as in all the previous times, and then click ```Create user```
+- Add a Docker environment by choosing between ```Local``` Docker engine or ```Remote``` - I’m using it to manage ```Local``` Docker engine so I choose that and press ```Connect```
+- Portainer ```Dashboard``` will open where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, Docker version, volumes, networks etc.
+- Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formerly ```Engine```) section will give you all the information you need to know about your Docker engine
+- ```App Templates``` section in Portainer tries to make the deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
 
 Portainer is now installed on ```bustergraafinen```
 
