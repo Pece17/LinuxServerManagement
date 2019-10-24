@@ -392,7 +392,7 @@ Stop service containers
 sudo docker-compose -f ./docker-compose.yml stop
 ```
 
-Destroy service containers
+Remove stopped service containers
 
 ```
 sudo docker-compose -f ./docker-compose.yml rm -f
@@ -401,13 +401,13 @@ sudo docker-compose -f ./docker-compose.yml rm -f
 Destroy the ```index.html``` file
 
 ```
-rm -r index.html
+sudo rm -r index.html
 ```
 
 Docker Compose is now installed and tested on ```bustergraafinen```
 
 
-# Installing Portainer
+# Installing Portainer (Work in progress)
 
 
 # Installing Geany
