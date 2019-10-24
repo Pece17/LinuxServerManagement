@@ -8,7 +8,7 @@ Linux notes and instructions for a course about Linux server management in Haaga
 Pekka Hämäläinen
 
 
-# Rovius CP
+# Initializing Rovius CP
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -122,7 +122,7 @@ Check the new hostname
 hostname
 ```
 
-Navigate inside /etc/hosts file for editing
+Navigate inside ```/etc/hosts``` file for editing
 
 ```
 sudo nano /etc/hosts
@@ -169,7 +169,7 @@ Install Salt Minion
 sudo apt-get -y install salt-minion
 ```
 
-Give the following command - note that it is a single command, even though it is printed on two lines
+Give the following command - note that it is a single command, even though it might be printed on two lines
 
 ```
 SALTID=$(getent passwd $USER| cut -d ':' -f 5 | cut -d ',' -f 1|tr -c '[a-zA-Z]' '_'; echo -n "_$(hostname)_"; date +'%H%M%S') echo -e "master: 10.207.5.78\nid: $SALTID"|sudo tee /etc/salt/minion
@@ -190,18 +190,27 @@ exit
 
 # Installing Docker (Work in progress)
 
-Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions
+Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen```
 
-Open ```bustergraafinen``` terminal
+Open ```bustergraafinen``` terminal and update the package lists
 
 ```
-sudo apt update
+sudo apt-get update
+```
+
+Start the installation by ensuring that all the packages used by docker as dependencies are installed
+
+```
 sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
+
+Import Docker GPG key used for signing Docker packages
 
 ```
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ```
+
+Add Docker repository which contain the latest stable releases of Docker CE - note that this command should be copied from the instructions of the website using a browser with ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 sudo add-apt-repository \
@@ -210,18 +219,20 @@ sudo add-apt-repository \
    stable"
 ```
 
+Check that the previous command added the line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the ```/etc/apt/sources.list``` file
+
 ```
 sudo nano /etc/apt/sources.list
 ```
 
-Copy line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the sources.list file
+In case the previous command didn't work for some reason, you can manually copy the line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the ```/etc/apt/sources.list``` file
 
 ```
 # 
 
-# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/$
+# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/ buster contrib main non-free
 
-# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/$
+# deb cdrom:[Debian GNU/Linux 10.0.0 _Buster_ - Official amd64 DVD Binary-1 20190706-10:24]/ buster contrib main non-free
 
 deb http://www.nic.funet.fi/debian/ buster main
 deb-src http://www.nic.funet.fi/debian/ buster main
@@ -238,14 +249,17 @@ deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 # (e.g. netinst, live or single CD). The matching "deb cdrom"
 # entries were disabled at the end of the installation process.
 # For information about how to configure apt package sources,
-deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 # deb-src [arch=amd64] https://download.docker.com/linux/debian buster stable
 # see the sources.list(5) manual.
 ```
 
+Update the apt package lists
+
 ```
 sudo apt-get update
 ```
+
+Install Docker CE (Community Edition) on Debian 10
 
 ```
 sudo apt -y install docker-ce docker-ce-cli containerd.io
@@ -309,4 +323,7 @@ ct index.html
 sudo docker-compose -f ./docker-compose.yml down
 
 
-# WordPress
+# Installing Port
+
+
+# Installing WordPress
