@@ -273,7 +273,7 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io
 Docker is now installed on ```bustergraafinen```
 
 
-# Installing Docker Compose (Work in progress)
+# Installing Docker Compose
 
 Navigate to address https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/ to view the instructions for installing latest Docker Compose on ```bustergraafinen```
 
@@ -398,7 +398,13 @@ Destroy service containers
 sudo docker-compose -f ./docker-compose.yml rm -f
 ```
 
-Docker Compose is now installed on ```bustergraafinen```
+Destroy the ```index.html``` file
+
+```
+rm -r index.html
+```
+
+Docker Compose is now installed and tested on ```bustergraafinen```
 
 
 # Installing Portainer
