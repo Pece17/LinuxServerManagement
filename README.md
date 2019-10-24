@@ -409,6 +409,32 @@ Docker Compose is now installed and tested on ```bustergraafinen```
 
 # Installing Portainer (Work in progress)
 
+Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
+
+Open ```bustergraafinen``` terminal and update the package lists
+
+```
+sudo apt-get update
+```
+
+sudo mkdir ~/portainer
+
+sudo docker pull portainer/portainer
+
+sudo docker tag portainer/portainer portainer
+
+export CONT_NAME="portainer"
+
+sudo docker run -d -p 9000:9000 \
+--restart always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v ~/portainer:/data \
+--name ${CONT_NAME} \
+portainer
+
+Access the web dashboard on address http://127.0.0.1:9000
+
+
 
 # Installing Geany
 
