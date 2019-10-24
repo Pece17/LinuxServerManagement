@@ -193,7 +193,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing Docker
+# Installing Docker (Work in progress)
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
@@ -268,6 +268,44 @@ Install Docker CE on Debian 10 Buster
 
 ```
 sudo apt -y install docker-ce docker-ce-cli containerd.io
+```
+
+The previous installation will add ```docker``` group to the system without any users so we are adding your user account to the group to run Docker commands as non-privileged user
+
+```
+sudo usermod -aG docker $USER
+```
+
+Change the current group of your user to ```docker``` where we previously added it
+
+```
+newgrp docker
+```
+
+Check Docker and Compose version
+
+```
+docker version
+```
+
+Log out and log back in so that your group membership is re-evaluated
+
+Run a test Docker container
+
+```
+docker run --rm -it  --name test alpine:latest /bin/sh
+```
+
+Check the operating system of the container
+
+```
+cat /etc/os-release
+```
+
+Exit the container
+
+```
+exit
 ```
 
 Docker is now installed on ```bustergraafinen```
@@ -459,6 +497,12 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 - Portainer ```Dashboard``` will open where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, Docker version, volumes, networks etc.
 - Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formerly ```Engine```) section will give you all the information you need to know about your Docker engine
 - ```App Templates``` section in Portainer tries to make the deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
+
+For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
+
+```
+docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
+```
 
 Portainer is now installed on ```bustergraafinen```
 
