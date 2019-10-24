@@ -362,10 +362,16 @@ Check help for Docker Compose command syntax
 docker-compose --help
 ```
 
-Start service containers
+Create and start service containers
 
 ```
 sudo docker-compose -f ./docker-compose.yml up -d
+```
+
+Show running containers
+
+```
+sudo docker-compose -f ./docker-compose.yml ps
 ```
 
 Enter the following command to download a ```index.html``` file for testing purposes
@@ -383,7 +389,13 @@ cat index.html
 Stop service containers
 
 ```
-sudo docker-compose -f ./docker-compose.yml down
+sudo docker-compose -f ./docker-compose.yml stop
+```
+
+Destroy service containers
+
+```
+sudo docker-compose -f ./docker-compose.yml rm -f
 ```
 
 Docker Compose is now installed on ```bustergraafinen```
