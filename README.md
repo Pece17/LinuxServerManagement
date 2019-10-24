@@ -187,10 +187,12 @@ Exit ```ubuntussh``` back to ```bustergraafinen``` terminal
 exit
 ```
 
+Salt Minion is now installed on ```ubuntussh```
 
-# Installing Docker (Work in progress)
 
-Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen```
+# Installing Docker
+
+Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
 Open ```bustergraafinen``` terminal and update the package lists
 
@@ -198,7 +200,7 @@ Open ```bustergraafinen``` terminal and update the package lists
 sudo apt-get update
 ```
 
-Start the installation by ensuring that all the packages used by docker as dependencies are installed
+Start the installation by ensuring that all the packages used by Docker as dependencies are installed
 
 ```
 sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
@@ -210,7 +212,7 @@ Import Docker GPG key used for signing Docker packages
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ```
 
-Add Docker repository which contain the latest stable releases of Docker CE - note that this command should be copied from the instructions of the website using a browser with ```bustergraafinen``` because it won't format right if copied from Windows
+Add Docker repository which contain the latest stable releases of Docker CE (Community Edition) - note that this command should be copied from the instructions of the website using the browser with ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 sudo add-apt-repository \
@@ -225,7 +227,7 @@ Check that the previous command added the line ```deb [arch=amd64] https://downl
 sudo nano /etc/apt/sources.list
 ```
 
-In case the previous command didn't work for some reason, you can manually copy the line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the ```/etc/apt/sources.list``` file
+In case the previously used command didn't work for adding the line, you can manually copy the line ```deb [arch=amd64] https://download.docker.com/linux/debian buster stable``` inside the ```/etc/apt/sources.list``` file as follows
 
 ```
 # 
@@ -253,17 +255,20 @@ deb [arch=amd64] https://download.docker.com/linux/debian buster stable
 # see the sources.list(5) manual.
 ```
 
-Update the apt package lists
+Update the package lists
 
 ```
 sudo apt-get update
 ```
 
-Install Docker CE (Community Edition) on Debian 10
+Install Docker CE on Debian 10 Buster
 
 ```
 sudo apt -y install docker-ce docker-ce-cli containerd.io
 ```
+
+Docker is now installed on ```bustergraafinen```
+
 
 # Installing Docker Compose (Work in progress)
 
