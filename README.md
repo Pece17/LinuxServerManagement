@@ -356,27 +356,37 @@ Check that the previously copied data is inside the ```docker-compose.yml``` fil
 cat docker-compose.yml
 ```
 
-Look for help
+Check help for Docker Compose command syntax
 
 ```
 docker-compose --help
 ```
 
+Start service containers
+
 ```
 sudo docker-compose -f ./docker-compose.yml up -d
 ```
+
+Enter the following command to download a file for testing purposes
 
 ```
 wget localhost:8080
 ```
 
+Check the contents inside the ```index.html``` file
+
 ```
 cat index.html
 ```
 
+Stop service containers
+
 ```
 sudo docker-compose -f ./docker-compose.yml down
 ```
+
+Docker Compose is now installed on ```bustergraafinen```
 
 
 # Installing Portainer
