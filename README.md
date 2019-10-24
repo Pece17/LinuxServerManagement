@@ -215,7 +215,7 @@ Import Docker GPG key used for signing Docker packages
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 ```
 
-Add Docker repository which contain the latest stable releases of Docker CE (Community Edition) - note that this command should be copied from the instructions of the website using the browser with ```bustergraafinen``` because it won't format right if copied from Windows
+Add Docker repository which contain the latest stable releases of Docker CE (Community Edition) - note that this command should be copied from the instructions of the website using the browser in ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 sudo add-apt-repository \
@@ -283,7 +283,7 @@ You need cURL installed before starting this installation operation
 sudo apt install -y curl
 ```
 
-Download the latest Compose - note that this command should be copied from the instructions of the website using the browser with ```bustergraafinen``` because it won't format right if copied from Windows
+Download the latest Compose - note that this command should be copied from the instructions of the website using the browser in ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 curl -s https://api.github.com/repos/docker/compose/releases/latest \
@@ -417,32 +417,50 @@ Open ```bustergraafinen``` terminal and update the package lists
 sudo apt-get update
 ```
 
+To persist Docker container data, create a directory that will hold all Portainer data
+
+```
 sudo mkdir ~/portainer
+```
 
+Download the image from Docker hub and store it locally on Docker host
+
+```
 sudo docker pull portainer/portainer
+```
 
+Tag the image and give it a custom name
+
+```
 sudo docker tag portainer/portainer portainer
+```
 
+Export the Portainer container
+
+```
 export CONT_NAME="portainer"
+```
 
+Start the Portainer container - note that this command should be copied from the instructions of the website using the browser in ```bustergraafinen``` because it won't format right if copied from Windows
+
+```
 sudo docker run -d -p 9000:9000 \
 --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v ~/portainer:/data \
 --name ${CONT_NAME} \
 portainer
+```
 
-Access the web dashboard on address http://127.0.0.1:9000
+Access the web dashboard on address http://127.0.0.1:9000 and do the following steps
 
-You’ll be asked to create an admin user and provide ```Username``` and ```Password```, for which I use the same credentials as in all the other previous times in this course, and then click ```Create user```
+- You’ll be asked to create an admin user and provide ```Username``` and ```Password```, for which I use the same credentials as in all the previous times, and then click ```Create user```
+- You’ll then be asked to add Docker environment, this can be ```Local``` Docker engine or ```Remote``` - for my case, I’m using it to manage ```Local``` docker engine so I choose that and press ```Connect```
+- You’ll be directed to  Portainer dashboard where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, docker version, volumes, networks etc.
+- Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formely ```Engine```) section will give you all the information you need to know about your Docker engine
+- Another interesting section is the ```App Templates``` - Portainer tries to make deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
 
-You’ll then be asked to add Docker environment, this can be ```Local``` Docker engine or ```Remote``` - for my case, I’m using it to manage ```Local``` docker engine so I choose that and press ```Connect```
-
-You’ll be directed to  Portainer dashboard where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, docker version, volumes, networks etc.
-
-Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formely ```Engine```) section will give you all the information you need to know about your Docker engine
-
-Another interesting section is the ```App Templates``` - Portainer tries to make deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
+Portainer is now installed on ```bustergraafinen```
 
 
 # Installing Geany
