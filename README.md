@@ -434,6 +434,11 @@ portainer
 
 Access the web dashboard on address http://127.0.0.1:9000
 
+You’ll be asked to create an admin user and provide ```Username``` and ```Password```, for which I use the same credentials as in all the other previous times in this course, and then click ```Create user```
+
+You’ll then be asked to add Docker environment, this can be ```Local``` Docker engine or ```Remote``` - for my case, I’m using it to manage ```Local``` docker engine so I choose that and press ```Connect```
+
+You’ll be directed to  Portainer dashboard where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, docker version, volumes, networks etc.
 
 
 # Installing Geany
