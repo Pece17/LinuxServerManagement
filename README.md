@@ -3,7 +3,7 @@
 Linux notes and instructions for a course about Linux server management in Haaga-Helia University of Applied Sciences
 
 
-## Author
+# Author
 
 Pekka Hämäläinen
 
@@ -18,7 +18,7 @@ Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
 
 Navigate to ```Instances``` and press ```Add Instance```
 
-Configure the following settings for the first instance that will be a graphical RDP (Remote Desktop Protocol) Linux workstation
+Configure the following settings for the first instance that will be a graphical RDP (Remote Desktop Protocol) Linux workstation that is running Debian 10 Buster operating system
 
 1. Choose ```HH01```, ```Template```, and press ```Next```
 2. Choose ```BUSTERxrpAdminws1AH``` and press ```Next```
@@ -29,7 +29,7 @@ Configure the following settings for the first instance that will be a graphical
 7. Press ```Next```
 8. Change ```Name``` to ```bustergraafinen```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Configure the following settings for the second instance that will be an Ubuntu server used via SSH (Secure Shell)
+Configure the following settings for the second instance that will be an Ubuntu server used via SSH (Secure Shell) that is running Ubuntu 18.04.3 LTS (Long Term Support) operating system
 
 1. Choose ```HH01```,  ```Template```, and press ```Next```
 2. Press ```Community``` tab, choose ```saltedLabExamUBU1804srv_HA2019s```, and press ```Next```
@@ -58,22 +58,21 @@ Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addre
 
 Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```10.207.5.193 [Source NAT]```, press ```Configuration```, choose ```Port Forwarding```, and configure the following parameters for three different ports
 
-
 - For the first port, add ```22``` ```22``` to ```Private Port``` and ```1001``` ```1001``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```ubuntussh```, and press ```Apply```
 - For the second port, add ```22``` ```22``` to ```Private Port``` and ```1002``` ```1002``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```bustergraafinen```, and press ```Apply```
 - Fort the third port, add ```3389``` ```3389``` to ```Private Port``` and ```1003``` ```1003``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```bustergraafinen```, and press ```Apply```
 
-The instances ```bustergraafinen``` and ```ubuntussh``` should be working correctly now, as well as the network ```pekanverkko```
+The instances ```bustergraafinen``` and ```ubuntussh``` should be now working correctly, as well as the network ```pekanverkko```
 
 
 # Remote connections to the instances
 
-First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
+First, we will establish a remote desktop connection to the RDP  instance ```bustergraafinen``` using the following steps
 
 - Open ```Remote Desktop Connection``` application and press ```Show Options```
 - Type ```10.207.5.193:1003``` to ```Computer:``` and press ```Connect```
 - A warning prompt will pop up for which you need to press ```Yes```
-- In the login window, keep ```Session``` as ```Xorg```, type ```oppilas``` for ```username```, type ```salainen``` for ```password```, and press ```OK```
+- In the login window, keep ```Session``` as ```Xorg```, enter ```oppilas``` for ```username```, enter ```salainen``` for ```password```, and press ```OK```
 
 Next, we will establish an SSH connection to the Ubuntu server instance ```ubuntussh``` using the terminal in ```bustergraafinen```
 
@@ -98,6 +97,8 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 - Open ```PuTTY``` application and select ```Session```
 - Type ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
 - Type ```oppilas``` in ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password```, after which the terminal to ```ubuntussh``` should unlock
+
+Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
 
 # Changing the Ubuntu server hostname permanently
