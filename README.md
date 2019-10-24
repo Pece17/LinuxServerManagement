@@ -102,7 +102,7 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 
 # Changing the Ubuntu server hostname permanently
 
-Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
+Navigate to address http://10.207.5.78/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -153,27 +153,35 @@ sudo reboot
 ```
 
 
-# Installing Salt Minion (Work in progress)
+# Installing Salt Minion
 
+Navigate to address http://10.207.5.78/ to view the instructions for installing Salt Minion
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
+
+```
 ssh -I oppilas -p 1001 10.207.5.193
+```
 
-http://10.207.5.78/
-
-Install Salt minion
+Install Salt Minion
 
 ```
 sudo apt-get -y install salt-minion
 ```
 
+Give the following command - note that it is a single command, even though it is printed on two lines
+
 ```
 SALTID=$(getent passwd $USER| cut -d ':' -f 5 | cut -d ',' -f 1|tr -c '[a-zA-Z]' '_'; echo -n "_$(hostname)_"; date +'%H%M%S') echo -e "master: 10.207.5.78\nid: $SALTID"|sudo tee /etc/salt/minion
 ```
+
+Restart Salt Minion
 
 ```
 sudo systemctl restart salt-minion
 ```
 
-Exit ubuntussh
+Exit ```ubuntussh``` back to ```bustergraafinen``` terminal
 
 ```
 exit
@@ -182,9 +190,9 @@ exit
 
 # Installing Docker (Work in progress)
 
-https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
+Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions
 
-Continue using bustergraafinen terminal
+Open ```bustergraafinen``` terminal
 
 ```
 sudo apt update
@@ -242,6 +250,8 @@ sudo apt-get update
 ```
 sudo apt -y install docker-ce docker-ce-cli containerd.io
 ```
+
+# Installing Docker Compose (Work in progress)
 
 https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/
 
