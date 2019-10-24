@@ -440,6 +440,10 @@ You’ll then be asked to add Docker environment, this can be ```Local``` Docker
 
 You’ll be directed to  Portainer dashboard where you can start managing Docker engine operations from a web UI - the default section has a summary of the number of containers, docker version, volumes, networks etc.
 
+Click the ```Home``` tab and select the ```local``` engine to open its ```Dashboard``` - clicking on the ```Host``` (Formely ```Engine```) section will give you all the information you need to know about your Docker engine
+
+Another interesting section is the ```App Templates``` - Portainer tries to make deployment of applications on Docker containers easy by providing a number of templates ready to use, this is available for both Windows and Linux, and you can search and deploy container within no time
+
 
 # Installing Geany
 
