@@ -275,9 +275,15 @@ Docker is now installed on ```bustergraafinen```
 
 # Installing Docker Compose (Work in progress)
 
-Navigate to https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/
+Navigate to address https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/ to view the instructions for installing latest Docker Compose on ```bustergraafinen```
 
+You need cURL installed before starting this installation operation
+
+```
 sudo apt install -y curl
+```
+
+Download the latest Compose - note that this command should be copied from the instructions of the website using the browser with ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 curl -s https://api.github.com/repos/docker/compose/releases/latest \
@@ -287,13 +293,37 @@ curl -s https://api.github.com/repos/docker/compose/releases/latest \
   | wget -qi -
 ```
 
+Make the binary file executable
+
+```
 chmod +x docker-compose-Linux-x86_64
+```
 
+Move the file to your path
+
+```
 sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+```
 
+Confirm Docker Compose version
+
+```
 docker-compose version
+```
 
+Place the completion script inside the ```/etc/bash_completion.d/docker-compose``` file
+
+```
 sudo curl -L https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+```
+
+Check that the previous command added the script inside the ```/etc/bash_completion.d/docker-compose``` file
+
+```
+sudo nano /etc/bash_completion.d/docker-compose
+```
+
+Source the file or re-login to enjoy completion feature
 
 ```
 source /etc/bash_completion.d/docker-compose
