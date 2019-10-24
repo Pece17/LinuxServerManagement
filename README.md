@@ -323,17 +323,19 @@ Check that the previous command added the script inside the ```/etc/bash_complet
 sudo nano /etc/bash_completion.d/docker-compose
 ```
 
-Source the file or re-login to enjoy completion feature
+Source the file to enjoy completion feature
 
 ```
 source /etc/bash_completion.d/docker-compose
 ```
 
+Create a test Docker Compose file
+
 ```
 sudo nano docker-compose.yml
 ```
 
-Copy following text
+Copy the following data to the file
 
 ```
 version: '3'  
@@ -348,17 +350,33 @@ services:
     image: php:7-fpm
 ```
 
+Check that the previously copied data is inside the ```docker-compose.yml``` file
+
+```
 cat docker-compose.yml
+```
 
-docker-compose --help|less
+Look for help
 
+```
+docker-compose --help
+```
+
+```
 sudo docker-compose -f ./docker-compose.yml up -d
+```
 
+```
 wget localhost:8080
+```
 
-ct index.html
+```
+cat index.html
+```
 
+```
 sudo docker-compose -f ./docker-compose.yml down
+```
 
 
 # Installing Portainer
