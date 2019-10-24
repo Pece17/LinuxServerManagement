@@ -335,7 +335,7 @@ Create a test Docker Compose file
 sudo nano docker-compose.yml
 ```
 
-Copy the following data to the file
+Copy the following data inside the ```docker-compose.yml``` file
 
 ```
 version: '3'  
