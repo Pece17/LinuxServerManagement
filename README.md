@@ -368,7 +368,7 @@ Start service containers
 sudo docker-compose -f ./docker-compose.yml up -d
 ```
 
-Enter the following command to download a file for testing purposes
+Enter the following command to download a ```index.html``` file for testing purposes
 
 ```
 wget localhost:8080
