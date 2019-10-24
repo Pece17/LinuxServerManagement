@@ -276,7 +276,7 @@ The previous installation will add ```docker``` group to the system without any 
 sudo usermod -aG docker $USER
 ```
 
-Change the current group of your user to ```docker``` where we previously added it
+Change the current group of your user to ```docker``` where we added it previously
 
 ```
 newgrp docker
@@ -288,7 +288,7 @@ Check Docker and Compose version
 docker version
 ```
 
-Log out and log back in so that your group membership is re-evaluated
+Log out and log back in so that the group membership of your user is re-evaluated
 
 Run a test Docker container
 
@@ -370,7 +370,7 @@ source /etc/bash_completion.d/docker-compose
 Create a test Docker Compose file
 
 ```
-sudo nano docker-compose.yml
+nano docker-compose.yml
 ```
 
 Copy the following data inside the ```docker-compose.yml``` file
@@ -403,13 +403,13 @@ docker-compose --help
 Create and start service containers
 
 ```
-sudo docker-compose -f ./docker-compose.yml up -d
+docker-compose up -d
 ```
 
 Show running containers
 
 ```
-sudo docker-compose -f ./docker-compose.yml ps
+docker-compose ps
 ```
 
 Enter the following command to download a ```index.html``` file for testing purposes
@@ -427,19 +427,19 @@ cat index.html
 Stop service containers
 
 ```
-sudo docker-compose -f ./docker-compose.yml stop
+docker-compose stop
 ```
 
 Remove stopped service containers
 
 ```
-sudo docker-compose -f ./docker-compose.yml rm -f
+docker-compose rm -f
 ```
 
 Destroy the ```index.html``` file
 
 ```
-sudo rm -r index.html
+rm -r index.html
 ```
 
 Docker Compose is now installed and tested on ```bustergraafinen```
