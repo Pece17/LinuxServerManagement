@@ -360,7 +360,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
         #ServerName www.example.com
 
         ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/html
+        DocumentRoot /home/oppilas/public_html/wordpress
 
         # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
         # error, crit, alert, emerg.
@@ -378,7 +378,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
         # after it has been globally disabled with "a2disconf".
         #Include conf-available/serve-cgi-bin.conf
 
-        <Directory /var/www/wordpress/>
+        <Directory /home/oppilas/public_html/wordpress/>
                 AllowOverride All
         </Directory>
 </VirtualHost>
