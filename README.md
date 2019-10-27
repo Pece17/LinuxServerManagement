@@ -385,6 +385,76 @@ sudo apache2ctl configtest
 
 sudo systemctl restart apache2
 
+cd /tmp
+
+curl -O https://wordpress.org/latest.tar.gz
+
+tar xzvf latest.tar.gz
+
+touch /tmp/wordpress/.htaccess
+
+cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+
+mkdir /tmp/wordpress/wp-content/upgrade
+
+sudo cp -a /tmp/wordpress/. /var/www/wordpress
+
+sudo chown -R www-data:www-data /var/www/wordpress
+
+sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+
+sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+
+```
+define('AUTH_KEY',         '8)b6`snQr(c2B4p(yECs2Vy$,wo#>EL+t?=C)_%t0RS0=]T>|_couV]+@FkGrG]x');
+define('SECURE_AUTH_KEY',  'Oaj(sLk+j&0g!O|K+`6+]@GZ_O^$a~oI|UvN-F>k+w%wWL+3+?^S}5+Tje?5$j(>');
+define('LOGGED_IN_KEY',    '8jmy{jP7hJOt[1zJnQy].wQu{+tfD^$XT`E4}: @SeKVO+TNn| a+K=*+VL+?ktx');
+define('NONCE_KEY',        'FF=/21X|||[Ow>zy3_d7`rT,.6zH[L&HTA=sGgT#vE]v(wBpS32 8h7e~/g+ean*');
+define('AUTH_SALT',        '*Th=i9Re!|n0@z!L-fuY[`YK=K+[n?lZ8FfVM{Q!|-_;.P3`=/63X]|h}.}m:9am');
+define('SECURE_AUTH_SALT', '!,Y9g:p%qmhA7pMbuTO*dA(~tx oblA(K#QXiC$8{C*[.;NUE/=)I+X%<[p6>akl');
+define('LOGGED_IN_SALT',   'Tu}?TP-k8B4ohyA|Zo1z+o^6rXjMW-S.jwfWCk2-K|mrZb+J>2M!{IVS2{Y*P=-5');
+define('NONCE_SALT',       '5)gUV|S}*jcs|+KPNu4^zNB~~FaE_o}7?[|8]I.IAqrSeAaY7kC0<!2C#hidVB0H');
+```
+
+sudo nano /var/www/wordpress/wp-config.php
+
+```
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         '8)b6`snQr(c2B4p(yECs2Vy$,wo#>EL+t?=C)_%t0RS0=]T>|_couV]+@FkGrG]x');
+define('SECURE_AUTH_KEY',  'Oaj(sLk+j&0g!O|K+`6+]@GZ_O^$a~oI|UvN-F>k+w%wWL+3+?^S}5+Tje?5$j(>');
+define('LOGGED_IN_KEY',    '8jmy{jP7hJOt[1zJnQy].wQu{+tfD^$XT`E4}: @SeKVO+TNn| a+K=*+VL+?ktx');
+define('NONCE_KEY',        'FF=/21X|||[Ow>zy3_d7`rT,.6zH[L&HTA=sGgT#vE]v(wBpS32 8h7e~/g+ean*');
+define('AUTH_SALT',        '*Th=i9Re!|n0@z!L-fuY[`YK=K+[n?lZ8FfVM{Q!|-_;.P3`=/63X]|h}.}m:9am');
+define('SECURE_AUTH_SALT', '!,Y9g:p%qmhA7pMbuTO*dA(~tx oblA(K#QXiC$8{C*[.;NUE/=)I+X%<[p6>akl');
+define('LOGGED_IN_SALT',   'Tu}?TP-k8B4ohyA|Zo1z+o^6rXjMW-S.jwfWCk2-K|mrZb+J>2M!{IVS2{Y*P=-5');
+define('NONCE_SALT',       '5)gUV|S}*jcs|+KPNu4^zNB~~FaE_o}7?[|8]I.IAqrSeAaY7kC0<!2C#hidVB0H');
+/**#@-*/
+```
+
+```
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'oppilas' );
+
+/** MySQL database username */
+define( 'DB_USER', 'oppilas' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'salainen' );
+
+define('FS_METHOD', 'direct');
+```
+
 
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
