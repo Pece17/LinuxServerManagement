@@ -193,6 +193,21 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
+# Installing LAMP on Ubuntu (Work in progress)
+
+Navigate to address http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
+
+
+# Configuring SSH key-based authentication on Ubuntu (Work in progress)
+
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```ubuntussh```
+
+
+# Installing WordPress on Ubuntu (Won in progress)
+
+Navigate to address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/ to view my own instructions for installing WordPress on ```ubuntussh```
+
+
 # Installing Docker on Buster
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
@@ -445,7 +460,7 @@ rm -r index.html
 Docker Compose is now installed and tested on ```bustergraafinen```
 
 
-# Installing Portainer on Buster (Work in progress)
+# Installing Portainer on Buster
 
 Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
 
@@ -501,6 +516,9 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
+# Installing Geany on Buster (Work in progress)
+
+
 # Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress)
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
@@ -510,16 +528,3 @@ Download the image and store it locally to ```bustergraafinen```
 ```
 docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
-
-
-# Installing Geany on Buster
-
-
-# Installing WordPress on Ubuntu
-
-
-
-# Installing SSH-key-based auth on
-
-
-# Installing LAMP on Ubuntu
