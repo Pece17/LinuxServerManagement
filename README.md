@@ -282,11 +282,6 @@ sudo systemctl restart apache2
 Open the browser with ```bustergraafinen``` and navigate to address http://10.208.0.238/~oppilas/ - this page shows the contents of the previously created ```index.php``` file and prints out the PHP calculation correctly
 
 
-# Configuring SSH key-based authentication on Ubuntu (Work in progress)
-
-Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```ubuntussh```
-
-
 # Installing WordPress on Ubuntu (Won in progress)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
@@ -302,6 +297,11 @@ sudo mysql -u root -p
 CREATE DATABASE oppilaswp CHARACTER SET utf8;
 
 GRANT ALL ON oppilaswp.* TO oppilaswp@localhost IDENTIFIED BY ‘hF4.(AwseqPHL(hhp’;
+
+
+# Configuring SSH key-based authentication on Ubuntu (Work in progress)
+
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```ubuntussh```
 
 
 # Installing Docker on Buster
