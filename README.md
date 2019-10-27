@@ -296,8 +296,19 @@ Navigate to address https://www.digitalocean.com/community/tutorials/how-to-inst
 
 sudo mysql -u root -p
 
+sudo mysql_secure_installation
 
+Press ```n```
 
+New password: ```salainen```
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
