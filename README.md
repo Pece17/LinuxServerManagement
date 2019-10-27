@@ -195,7 +195,7 @@ Salt Minion is now installed on ```ubuntussh```
 
 # Installing LAMP on Ubuntu (Work in progress)
 
-Navigate to address http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
+Navigate to addresses https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 and http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -281,22 +281,22 @@ sudo systemctl restart apache2
 
 Open the browser with ```bustergraafinen``` and navigate to address http://10.208.0.238/~oppilas/ - this page shows the contents of the previously created ```index.php``` file and prints out the PHP calculation correctly
 
-
-# Installing WordPress on Ubuntu (Won in progress)
-
-Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
-
 sudo apt-get remove --purge mysql-client mysql-server mysql-common mysql-client-core-5.7 mysql-server-core-5.7
 
 Press ```Yes``` on ```Configuring mysql-server-5.7``` screen
 
-sudo apt-get install mysql-client mysql-server php-mysql curl lynx
+sudo apt-get install mysql-server
+
+sudo mysql_secure_installation
+
+
+# Installing WordPress on Ubuntu (Work in progress)
+
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
 sudo mysql -u root -p
 
-CREATE DATABASE oppilaswp CHARACTER SET utf8;
 
-GRANT ALL ON oppilaswp.* TO oppilaswp@localhost IDENTIFIED BY ‘hF4.(AwseqPHL(hhp’;
 
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
