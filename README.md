@@ -544,7 +544,7 @@ Exit from ```ubuntussh``` terminal
 
 exit
 
-SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - this you should be able to login without needing to enter the password with SSH key-based authentication
+SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - now you should be able to login without needing to enter the password with SSH key-based authentication
 
 ssh -I oppilas -p 1001 10.207.5.193
 
