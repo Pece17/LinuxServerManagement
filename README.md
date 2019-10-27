@@ -197,6 +197,90 @@ Salt Minion is now installed on ```ubuntussh```
 
 Navigate to address http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
+
+```
+ssh -I oppilas -p 1001 10.207.5.193
+```
+
+Install Tasksel tool that can install multiple related packages as a co-ordinated "task" onto your system
+
+sudo apt-get install tasksel
+
+Run Tasksel
+
+sudo tasksel
+
+Select ```LAMP server``` in ```Software selection``` by pressing ```Space``` and press ```Enter``` to start installation, already-installed tasks will have an asterisk beside their name
+
+Install Net-tools package containing a collection of programs which form the base of Linux networking
+
+sudo apt-get install net-tools
+
+Check your IP address
+
+ifconfig
+
+Open the browser with ```bustergraafinen``` and enter the IP address http://10.208.0.238/ of ```ubuntussh``` in the address bar - Apache2 default page opens which indicates that LAMP installation was successful
+
+sudo a2enmod apache2
+
+sudo systemctl restart apache2
+
+sudoedit /etc/apache2/mods-available/php7.2.conf
+
+Put hashtags
+
+```
+# Deny access to files without filename (e.g. '.php')
+<FilesMatch "^\.ph(ar|p|ps|tml)$">
+    Require all denied
+</FilesMatch>
+
+# Running PHP scripts in user directories is disabled by default
+# 
+# To re-enable PHP in user directories comment the following lines
+# (from <IfModule ...> to </IfModule>.) Do NOT set it to On as it
+# prevents .htaccess files from disabling it.
+#<IfModule mod_userdir.c>
+#    <Directory /home/*/public_html>
+#        php_admin_flag engine Off
+#    </Directory>
+#</IfModule>
+```
+
+sudo mkdir public_html
+
+cd public_html
+
+sudo nano public_html
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Palvelinten hallinta</h1>
+
+<p>This is a paragraph.</p>
+
+<?php
+
+print (1+7);
+
+?>
+
+</body>
+</html>
+```
+
+sudo systemctl restart apache2
+
+Open the browser with ```bustergraafinen``` and navigate to address http://10.208.0.238/~oppilas/ - this page shows the contents of the previously created ```index.php``` file and prints out the PHP calculation correctly
+
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
@@ -205,7 +289,19 @@ Navigate to address https://www.digitalocean.com/community/tutorials/how-to-conf
 
 # Installing WordPress on Ubuntu (Won in progress)
 
-Navigate to address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/ to view my own instructions for installing WordPress on ```ubuntussh```
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
+
+sudo apt-get remove --purge mysql-client mysql-server mysql-common mysql-client-core-5.7 mysql-server-core-5.7
+
+Press ```Yes``` on ```Configuring mysql-server-5.7``` screen
+
+sudo apt-get install mysql-client mysql-server php-mysql curl lynx
+
+sudo mysql -u root -p
+
+CREATE DATABASE oppilaswp CHARACTER SET utf8;
+
+GRANT ALL ON oppilaswp.* TO oppilaswp@localhost IDENTIFIED BY ‘hF4.(AwseqPHL(hhp’;
 
 
 # Installing Docker on Buster
