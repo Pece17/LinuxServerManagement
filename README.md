@@ -229,8 +229,6 @@ sudo ufw app info "Apache Full"
 
 sudo ufw allow in "Apache Full"
 
-
-
 sudo a2enmod apache2
 
 sudo systemctl restart apache2
@@ -486,6 +484,7 @@ Search Engine Visibility: untick
 Confirm and Log in
 
 Creat a first post
+
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
