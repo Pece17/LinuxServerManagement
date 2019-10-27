@@ -469,7 +469,23 @@ cd ..
 
 sudo mv wordpress /home/oppilas/public_html/
 
-Open address 
+Open address http://10.208.0.238/~oppilas/wordpress/
+
+English (United States)
+
+Site Title: Pekanloki
+
+Username: oppilas
+
+Password: salainen
+
+Your Email: pekka.hamalainen@myy.haaga-helia.fi
+
+Search Engine Visibility: untick
+
+Confirm and Log in
+
+Creat a first post
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
