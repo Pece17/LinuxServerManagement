@@ -301,6 +301,23 @@ Remove test database and access to it? (Press y|Y for Yes, any other key for No)
 
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
+sudo mysql
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'salainen';
+
+FLUSH PRIVILEGES;
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+exit
+
+sudo mysql -p
+
+Enter the password ```salainen```
+
+exit
 
 # Installing WordPress on Ubuntu (Work in progress)
 
