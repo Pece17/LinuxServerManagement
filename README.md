@@ -223,6 +223,14 @@ ifconfig
 
 Open the browser with ```bustergraafinen``` and enter the IP address http://10.208.0.238/ of ```ubuntussh``` in the address bar - Apache2 default page opens which indicates that LAMP installation was successful
 
+sudo ufw app list
+
+sudo ufw app info "Apache Full"
+
+sudo ufw allow in "Apache Full"
+
+
+
 sudo a2enmod apache2
 
 sudo systemctl restart apache2
@@ -455,7 +463,13 @@ define( 'DB_PASSWORD', 'salainen' );
 define('FS_METHOD', 'direct');
 ```
 
+cd /wordpress/
 
+cd ..
+
+sudo mv wordpress /home/oppilas/public_html/
+
+Open address 
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
