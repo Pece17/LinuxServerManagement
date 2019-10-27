@@ -289,15 +289,6 @@ sudo apt-get install mysql-server
 
 sudo mysql_secure_installation
 
-
-# Installing WordPress on Ubuntu (Work in progress)
-
-Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
-
-sudo mysql -u root -p
-
-sudo mysql_secure_installation
-
 Press ```n```
 
 New password: ```salainen```
@@ -309,6 +300,14 @@ Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
 Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
 
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+
+
+# Installing WordPress on Ubuntu (Work in progress)
+
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
+
+sudo mysql -u root -p
+
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
