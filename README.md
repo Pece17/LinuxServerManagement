@@ -193,7 +193,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing LAMP on Ubuntu (Work in progress)
+# Installing LAMP on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?
 
 Navigate to addresses https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 and http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
@@ -326,7 +326,7 @@ Enter the password ```salainen```
 exit
 
 
-# Installing WordPress on Ubuntu (Work in progress)
+# Installing WordPress on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
