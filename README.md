@@ -325,6 +325,7 @@ Enter the password ```salainen```
 
 exit
 
+
 # Installing WordPress on Ubuntu (Work in progress)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
@@ -488,7 +489,66 @@ Creat a first post
 
 # Configuring SSH key-based authentication on Ubuntu (Work in progress)
 
-Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```ubuntussh```
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
+
+Open ```bustergraafinen``` terminal and generate a key pair with this command
+
+ssh-keygen
+
+Press Enter for default location
+
+Enter passphrase: empty
+
+empty again
+
+```
+Your identification has been saved in /home/oppilas/.ssh/id_rsa.
+Your public key has been saved in /home/oppilas/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:QJd+dhXN4k04B79sgw+xbRSx40yX9EjrRMikyeHC2rM oppilas@deb10xfcews1
+The key's randomart image is:
++---[RSA 2048]----+
+|      . ...o..=X.|
+|     . o.o +oo*+X|
+|      ..o =  ++%+|
+|       +..o .o% =|
+|      . So . +.X |
+|         o    = .|
+|        E      . |
+|                 |
+|                 |
++----[SHA256]-----+
+```
+
+SSH to ```ubuntussh```
+
+ssh -I oppilas -p 1001 10.207.5.193
+
+Create the following folder
+
+mkdir -p ~/.ssh
+
+Open ```bustergraafinen``` terminal and enter this command into the terminal to print your public SSH key
+
+cat ~/.ssh/id_rsa.pub
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh1k/jnJQAqy7GdedhiILxkHo7Eso2RBHwZOSaAo/UdPHpEtu5BTD6Ty+88VC5CjCTQZVSTghCsQjjC3g4TsfvighpF6Di8PAWYq6yRNe7ns1vNR6Wx423W1JdamnnGcc1F5hhAuYPzPD+UxMhRR41sYy7e8UuA40Tj+1TrPYyGPjq/z7/V+yzXzNMGwIwTXQfUsYgNNKFh/pzglXCD1QNuuN9TPvsnX/Ka0YZIvv3bCMKvJWz18XTIode15wDueQ1aShfVl3ZgLHVzQ6NHuTVDSqf1salvjMjF0XHbGbpIvRy51gnOJP9IEdoSPnhJHcF1AyUSWEgD3VSLj5UdHAB oppilas@deb10xfcews1
+```
+
+Open ```ubuntussh``` terminal and open the ```authorized_keys``` file in the text editor of your choice, and paste your public key into the file, then save and exit
+
+sudo nano ~/.ssh/authorized_keys
+
+Exit from ```ubuntussh``` terminal
+
+exit
+
+SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - this you should be able to login without needing to enter the password with SSH key-based authentication
+
+ssh -I oppilas -p 1001 10.207.5.193
+
+SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
 
 # Installing Docker on Buster
