@@ -239,6 +239,59 @@ Remove test database and access to it? (Press y|Y for Yes, any other key for No)
 
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
+sudo mysql
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'salainen';
+
+FLUSH PRIVILEGES;
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+exit
+
+sudo mysql -p
+
+exit
+
+sudo apt-get install php libapache2-mod-php php-mysql
+
+sudo nano /etc/apache2/mods-enabled/dir.conf
+
+```
+<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+```
+
+sudo systemctl restart apache2
+
+sudo systemctl status apache2
+
+q
+
+apt search php- | less
+
+q
+
+apt show package_name
+
+apt show php-cli
+
+sudo apt-get install php-cli
+
+sudo apt-get install package1 package2 ...
+
+sudo mkdir /var/www/oppilas
+
+sudo chown -R $USER:$USER /var/www/oppilas
+
+sudo chmod -R 755 /var/www/oppilas
+
+nano /var/www/oppilas/index.html
 
 
 
@@ -254,7 +307,16 @@ Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
 
 
-### (Old version to be deleted after writing new one: Installing LAMP on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?)
+
+
+
+
+
+
+
+
+
+## (Old version to be deleted after writing new one: Installing LAMP on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?)
 
 Navigate to addresses https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 and http://spotwise.com/2008/11/05/adding-roles-to-ubuntu-server/ to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
@@ -400,7 +462,7 @@ Navigate to address https://www.digitalocean.com/community/tutorials/how-to-inst
 
 
 
-### (old version to be deleted: Installing WordPress on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?)
+## (old version to be deleted: Installing WordPress on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
