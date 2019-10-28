@@ -387,6 +387,20 @@ sudo apache2ctl configtest
 
 sudo systemctl restart apache2
 
+cd /tmp
+
+curl -O https://wordpress.org/latest.tar.gz
+
+tar xzvf latest.tar.gz
+
+touch /tmp/wordpress/.htaccess
+
+cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+
+mkdir /tmp/wordpress/wp-content/upgrade
+
+sudo cp -a /tmp/wordpress/. /var/www/ubuntussh
+
 
 
 
