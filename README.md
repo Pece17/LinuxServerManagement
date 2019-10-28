@@ -343,7 +343,7 @@ Go to address http://ubuntussh/info.php
 
 sudo rm /var/www/ubuntussh/info.php
 
-
+LAMP is now installed on ```ubuntussh```
 
 
 
