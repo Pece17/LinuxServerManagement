@@ -217,6 +217,35 @@ Go to address http://10.208.0.238
 
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 
+sudo apt-get install curl
+
+curl http://icanhazip.com
+
+sudo apt-get install mysql-server
+
+sudo mysql_secure_installation
+
+VALIDATE PASSWORD PLUGIN Press y|Y for Yes, any other key for No: n
+
+New password: salainen
+
+Re-enter new password: salainen
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+
+
+
+
+
+
+
+
 
 
 
