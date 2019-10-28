@@ -213,9 +213,11 @@ sudo ufw app info "Apache Full"
 
 sudo ufw allow in "Apache Full"
 
-Go to address http://10.208.0.238
+Go to address http://10.208.0.83/
 
+```
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+````
 
 sudo apt-get install curl
 
