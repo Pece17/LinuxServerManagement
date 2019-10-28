@@ -193,7 +193,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing LAMP on Ubuntu (Work in progress)
+# Installing LAMP on Ubuntu (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -495,7 +495,7 @@ Enter the password ```salainen```
 exit
 
 
-# Installing WordPress on Ubuntu (Work in progress)
+# Installing WordPress on Ubuntu (Work in progress) < Write!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -669,7 +669,7 @@ Confirm and Log in
 Creat a first post
 
 
-# Configuring SSH key-based authentication on Ubuntu (Work in progress)
+# Configuring SSH key-based authentication on Ubuntu (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -731,6 +731,11 @@ SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - now y
 ssh -I oppilas -p 1001 10.207.5.193
 
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
+
+
+# Installing and securing phpMyAdmin on Ubuntu (Work in progress) < Optional!
+
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
 
 
 # Installing Docker on Buster
