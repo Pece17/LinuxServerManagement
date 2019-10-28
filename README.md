@@ -285,39 +285,40 @@ sudo apt-get install php-cli
 
 sudo apt-get install package1 package2 ...
 
-sudo mkdir /var/www/oppilas
 
-sudo chown -R $USER:$USER /var/www/oppilas
+sudo mkdir /var/www/ubuntussh
 
-sudo chmod -R 755 /var/www/oppilas
+sudo chown -R $USER:$USER /var/www/ubuntussh
 
-nano /var/www/oppilas/index.html
+sudo chmod -R 755 /var/www/ubuntussh
+
+nano /var/www/ubuntussh/index.html
 
 ```
 <html>
     <head>
-        <title>Welcome to oppilas!</title>
+        <title>Welcome to ubuntussh!</title>
     </head>
     <body>
-        <h1>Success!  The oppilas server block is working!</h1>
+        <h1>Success!  The ubuntussh server block is working!</h1>
     </body>
 </html>
 ```
 
-sudo nano /etc/apache2/sites-available/oppilas.conf
+sudo nano /etc/apache2/sites-available/ubuntussh.conf
 
 ```
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
-    ServerName oppilas
-    ServerAlias www.oppilas
-    DocumentRoot /var/www/oppilas
+    ServerName ubuntussh
+    ServerAlias www.ubuntussh
+    DocumentRoot /var/www/ubuntussh
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
-sudo a2ensite oppilas.conf
+sudo a2ensite ubuntussh.conf
 
 sudo a2dissite 000-default.conf
 
