@@ -409,7 +409,9 @@ sudo find /var/www/ubuntussh/ -type d -exec chmod 750 {} \;
 
 sudo find /var/www/ubuntussh/ -type f -exec chmod 640 {} \;
 
-````
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+
+```
 define('AUTH_KEY',         '%8CNX`|py%-^Fk$QhU>o0FpSk2Ul*fTdeTIfnV:=}<(*v@)!]`gH<]=dRK)[+i6T');
 define('SECURE_AUTH_KEY',  '1@~b6R?@_Ys43v|k9wFyF;SvA:*sPbz5+=n?:rQI273fHEY3;|QL828<1%SX++TC');
 define('LOGGED_IN_KEY',    'RbhYg(_{ir;=>bt~]ay-- 3oh~qSz^!C+E*!7X7Oh~w`%.S&#l<oOCG>5sPR(-Z5');
