@@ -218,6 +218,7 @@ Go to address http://10.208.0.83/
 ```
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 ````
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 
 sudo apt-get install curl
 
