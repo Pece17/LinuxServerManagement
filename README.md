@@ -172,7 +172,7 @@ Install Salt Minion
 sudo apt-get -y install salt-minion
 ```
 
-Give the following command - note that it is a single command, even though it might be printed on two lines
+Give the following command - note that it is a single command, even though it might be printed on two lines, and also note that this command should be copied from the instructions of the website using the browser in ```bustergraafinen``` because it won't format right if copied from Windows
 
 ```
 SALTID=$(getent passwd $USER| cut -d ':' -f 5 | cut -d ',' -f 1|tr -c '[a-zA-Z]' '_'; echo -n "_$(hostname)_"; date +'%H%M%S') echo -e "master: 10.207.5.78\nid: $SALTID"|sudo tee /etc/salt/minion
