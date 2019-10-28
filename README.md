@@ -345,7 +345,7 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-# Installing WordPress on Ubuntu (Work in progress) < Write!
+# Installing WordPress on Ubuntu (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -585,7 +585,7 @@ WordPress is now installed on ```ubuntussh```
 
 
 
-## (old version to be deleted: Installing WordPress on Ubuntu (Work in progress) < Possibly do again from scratch following DigitalOcean precisely?)
+## (old version to be deleted: Installing WordPress on Ubuntu (Work in progress) < Delete!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh``` - I also check my own instructions from a previous Linux course from address https://pekkahamalainen.wordpress.com/2017/10/01/linux-palvelimet-5-viikon-laksyt-messuraportti-lamp-php-ja-wordpressin-asennus/
 
@@ -754,28 +754,31 @@ Open ```bustergraafinen``` terminal and generate a key pair with this command
 
 ssh-keygen
 
-Press Enter for default location
+Enter file in which to save the key (/home/oppilas/.ssh/id_rsa): Press Enter for default key location
 
-Enter passphrase: empty
+/home/oppilas/.ssh/id_rsa already exists.
+Overwrite (y/n)? Press y to agree
 
-empty again
+Enter passphrase (empty for no passphrase): Press Enter for empty
+
+Enter same passphrase again: Press Enter for empty
 
 ```
 Your identification has been saved in /home/oppilas/.ssh/id_rsa.
 Your public key has been saved in /home/oppilas/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:QJd+dhXN4k04B79sgw+xbRSx40yX9EjrRMikyeHC2rM oppilas@deb10xfcews1
+SHA256:atI1MNNBrLmHmYPeS9i/PZqfSu0vwwQANET2sT52bk4 oppilas@deb10xfcews1
 The key's randomart image is:
 +---[RSA 2048]----+
-|      . ...o..=X.|
-|     . o.o +oo*+X|
-|      ..o =  ++%+|
-|       +..o .o% =|
-|      . So . +.X |
-|         o    = .|
-|        E      . |
-|                 |
-|                 |
+|   +B..oo        |
+|   . o.+..       |
+|      *+.        |
+|     .o+.        |
+|     .+=S.       |
+|    .=**.o.      |
+|   .o.*oEo.      |
+|    .+.* +=.     |
+|      ..B===.    |
 +----[SHA256]-----+
 ```
 
