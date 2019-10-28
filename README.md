@@ -381,6 +381,12 @@ sudo nano /etc/apache2/sites-available/ubuntussh.conf
 </VirtualHost>
 ```
 
+sudo a2enmod rewrite
+
+sudo apache2ctl configtest
+
+sudo systemctl restart apache2
+
 
 
 
