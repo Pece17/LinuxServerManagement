@@ -540,10 +540,33 @@ Continue
 
 Install WordPress
 
+Log In
 
+Appearance
 
+Themes
 
+Twenty Seventeen
 
+Activate
+
+Posts
+
+Hello world!
+
+Trash
+
+Add New
+
+```
+First Post on PekanWordpress
+
+You will find my Linux notes and instructions for a course about Linux server management in Haaga-Helia University of Applied Sciences at https://github.com/Pece17/LinuxServerManagement
+```
+
+Publish
+
+View Post
 
 
 
