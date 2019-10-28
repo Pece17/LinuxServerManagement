@@ -790,23 +790,29 @@ Create the following folder
 
 mkdir -p ~/.ssh
 
-Open ```bustergraafinen``` terminal and enter this command into the terminal to print your public SSH key
+Open ```bustergraafinen``` terminal aside and enter this command into the terminal to print your public SSH key
 
 cat ~/.ssh/id_rsa.pub
 
 ```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh1k/jnJQAqy7GdedhiILxkHo7Eso2RBHwZOSaAo/UdPHpEtu5BTD6Ty+88VC5CjCTQZVSTghCsQjjC3g4TsfvighpF6Di8PAWYq6yRNe7ns1vNR6Wx423W1JdamnnGcc1F5hhAuYPzPD+UxMhRR41sYy7e8UuA40Tj+1TrPYyGPjq/z7/V+yzXzNMGwIwTXQfUsYgNNKFh/pzglXCD1QNuuN9TPvsnX/Ka0YZIvv3bCMKvJWz18XTIode15wDueQ1aShfVl3ZgLHVzQ6NHuTVDSqf1salvjMjF0XHbGbpIvRy51gnOJP9IEdoSPnhJHcF1AyUSWEgD3VSLj5UdHAB oppilas@deb10xfcews1
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBQhk63HMYl8d8A4mrp++xAUsEcOjwm5aZOwPt8qBXHvVucA7W/e965CAqN3TKjfBQrJSIw3Is4TQRl5kWGgY/lqUoRdDUdEZ2u3mD7wJKaimBEuU6GvjgfIQvt+C7tlxmvEsSQJ+OHdVApOPTK/cUMvhQZwCdi6bCk3wRP6D/ZXejjFuUQoFMPf3IYun2rvB4VWQg7EFAWq7VwRyq0EY9i1xCVsFO6I+f1X9TE7uKPEl76W0ou7O3lGXNzod9kFXMVfhSh3lH1TnZRJcIqZj2FBKuB44jyXPNcMsw1uVH3+BGh8cCp3qq2EpsjcYny1iO8082wi1koRC56TeoiUoj oppilas@deb10xfcews1
 ```
 
-Open ```ubuntussh``` terminal and open the ```authorized_keys``` file in the text editor of your choice, and paste your public key into the file, then save and exit
+Open ```ubuntussh``` terminal and open the ```authorized_keys``` file in the text editor of your choice
 
 sudo nano ~/.ssh/authorized_keys
+
+Paste your public key into the ```authorized_keys``` file, then save and exit
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDBQhk63HMYl8d8A4mrp++xAUsEcOjwm5aZOwPt8qBXHvVucA7W/e965CAqN3TKjfBQrJSIw3Is4TQRl5kWGgY/lqUoRdDUdEZ2u3mD7wJKaimBEuU6GvjgfIQvt+C7tlxmvEsSQJ+OHdVApOPTK/cUMvhQZwCdi6bCk3wRP6D/ZXejjFuUQoFMPf3IYun2rvB4VWQg7EFAWq7VwRyq0EY9i1xCVsFO6I+f1X9TE7uKPEl76W0ou7O3lGXNzod9kFXMVfhSh3lH1TnZRJcIqZj2FBKuB44jyXPNcMsw1uVH3+BGh8cCp3qq2EpsjcYny1iO8082wi1koRC56TeoiUoj oppilas@deb10xfcews1
+```
 
 Exit from ```ubuntussh``` terminal
 
 exit
 
-SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - now you should be able to login without needing to enter the password with SSH key-based authentication
+SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - now you should be able to login with SSH key-based authentication without needing to enter the password
 
 ssh -I oppilas -p 1001 10.207.5.193
 
