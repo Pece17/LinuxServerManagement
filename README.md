@@ -520,6 +520,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once( ABSPATH . 'wp-settings.php' );
 ```
 
+Go to address http://ubuntussh/
+
+English (United States)
+
+Continue
+
+```Site Title``` Pekan WordPress
+
+```Username``` ubuntussh
+
+```Password``` salainen
+
+```Confirm Password``` Check ```Confirm use of weak password```
+
+```Your Email``` pekka.hamalainen@myy.haaga-helia.fi ```Double-check your email address before continuing.```
+
+```Search Engine Visibility``` Uncheck ```Discourage search engines from indexing this site It is up to search engines to honor this request.```
+
+Install WordPress
 
 
 
