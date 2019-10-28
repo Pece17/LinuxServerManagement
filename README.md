@@ -302,7 +302,8 @@ nano /var/www/ubuntussh/index.html
         <title>Welcome to ubuntussh!</title>
     </head>
     <body>
-        <h1>Success!  The ubuntussh server block is working!</h1>
+        <h1>Success! The ubuntussh server block is working!</h1>
+        <p>Tremendous!</p>
     </body>
 </html>
 ```
