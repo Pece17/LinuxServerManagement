@@ -158,7 +158,7 @@ The hostname is now changed permanently on ```ubuntussh```
 
 # Installing Salt Minion on Ubuntu
 
-Navigate to address http://10.207.5.78/ to view the instructions for installing Salt Minion
+Navigate to address http://10.207.5.78/ to view the instructions for installing Salt Minion on ```ubuntussh```
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -348,6 +348,46 @@ LAMP is now installed on ```ubuntussh```
 # Installing WordPress on Ubuntu (Work in progress) < Write!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
+
+mysql -u root -p
+
+CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'salainen';
+
+FLUSH PRIVILEGES;
+
+EXIT;
+
+sudo apt-get update
+
+sudo apt-get install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+
+sudo systemctl restart apache2
+
+sudo nano /etc/apache2/sites-available/ubuntussh.conf
+
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName ubuntussh
+    ServerAlias www.ubuntussh
+    DocumentRoot /var/www/ubuntussh
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    <Directory /var/www/ubuntussh/>
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+```
+
+
+
+
+
+
+
+
 
 
 
