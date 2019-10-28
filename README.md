@@ -293,10 +293,37 @@ sudo chmod -R 755 /var/www/oppilas
 
 nano /var/www/oppilas/index.html
 
+```
+<html>
+    <head>
+        <title>Welcome to oppilas!</title>
+    </head>
+    <body>
+        <h1>Success!  The oppilas server block is working!</h1>
+    </body>
+</html>
+```
 
+sudo nano /etc/apache2/sites-available/oppilas.conf
 
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName oppilas
+    ServerAlias www.oppilas
+    DocumentRoot /var/www/oppilas
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
 
+sudo a2ensite oppilas.conf
 
+sudo a2dissite 000-default.conf
+
+sudo apache2ctl configtest
+
+sudo systemctl restart apache2
 
 
 
