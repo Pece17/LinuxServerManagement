@@ -329,6 +329,21 @@ sudo apache2ctl configtest
 
 sudo systemctl restart apache2
 
+Go to address http://ubuntussh/
+
+sudo nano /var/www/ubuntussh/info.php
+
+```
+<?php
+phpinfo();
+?>
+```
+
+Go to address http://ubuntussh/info.php
+
+sudo rm /var/www/ubuntussh/info.php
+
+
 
 
 
