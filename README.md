@@ -559,7 +559,7 @@ Trash
 Add New
 
 ```
-First Post on PekanWordpress
+First Post on Pekan Wordpress
 
 You will find my Linux notes and instructions for a course about Linux server management in Haaga-Helia University of Applied Sciences at https://github.com/Pece17/LinuxServerManagement
 ```
@@ -568,11 +568,11 @@ Publish
 
 View Post
 
+Hover over ```Howdy, ubuntussh```
 
+Log Out
 
-
-
-
+WordPress is now installed on ```ubuntussh```
 
 
 
