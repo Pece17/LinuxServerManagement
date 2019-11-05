@@ -1009,7 +1009,7 @@ Configure the following settings for the third instance that will be a Salt Mast
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntumaster```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Configure the following settings for the fourth instance that will be a Salt Minion Linux workstation that is running Ubuntu 18.04 ? operating system
+Configure the following settings for the fourth instance that will be a Salt Minion Linux workstation that is running CentOS operating system
 
 1. Choose ```HH01```, ```Template```, and press ```Next```
 2. Choose ```CENTOS7cloudSaltMinidb1dsk1AH``` and press ```Next```
@@ -1018,14 +1018,31 @@ Configure the following settings for the fourth instance that will be a Salt Min
 5. Press ```Next```
 6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
 7. Press ```Next```
-8. Change ```Name``` to ```ubuntuminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
+8. Change ```Name``` to ```centosminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
+
+Configure the following settings for the fifth instance that will be a Salt Minion Linux workstation that is running Ubuntu 18.04 ? operating system
+
+1. Choose ```HH01```, ```Template```, and press ```Next```
+2. Choose ```UBUsrvSaltMaster1AH``` and press ```Next```
+3. Choose ```Linux Normal``` and press ```Next```
+4. Choose ```No thanks``` and press ```Next```
+5. Press ```Next```
+6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
+7. Press ```Next```
+8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 Connecting to saltmaster
 
 ssh -l oppilas 10.208.0.56
 
-Connecting to saltminion
+df -h
+
+sudo apt-get upgrade
+
+Connecting to centosminion
 
 ssh -l root 10.208.0.121
 
-df -h
+yum upgrade
+
+Connecting to ubuntuminion
