@@ -1150,3 +1150,5 @@ Download the image and store it locally to ```bustergraafinen```
 ```
 docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
+
+# Taking a snapshot with Rovious CP (Work in progress) < Write!
