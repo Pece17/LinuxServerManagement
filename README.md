@@ -1134,6 +1134,8 @@ Portainer is now installed on ```bustergraafinen```
 
 # Installing Geany on Buster (Work in progress) < Cleanup!
 
+https://tecadmin.net/install-geany-ide-ubuntu/
+
 sudo add-apt-repository ppa:geany-dev/ppa
 
 sudo apt-get update
