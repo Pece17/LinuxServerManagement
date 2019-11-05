@@ -1032,7 +1032,10 @@ Configure the following settings for the fifth instance that will be a Salt Mini
 8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 
-Connecting to saltmaster
+
+
+
+Connecting to ubuntumaster
 
 ssh -l oppilas 10.208.0.56
 
@@ -1060,6 +1063,8 @@ Bootstrap - multiplatform
 
 
 
+
+
 Connecting to centosminion
 
 ssh -l root 10.208.0.55
@@ -1067,7 +1072,11 @@ ssh -l root 10.208.0.55
 yum upgrade
 
 
-Connecting to ubuntuminion
+
+
+
+
+Connecting to minionubuntu
 
 ssh -l oppilas 10.208.0.161
 
