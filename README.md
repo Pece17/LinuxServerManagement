@@ -1132,11 +1132,16 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
-# Installing Geany on Buster (Work in progress)
+# Installing Geany on Buster (Work in progress) < Cleamup!
+
+sudo add-apt-repository ppa:geany-dev/ppa
+
+sudo apt-get update
 
 sudo apt-get install geany geany-plugins-common
 
-# Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress)
+
+# Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress) < Write!
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
 
