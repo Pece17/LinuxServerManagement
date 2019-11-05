@@ -1007,5 +1007,5 @@ Configure the following settings for the third instance that will be a Salt Mast
 5. Press ```Next```
 6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
 7. Press ```Next```
-8. Change ```Name``` to ```saltmaster```, choose ```Standard (US) keyboard```, and press ```Launch VM```
+8. Change ```Name``` to ```ubuntumaster```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
