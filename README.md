@@ -989,3 +989,23 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 # Bootstrapping Salt Master instance (Work in progress) < Write!
 
 http://repo.saltstack.com/
+
+Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
+
+Type your ```Username```, ```Password```, and ```Domain```, after which press ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
+
+Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
+
+Navigate to ```Instances``` and press ```Add Instance```
+
+Configure the following settings for the third instance that will be a Salt Master Linux workstation that is running Ubuntu 18.04 operating system
+
+1. Choose ```HH01```, ```Template```, and press ```Next```
+2. Choose ```UBUsrvSaltMaster1AH``` and press ```Next```
+3. Choose ```Linux Normal``` and press ```Next```
+4. Choose ```No thanks``` and press ```Next```
+5. Press ```Next```
+6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
+7. Press ```Next```
+8. Change ```Name``` to ```saltmaster```, choose ```Standard (US) keyboard```, and press ```Launch VM```
+
