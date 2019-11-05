@@ -1071,7 +1071,23 @@ ssh -l root 10.208.0.55
 
 yum upgrade
 
+https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
 
+Change hostname
+
+sudo hostnamectl set-hostname centosminion
+
+hostname
+
+yum install nano
+
+sudo nano /etc/hosts
+
+127.0.1.1 centosminion
+
+sudo reboot
+
+http://repo.saltstack.com/
 
 
 
@@ -1095,3 +1111,5 @@ sudo nano /etc/hosts
 127.0.1.1 minionubuntu
 
 sudo reboot
+
+http://repo.saltstack.com/
