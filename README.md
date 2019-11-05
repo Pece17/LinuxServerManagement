@@ -1132,7 +1132,7 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
-# Installing Geany on Buster (Work in progress) < Cleamup!
+# Installing Geany on Buster (Work in progress) < Cleanup!
 
 sudo add-apt-repository ppa:geany-dev/ppa
 
