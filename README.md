@@ -1020,3 +1020,12 @@ Configure the following settings for the fourth instance that will be a Salt Min
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntuminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
+Connecting to saltmaster
+
+ssh -l oppilas 10.208.0.56
+
+Connecting to saltminion
+
+ssh -l root 10.208.0.121
+
+df -h
