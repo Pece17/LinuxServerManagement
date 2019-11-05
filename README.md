@@ -1134,6 +1134,7 @@ Portainer is now installed on ```bustergraafinen```
 
 # Installing Geany on Buster (Work in progress)
 
+sudo apt-get install geany geany-plugins-common
 
 # Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress)
 
