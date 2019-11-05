@@ -1031,6 +1031,7 @@ Configure the following settings for the fifth instance that will be a Salt Mini
 7. Press ```Next```
 8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
+
 Connecting to saltmaster
 
 ssh -l oppilas 10.208.0.56
@@ -1039,10 +1040,49 @@ df -h
 
 sudo apt-get upgrade
 
+https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
+
+Change hostname
+
+sudo hostnamectl set-hostname ubuntumaster
+
+hostname
+
+sudo nano /etc/hosts
+
+127.0.1.1 ubuntumaster
+
+sudo reboot
+
+http://repo.saltstack.com/
+
+Bootstrap - multiplatform
+
+
+
 Connecting to centosminion
 
-ssh -l root 10.208.0.121
+ssh -l root 10.208.0.55
 
 yum upgrade
 
+
 Connecting to ubuntuminion
+
+ssh -l oppilas 10.208.0.161
+
+sudo apt-get upgrade
+
+https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
+
+Change hostname
+
+sudo hostnamectl set-hostname minionubuntu
+
+hostname
+
+sudo nano /etc/hosts
+
+127.0.1.1 minionubuntu
+
+sudo reboot
