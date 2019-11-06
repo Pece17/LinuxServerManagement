@@ -65,7 +65,7 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 The instances ```bustergraafinen``` and ```ubuntussh``` are now working correctly, as well as the network ```pekanverkko```
 
 
-# Remote connections to bustergraafinen and ubuntussh
+# Remote connections to ```bustergraafinen``` and ```ubuntussh```
 
 First, we will establish a remote desktop connection to the RDP  instance ```bustergraafinen``` using the following steps
 
