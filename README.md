@@ -997,7 +997,7 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
 
-# Initializing three more instances in Rovius CP (Work in progress) < Write!
+# Initializing three more instances in Rovius CP (Work in progress) < Cleanup!
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1040,10 +1040,11 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 5. Press ```Next```
 6. Choose previously made ```pekanverkko``` under ```Networks``` and press ```Next```
 7. Press ```Next```
-8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
+8. Change ```Name``` to ```ubuntuminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 
-# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
+
+# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < `Write!`
 
 
 # Changing the hostname permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
