@@ -961,11 +961,11 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
-# Installing Geany on Buster (Work in progress) < Cleanup!
+# Installing Geany IDE on Buster
 
-Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany text editor on ```bustergraafinen```
+Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany IDE (Integrated Development Environment) on ```bustergraafinen```
 
-Open ```bustergraafinen``` terminal and configure PPA (Personal Package Archive) of Geany to your system
+Open ```bustergraafinen``` terminal and configure PPA (Personal Package Archive) of Geany IDE to your system
 
 ```
 sudo add-apt-repository ppa:geany-dev/ppa
@@ -977,13 +977,13 @@ Update the package lists
 sudo apt-get update
 ```
 
-Install Geany
+Install Geany IDE
 
 ```
 sudo apt-get install geany geany-plugins-common
 ```
 
-Geany is now installed on ```bustergraafinen```
+Geany IDE is now installed on ```bustergraafinen```
 
 
 # Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress) < Write!
