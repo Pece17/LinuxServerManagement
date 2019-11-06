@@ -1264,9 +1264,9 @@ sudo reboot
 http://repo.saltstack.com/
 
 
-Connecting to minionubuntu
+Connecting to ubuntuminion
 
-ssh -l oppilas 10.208.0.161
+ssh -l oppilas 10.208.0.43
 
 sudo apt-get upgrade
 
