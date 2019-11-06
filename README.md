@@ -1044,7 +1044,7 @@ Configure the following settings for the fifth instance that will be a Salt Mini
 # Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
 
 
-# Changing hostnames permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
+# Changing the hostname permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
 
 Connecting to ubuntumaster
 
@@ -1126,7 +1126,7 @@ sudo reboot
 http://repo.saltstack.com/
 
 
-# Installing Salt on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
+# Bootstrapping Salt Master on Ubuntu Master, and Salt Minion on CentOS Minion and Ubuntu Minion (Work in progress) < Write!
 
 
 # Taking a snapshot with Rovious CP (Work in progress) < Write!
