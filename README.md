@@ -963,7 +963,7 @@ Portainer is now installed on ```bustergraafinen```
 
 # Installing Geany on Buster (Work in progress) < Cleanup!
 
-Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany on ```bustergraafinen```
+Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany text editor on ```bustergraafinen```
 
 Open ```bustergraafinen``` terminal and configure PPA (Personal Package Archive) of Geany to your system
 
