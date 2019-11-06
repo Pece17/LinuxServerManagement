@@ -1044,7 +1044,7 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 
 
 
-# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < `Write!`
+# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < ```Write!```
 
 
 # Changing the hostname permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
