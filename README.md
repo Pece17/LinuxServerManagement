@@ -997,17 +997,19 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
 
-# Creating three more instances in Rovius CP (Work in progress) < Write!
+# Initializing three more instances in Rovius CP (Work in progress) < Write!
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
 Type your ```Username```, ```Password```, and ```Domain```, after which press ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
 
-Change ```Project``` to ```ICT4TN 022-3006``` from upper left corner
+Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
+
+We previously created two instances called ```bustergraafinen``` and ```ubuntussh```, but now we have to create three more instances called ?, ?, and ?
 
 Navigate to ```Instances``` and press ```Add Instance```
 
-Configure the following settings for the third instance that will be a Salt Master Linux workstation that is running Ubuntu 18.04 ? operating system
+Configure the following settings for the third instance that will be an Ubuntu Salt Master that is running Ubuntu 14.04 operating system
 
 1. Choose ```HH01```, ```Template```, and press ```Next```
 2. Choose ```UBUsrvSaltMaster1AH``` and press ```Next```
@@ -1018,7 +1020,7 @@ Configure the following settings for the third instance that will be a Salt Mast
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntumaster```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Configure the following settings for the fourth instance that will be a Salt Minion Linux workstation that is running CentOS operating system
+Configure the following settings for the fourth instance that will be a CentOS Salt Minion that is running CentOS 7.2 operating system
 
 1. Choose ```HH01```, ```Template```, and press ```Next```
 2. Choose ```CENTOS7cloudSaltMinidb1dsk1AH``` and press ```Next```
@@ -1029,7 +1031,7 @@ Configure the following settings for the fourth instance that will be a Salt Min
 7. Press ```Next```
 8. Change ```Name``` to ```centosminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
-Configure the following settings for the fifth instance that will be a Salt Minion Linux workstation that is running Ubuntu 18.04 ? operating system
+Configure the following settings for the fifth instance that will be an Ubuntu Salt Minion that is running Ubuntu 14.04 operating system
 
 1. Choose ```HH01```, ```Template```, and press ```Next```
 2. Choose ```UBUsrvSaltMaster1AH``` and press ```Next```
