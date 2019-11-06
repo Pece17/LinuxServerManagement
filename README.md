@@ -647,7 +647,7 @@ WordPress is now installed on ```ubuntussh```
 
 
 
-# Configuring SSH key-based authentication on `bustergraafinen` ```ubuntussh``` (Work in progress < Cleanup!)
+# Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
