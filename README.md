@@ -164,7 +164,7 @@ sudo reboot
 The hostname is now changed permanently on ```ubuntussh```
 
 
-# Installing Salt Minion on Ubuntu
+# Installing Salt Minion on ```ubuntussh```
 
 Navigate to address http://10.207.5.78/ to view the instructions for installing Salt Minion on ```ubuntussh```
 
@@ -201,7 +201,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing LAMP on Ubuntu (Work in progress) < Cleanup!
+# Installing LAMP on ```ubuntussh``` (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -353,7 +353,7 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-# Installing WordPress on Ubuntu (Work in progress) < Cleanup!
+# Installing WordPress on ```ubuntussh``` (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -583,7 +583,7 @@ Log Out
 WordPress is now installed on ```ubuntussh```
 
 
-# Configuring SSH key-based authentication on Ubuntu (Work in progress) < Cleanup!
+# Configuring SSH key-based authentication on ```ubuntussh``` (Work in progress) < Cleanup!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -656,12 +656,12 @@ ssh -I oppilas -p 1001 10.207.5.193
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
 
-# Installing and securing phpMyAdmin on Ubuntu (Work in progress) < Optional!
+# Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress) < Optional!
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
 
 
-# Installing Docker on Buster
+# Installing Docker on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
@@ -779,7 +779,7 @@ exit
 Docker is now installed and tested on ```bustergraafinen```
 
 
-# Installing Docker Compose on Buster
+# Installing Docker Compose on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/ to view the instructions for installing latest Docker Compose on ```bustergraafinen```
 
@@ -913,7 +913,7 @@ rm -r index.html
 Docker Compose is now installed and tested on ```bustergraafinen```
 
 
-# Installing Portainer on Buster
+# Installing Portainer on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
 
@@ -969,7 +969,7 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
-# Installing Geany IDE on Buster
+# Installing Geany IDE on ```bustergraafinen```
 
 Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany IDE (Integrated Development Environment) on ```bustergraafinen```
 
@@ -994,7 +994,7 @@ sudo apt-get install geany geany-plugins-common
 Geany IDE is now installed on ```bustergraafinen```
 
 
-# Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress) < Write!
+# Pulling Harri's ready to run Salt Master and Minion container on ```bustergraafinen``` (Work in progress) < Write!
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
 
@@ -1053,10 +1053,10 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now working correctly
 
 
-# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < ```Write!```
+# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress) < ```Write!```
 
 
-# Changing the hostname permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
+# Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress) < Write!
 
 Connecting to ubuntumaster
 
@@ -1138,7 +1138,7 @@ sudo reboot
 http://repo.saltstack.com/
 
 
-# Bootstrapping Salt Master on Ubuntu Master, and Salt Minion on CentOS Minion and Ubuntu Minion (Work in progress) < Write!
+# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress) < Write!
 
 
-# Taking a snapshot with Rovious CP (Work in progress) < Write!
+# Taking a VM Snapshot in Rovious CP (Work in progress) < Write!
