@@ -997,7 +997,7 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
 
-# Initializing three more instances in Rovius CP Salt MasterCreatingBootstrapping Salt Master instance (Work in progress) < Write!
+# Creating three more instances in Rovius CP (Work in progress) < Write!
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1041,9 +1041,10 @@ Configure the following settings for the fifth instance that will be a Salt Mini
 8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 
-# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion
+# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
 
-# 
+
+# Changing hostnames permanently on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
 
 Connecting to ubuntumaster
 
@@ -1123,6 +1124,9 @@ sudo nano /etc/hosts
 sudo reboot
 
 http://repo.saltstack.com/
+
+
+# Installing Salt on Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < Write!
 
 
 # Taking a snapshot with Rovious CP (Work in progress) < Write!
