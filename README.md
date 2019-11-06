@@ -104,7 +104,7 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 
 - Open ```PuTTY``` application and select ```Session```
 - Enter ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
-- Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password```, after which the terminal to ```ubuntussh``` should open
+- Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password:``` prompt, after which the terminal to ```ubuntussh``` should open
 
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
