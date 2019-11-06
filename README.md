@@ -101,7 +101,7 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
 
-# Changing the hostname permanently on Ubuntu
+# Changing the hostname permanently on ```ubuntussh```
 
 Navigate to address http://10.207.5.78/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
