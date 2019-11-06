@@ -1239,9 +1239,6 @@ http://repo.saltstack.com/
 Bootstrap - multiplatform
 
 
-
-
-
 Connecting to centosminion
 
 ssh -l root 10.208.0.55
@@ -1265,8 +1262,6 @@ sudo nano /etc/hosts
 sudo reboot
 
 http://repo.saltstack.com/
-
-
 
 
 Connecting to minionubuntu
