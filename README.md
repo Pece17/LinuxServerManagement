@@ -67,21 +67,29 @@ The instances ```bustergraafinen``` and ```ubuntussh``` are now working correctl
 
 # Remote connections to ```bustergraafinen``` and ```ubuntussh```
 
-First, we will establish a remote desktop connection to the RDP  instance ```bustergraafinen``` using the following steps
+First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
 
 - Open ```Remote Desktop Connection``` application and press ```Show Options```
 - Type ```10.207.5.193:1003``` to ```Computer:``` and press ```Connect```
 - A warning prompt will pop up for which you need to press ```Yes```
 - In the login window, keep ```Session``` as ```Xorg```, enter ```oppilas``` for ```username```, enter ```salainen``` for ```password```, and press ```OK```
 
+https://www.technipages.com/unable-to-copy-and-paste-to-remote-desktop-session
+
 Next, we will establish an SSH connection to the Ubuntu server instance ```ubuntussh``` using the terminal in ```bustergraafinen```
 
 Open the terminal with ```Ctrl + Alt + T```
 
+Check help for SSH syntax
+
+```
+ssh --help
+```
+
 Establish an SSH connection to ```ubuntussh```
 
 ```
-ssh -I oppilas -p 1001 10.207.5.193
+ssh -l oppilas -p 1001 10.207.5.193
 ```
 
 After giving the correct password, you should be in ```ubuntussh``` terminal
@@ -95,8 +103,8 @@ exit
 Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubuntussh``` using the following steps
 
 - Open ```PuTTY``` application and select ```Session```
-- Type ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
-- Type ```oppilas``` in ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password```, after which the terminal to ```ubuntussh``` should unlock
+- Enter ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
+- Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password```, after which the terminal to ```ubuntussh``` should open
 
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
