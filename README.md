@@ -1133,7 +1133,7 @@ Type your ```Username```, ```Password```, and ```Domain```, after which press ``
 
 Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
 
-We previously created two instances called ```bustergraafinen``` and ```ubuntussh```, but now we have to create three more instances called ?, ?, and ?
+We previously created two instances called ```bustergraafinen``` and ```ubuntussh```, but now we have to create three more instances called ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` - this brings the total amount of instances to five
 
 Navigate to ```Instances``` and press ```Add Instance```
 
@@ -1306,4 +1306,4 @@ http://repo.saltstack.com/
 
 
 
-# Taking VM Snapshots in Rovious CP (Work in progress < Write!)
+# Taking VM Snapshots in Rovius CP (Work in progress < Write!)
