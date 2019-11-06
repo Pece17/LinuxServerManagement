@@ -1295,7 +1295,7 @@ http://repo.saltstack.com/
 
 
 
-# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress) < Write!
+# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Write!)
 
 
 
