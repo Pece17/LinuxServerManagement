@@ -201,7 +201,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# Installing LAMP on ```ubuntussh``` (Work in progress) < Cleanup!
+# Installing LAMP on ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -353,7 +353,7 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-# Installing WordPress on ```ubuntussh``` (Work in progress) < Cleanup!
+# Installing WordPress on ```ubuntussh``` (Work in progress < Cleanup!) 
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -583,7 +583,7 @@ Log Out
 WordPress is now installed on ```ubuntussh```
 
 
-# Configuring SSH key-based authentication on ```ubuntussh``` (Work in progress) < Cleanup!
+# Configuring SSH key-based authentication on `bustergraafinen` ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -656,7 +656,7 @@ ssh -I oppilas -p 1001 10.207.5.193
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
 
-# Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress) < Optional!
+# Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress < Optional!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
 
@@ -994,7 +994,7 @@ sudo apt-get install geany geany-plugins-common
 Geany IDE is now installed on ```bustergraafinen```
 
 
-# Pulling Harri's ready to run Salt Master and Minion container on ```bustergraafinen``` (Work in progress) < Write!
+# Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress < Write!)
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
 
@@ -1005,7 +1005,7 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
 
-# Initializing three more instances in Rovius CP (Work in progress) < Cleanup!
+# Initializing three more instances in Rovius CP (Work in progress < Cleanup!)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1053,7 +1053,25 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now working correctly
 
 
-# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress) < ```Write!```
+# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Write!)
+
+Connecting to ```ubuntumaster``` from ```bustergraafinen``` terminal
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Connecting to ```centosminion``` from ```bustergraafinen``` terminal
+
+```
+ssh -l root 10.208.0.55
+```
+
+Connecting to ```ubuntuminion``` from ```bustergraafinen``` terminal
+
+```
+ssh -l oppilas 10.208.0.43
+```
 
 
 # Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress) < Write!
