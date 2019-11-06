@@ -1042,6 +1042,7 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntuminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
+The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now working correctly
 
 
 # Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion (Work in progress) < ```Write!```
