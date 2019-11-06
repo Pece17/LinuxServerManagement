@@ -963,7 +963,7 @@ Portainer is now installed on ```bustergraafinen```
 
 # Installing Geany on Buster (Work in progress) < Cleanup!
 
-https://tecadmin.net/install-geany-ide-ubuntu/
+Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany on ```bustergraafinen```
 
 sudo add-apt-repository ppa:geany-dev/ppa
 
@@ -971,6 +971,7 @@ sudo apt-get update
 
 sudo apt-get install geany geany-plugins-common
 
+Geany is now installed on ```bustergraafinen```
 
 # Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress) < Write!
 
@@ -983,12 +984,7 @@ docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
 
-# Taking a snapshot with Rovious CP (Work in progress) < Write!
-
-
-# Bootstrapping Salt Master instance (Work in progress) < Write!
-
-http://repo.saltstack.com/
+# Initializing three more instances in Rovius CP Salt MasterCreatingBootstrapping Salt Master instance (Work in progress) < Write!
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1032,8 +1028,9 @@ Configure the following settings for the fifth instance that will be a Salt Mini
 8. Change ```Name``` to ```minionubuntu```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
 
+# Remote connections to Ubuntu Master, CentOS Minion, and Ubuntu Minion
 
-
+# 
 
 Connecting to ubuntumaster
 
@@ -1114,3 +1111,5 @@ sudo reboot
 
 http://repo.saltstack.com/
 
+
+# Taking a snapshot with Rovious CP (Work in progress) < Write!
