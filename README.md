@@ -101,7 +101,7 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
 
-# Changing the hostname permanently on ```ubuntussh```
+# Changing the hostname permanently on Ubuntu
 
 Navigate to address http://10.207.5.78/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
@@ -965,13 +965,26 @@ Portainer is now installed on ```bustergraafinen```
 
 Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany on ```bustergraafinen```
 
+Open ```bustergraafinen``` terminal and configure PPA (Personal Package Archive) of Geany to your system
+
+```
 sudo add-apt-repository ppa:geany-dev/ppa
+```
 
+Update the package lists
+
+```
 sudo apt-get update
+```
 
+Install Geany
+
+```
 sudo apt-get install geany geany-plugins-common
+```
 
 Geany is now installed on ```bustergraafinen```
+
 
 # Pulling Harri's ready to run Salt Master and Minion container on Buster (Work in progress) < Write!
 
