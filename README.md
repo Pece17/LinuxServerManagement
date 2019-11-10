@@ -1450,6 +1450,19 @@ Proceed? [n/Y] y
 Key for minion centosminion accepted.
 ```
 
+Send a message to all the minions and tell them to return ```True``` to check which minions are alive
+
+```
+sudo salt '*' test.ping
+```
+
+```
+myminion:
+    True
+centosminion:
+    True
+```
+
 
 
 Connect to centosminion
