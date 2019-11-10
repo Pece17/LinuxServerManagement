@@ -1389,6 +1389,22 @@ sudo service salt-minion restart
 
 sudo service salt-master restart
 
+sudo salt-key -f myminion
+
+sudo salt-call --local key.finger
+
+sudo salt-key -L
+
+sudo salt-key -A
+
+```
+Proceed? [n/Y] y
+```
+
+sudo salt-key
+
+sudo salt '*' test.ping
+
 
 Connect to centosminion
 
