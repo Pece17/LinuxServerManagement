@@ -1210,17 +1210,17 @@ ssh -l oppilas 10.208.0.43
 
 
 
-# Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Write!)
+# Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
 
-Connecting to ubuntumaster
+Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
+
+Connect to ubuntumaster
 
 ssh -l oppilas 10.208.0.56
 
 df -h
 
 sudo apt-get upgrade
-
-https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
 
 Change hostname
 
@@ -1230,7 +1230,7 @@ hostname
 
 sudo nano /etc/hosts
 
-127.0.1.1 ubuntumaster
+Add 127.0.1.1 ubuntumaster
 
 ```
 127.0.0.1 localhost
@@ -1253,8 +1253,6 @@ ssh -l root 10.208.0.55
 
 yum upgrade
 
-https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
-
 Change hostname
 
 sudo hostnamectl set-hostname centosminion
@@ -1265,9 +1263,20 @@ yum install nano
 
 sudo nano /etc/hosts
 
+Add 127.0.1.1 centosminion
+
+```
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
 127.0.1.1 centosminion
+```
 
 sudo reboot
+
+ssh -l root 10.208.0.55
+
+ping 127.0.1.1
 
 
 Connecting to ubuntuminion
@@ -1276,19 +1285,31 @@ ssh -l oppilas 10.208.0.43
 
 sudo apt-get upgrade
 
-https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/
-
 Change hostname
 
-sudo hostnamectl set-hostname minionubuntu
+sudo hostnamectl set-hostname ubuntuminion
 
 hostname
 
 sudo nano /etc/hosts
 
-127.0.1.1 minionubuntu
+Add 127.0.1.1 ubuntuminion
+
+```
+127.0.0.1 localhost
+127.0.1.1 ubuntuminion    
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
 
 sudo reboot
+
+The hostname is now changed permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
 
@@ -1300,6 +1321,8 @@ sudo reboot
 
 
 # Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Write!)
+
+Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
 Connect to ubuntumaster
 
