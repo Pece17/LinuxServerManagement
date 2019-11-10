@@ -1330,8 +1330,6 @@ Connect to ubuntumaster
 
 ssh -l oppilas 10.208.0.56
 
-http://repo.saltstack.com/
-
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P -M
@@ -1340,7 +1338,7 @@ sudo salt --versions-report
 
 sudo nano /etc/salt/minion
 
-Edit ```master: localhost```
+Change ```master: salt``` to ```master: localhost``` and remove the hashtag
 
 ```
 ##### Primary configuration settings #####
@@ -1364,7 +1362,7 @@ master: localhost
 #proxy_host:
 ```
 
-Edit ```id: myminion```
+Change ```id:``` to ```id: myminion``` and remove the hashtag
 
 ```
 # The directory to store the pki information in
@@ -1419,9 +1417,13 @@ sudo salt '*' sys.list_functions sys
 
 sudo salt '*' grains.get os
 
-ip add
+Find out the IP address of ```ubuntumaster```
 
-After installing Salt-Minion to ```centosminion```, accept it on ```ubuntumaster```
+```
+ip address
+```
+
+After installing Salt-Minion to ```centosminion```, accept it on ```ubuntumaster``` with the following commands
 
 List all public keys
 
@@ -1434,6 +1436,8 @@ Accept all pending keys
 ```
 sudo salt-key -A
 ```
+
+Enter ```y```
 
 ```
 The following keys are going to be accepted:
@@ -1450,9 +1454,9 @@ Key for minion centosminion accepted.
 
 Connect to centosminion
 
+```
 ssh -l root 10.208.0.55
-
-http://repo.saltstack.com/
+```
 
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
@@ -1460,7 +1464,7 @@ sudo sh install_salt.sh -P
 
 sudo nano /etc/salt/minion ? < I'm not sure
 
-Uncomment ```master: salt``` ? < I'm not sure
+Remove hashtag from ```master: salt``` ? < I'm not sure
 
 ```
 ##### Primary configuration settings #####
