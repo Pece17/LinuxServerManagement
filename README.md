@@ -1336,6 +1336,59 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P -M
 
+sudo salt --versions-report
+
+sudo nano /etc/salt/minion
+
+Edit ```master: localhost```
+
+```
+##### Primary configuration settings #####
+##########################################
+# This configuration file is used to manage the behavior of the Salt Minion.
+# With the exception of the location of the Salt Master Server, values that are
+# commented out but have an empty line after the comment are defaults that need
+# not be set in the config. If there is no blank line after the comment, the
+# value is presented as an example and is not the default.
+
+# Per default the minion will automatically include all config files
+# from minion.d/*.conf (minion.d is a directory in the same directory
+# as the main minion config file).
+#default_include: minion.d/*.conf
+
+# Set the location of the salt master server. If the master server cannot be
+# resolved, then the minion will fail to start.
+master: localhost
+
+# Set http proxy information for the minion when doing requests
+#proxy_host:
+```
+
+Edit ```id: myminion```
+
+```
+# The directory to store the pki information in
+#pki_dir: /etc/salt/pki/minion
+
+# Explicitly declare the id for this minion to use, if left commented the id
+# will be the hostname as returned by the python call: socket.getfqdn()
+# Since salt uses detached ids it is possible to run multiple minions on the
+# same machine but with different ids, this can be useful for salt compute
+# clusters.
+id: myminion
+
+# Cache the minion id to a file when the minion's id is not statically defined
+# in the minion config. Defaults to "True". This setting prevents potential
+# problems when automatic minion id resolution changes, which can cause the
+# minion to lose connection with the master. To turn off minion id caching,
+# set this config to ``False``.
+#minion_id_caching: True
+```
+
+sudo service salt-minion restart
+
+sudo service salt-master restart
+
 
 Connect to centosminion
 
