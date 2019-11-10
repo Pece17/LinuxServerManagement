@@ -1421,6 +1421,30 @@ sudo salt '*' grains.get os
 
 ip add
 
+After installing Salt-Minion to ```centosminion```, accept it on ```ubuntumaster```
+
+List all public keys
+
+```
+sudo salt-key -L
+```
+
+Accept all pending keys
+
+```
+sudo salt-key -A
+```
+
+```
+The following keys are going to be accepted:
+Unaccepted Keys:
+centosminion
+Proceed? [n/Y] y
+```
+
+```
+Key for minion centosminion accepted.
+```
 
 
 
@@ -1434,7 +1458,46 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P
 
-sudo nano /etc/salt/minion
+sudo nano /etc/salt/minion ? < I'm not sure
+
+Uncomment ```master: salt``` ? < I'm not sure
+
+```
+##### Primary configuration settings #####
+##########################################
+# This configuration file is used to manage the behavior of the Salt Minion.
+# With the exception of the location of the Salt Master Server, values that are
+# commented out but have an empty line after the comment are defaults that need
+# not be set in the config. If there is no blank line after the comment, the
+# value is presented as an example and is not the default.
+
+# Per default the minion will automatically include all config files
+# from minion.d/*.conf (minion.d is a directory in the same directory
+# as the main minion config file).
+#default_include: minion.d/*.conf
+
+# Set the location of the salt master server. If the master server cannot be
+# resolved, then the minion will fail to start.
+master: salt
+
+# Set http proxy information for the minion when doing requests
+#proxy_host:
+```
+
+sudo nano /etc/hosts ? < I'm not sure
+
+Add ```10.208.0.56 salt``` ? < I'm not sure
+
+```
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+127.0.1.1 centosminion
+
+10.208.0.56 salt
+```
+
+sudo systemctl restart salt-minion
 
 
 
