@@ -1405,6 +1405,21 @@ sudo salt-key
 
 sudo salt '*' test.ping
 
+sudo salt 'myminion' sys.list_functions test
+
+sudo salt '*' test.fib
+
+sudo salt '*' sys.doc test.fib
+
+sudo salt '*' test.fib 30
+
+sudo salt '*' sys.doc test
+
+sudo salt '*' sys.list_functions sys
+
+
+
+
 
 Connect to centosminion
 
