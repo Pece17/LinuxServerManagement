@@ -1417,6 +1417,8 @@ sudo salt '*' sys.doc test
 
 sudo salt '*' sys.list_functions sys
 
+sudo salt '*' grains.get os
+
 
 
 
