@@ -1401,7 +1401,11 @@ Proceed? [n/Y] y
 
 sudo salt-key
 
+Send a message to all the minions and tell them to return ```True``` to check which minions are alive
+
+```
 sudo salt '*' test.ping
+```
 
 sudo salt 'myminion' sys.list_functions test
 
