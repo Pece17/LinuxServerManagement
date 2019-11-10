@@ -1419,6 +1419,7 @@ sudo salt '*' sys.list_functions sys
 
 sudo salt '*' grains.get os
 
+ip add
 
 
 
@@ -1432,6 +1433,10 @@ http://repo.saltstack.com/
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P
+
+sudo nano /etc/salt/minion
+
+
 
 
 Connect to ubuntuminion
