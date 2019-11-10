@@ -1247,7 +1247,7 @@ ff02::2 ip6-allrouters
 sudo reboot
 
 
-Connecting to centosminion
+Connect to centosminion
 
 ssh -l root 10.208.0.55
 
@@ -1278,8 +1278,10 @@ ssh -l root 10.208.0.55
 
 ping 127.0.1.1
 
+ping centosminion
 
-Connecting to ubuntuminion
+
+Connect to ubuntuminion
 
 ssh -l oppilas 10.208.0.43
 
@@ -1330,6 +1332,10 @@ ssh -l oppilas 10.208.0.56
 
 http://repo.saltstack.com/
 
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+
+sudo sh install_salt.sh -P -M
+
 
 Connect to centosminion
 
@@ -1337,12 +1343,28 @@ ssh -l root 10.208.0.55
 
 http://repo.saltstack.com/
 
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+
+sudo sh install_salt.sh -P
+
 
 Connect to ubuntuminion
 
 ssh -l oppilas 10.208.0.43
 
 http://repo.saltstack.com/
+
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+
+sudo sh install_salt.sh -P
+
+
+
+
+
+
+
+
 
 
 # Taking VM Snapshots in Rovius CP (Work in progress < Write!)
