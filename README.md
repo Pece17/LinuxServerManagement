@@ -1322,7 +1322,7 @@ The hostname is now changed permanently on ```ubuntumaster```, ```centosminion``
 
 
 
-# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Write!)
+# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Write More!)
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
@@ -1542,4 +1542,16 @@ sudo sh install_salt.sh -P
 
 
 
-# Taking VM Snapshots in Rovius CP (Work in progress < Write!)
+# Taking VM Snapshots in Rovius CP (Work in progress < Cleanup!)
+
+Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
+
+Enter your ```Username``` > ```Password``` > ```Domain``` > press ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
+
+Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
+
+Go to ```Instances``` > checkmark all five instances > ```Take VM Snapshot(s)```
+
+Enter ```Name:``` > ```Description:``` > checkmark ```Snapshot memory:``` ? > press ```OK```
+
+VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
