@@ -1612,6 +1612,6 @@ Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper lef
 9. Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
 10. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
-Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` > ```View Snapshots``` > check that VM Snapshots have been created for the respective instances
+Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` respectively > ```View Snapshots``` > check that VM Snapshots have been created for the respective instances
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
