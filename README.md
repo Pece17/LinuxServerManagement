@@ -437,7 +437,7 @@ Navigate inside ```/var/www/ubuntussh/index.html``` file for editing
 nano /var/www/ubuntussh/index.html
 ```
 
-Copy the following text inside the ```index.html``` file
+Copy the following text inside the ```/var/www/ubuntussh/index.html``` file
 
 ```
 <html>
@@ -451,7 +451,13 @@ Copy the following text inside the ```index.html``` file
 </html>
 ```
 
+Navigate inside ```/etc/apache2/sites-available/ubuntussh.conf``` file for editing
+
+```
 sudo nano /etc/apache2/sites-available/ubuntussh.conf
+```
+
+Copy the following text inside the ```/etc/apache2/sites-available/ubuntussh.conf``` file
 
 ```
 <VirtualHost *:80>
@@ -464,17 +470,31 @@ sudo nano /etc/apache2/sites-available/ubuntussh.conf
 </VirtualHost>
 ```
 
+```
 sudo a2ensite ubuntussh.conf
+```
 
+```
 sudo a2dissite 000-default.conf
+```
 
+```
 sudo apache2ctl configtest
+```
 
+```
 sudo systemctl restart apache2
+```
 
 Go to address http://ubuntussh/
 
+Navigate inside ```/var/www/ubuntussh/info.php``` file for editing
+
+```
 sudo nano /var/www/ubuntussh/info.php
+```
+
+Copy the following text inside the ```/var/www/ubuntussh/info.php``` file
 
 ```
 <?php
@@ -484,7 +504,9 @@ phpinfo();
 
 Go to address http://ubuntussh/info.php
 
+```
 sudo rm /var/www/ubuntussh/info.php
+```
 
 LAMP is now installed on ```ubuntussh```
 
