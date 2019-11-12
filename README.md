@@ -1463,12 +1463,19 @@ sudo salt '*' test.ping
 ```
 
 ```
+ubuntuminion:
+    True
 myminion:
     True
 centosminion:
     True
 ```
 
+Add user
+
+```
+sudo salt '*' user.add pekka shell=/bin/bash
+```
 
 
 Connect to centosminion
