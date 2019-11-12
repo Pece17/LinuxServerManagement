@@ -64,7 +64,7 @@ Navigate to ```Network```, choose ```pekanverkko```, press ```Egress rules```, a
 - Leave ```Start Port``` and ```End Port``` empty
 - Press ```Add```
 
-Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```10.207.5.193 [Source NAT]```, press ```Configuration```, choose ```Firewall```, and configure the following parameters
+Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```x.x.x.x [Source NAT]```, press ```Configuration```, choose ```Firewall```, and configure the following parameters
 
 - Add address ```0.0.0.0/0``` to ```Source CIDR```
 - Change ```Protocol``` to ```TCP```
@@ -113,7 +113,7 @@ ssh --help
 Establish an SSH connection to ```ubuntussh```
 
 ```
-ssh -l oppilas -p 1001 10.207.5.193
+ssh -l oppilas 10.208.0.83
 ```
 
 After giving the correct password, you should be in ```ubuntussh``` terminal
@@ -127,8 +127,8 @@ exit
 Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubuntussh``` using the following steps
 
 - Open ```PuTTY``` application and select ```Session```
-- Enter ```10.207.5.193``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
-- Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@10.207.5.193's password:``` prompt, after which the terminal to ```ubuntussh``` should open
+- Enter ```x.x.x.x``` to ```Host Name (or IP address)``` and ```1001``` to ```Port```, after which press ```Open```
+- Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@x.x.x.x's password:``` prompt, after which the terminal to ```ubuntussh``` should open
 
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
 
@@ -148,7 +148,7 @@ Navigate to address http://10.207.5.78/ first and then open the link from there 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
 ```
-ssh -I oppilas -p 1001 10.207.5.193
+ssh -l oppilas 10.208.0.83
 ```
 
 Replace the old hostname ```saltminionweb1``` with ```salt_hamalainen``` - the new hostname is derived from your surname, but remember to replace all Scandinavian letters with English letters
@@ -211,7 +211,7 @@ Navigate to address http://10.207.5.78/ to view the instructions for installing 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
 ```
-ssh -I oppilas -p 1001 10.207.5.193
+ssh -l oppilas 10.208.0.83
 ```
 
 Install Salt Minion
