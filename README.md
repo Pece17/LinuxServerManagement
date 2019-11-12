@@ -1597,8 +1597,10 @@ Enter your ```Username``` > ```Password``` > ```Domain``` > press ```Login``` - 
 
 Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
 
-Go to ```Instances``` > checkmark all five instances > ```Take VM Snapshot(s)```
+Go to ```Instances``` > checkmark ONE instance > ```Take VM Snapshot(s)```
 
 Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+Repeat for four other instances
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
