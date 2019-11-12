@@ -1603,12 +1603,12 @@ Enter your ```Username``` > ```Password``` > ```Domain``` > press ```Login``` - 
 
 Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
 
-Take VM Snapshot from ```bustergraafinen```
+1. Take VM Snapshot from ```bustergraafinen```
 
 - Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
 - Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
-Take VM Snapshot from ```ubuntussh```
+2. Take VM Snapshot from ```ubuntussh```
 
 - Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
 - Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
