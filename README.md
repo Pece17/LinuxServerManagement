@@ -1516,7 +1516,6 @@ Add ```10.208.0.56 salt``` ? < I'm not sure
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 
 127.0.1.1 centosminion
-
 10.208.0.56 salt
 ```
 
