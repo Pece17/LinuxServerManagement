@@ -1176,6 +1176,8 @@ Configure the following settings for the fifth instance that will be an Ubuntu S
 7. Press ```Next```
 8. Change ```Name``` to ```ubuntuminion```, choose ```Standard (US) keyboard```, and press ```Launch VM```
 
+Lastly, navigate to ```Network``` > ```pekanverkko``` > ```View IP Addresses``` > ```x.x.x.x [Source NAT]``` > ```Configuration``` > ```Port Forwarding``` > configure the following parameters for three different ports
+
 The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now working correctly
 
 
