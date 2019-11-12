@@ -1270,26 +1270,53 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
+Reboot the system
+
+```
 sudo reboot
+```
 
 
-Connect to centosminion
 
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```centosminion```
+
+```
 ssh -l root 10.208.0.55
+```
 
+Install available upgrades for all packages currently installed
+
+```
 yum upgrade
+```
 
-Change hostname
 
+Replace the old hostname with ```centosminion```
+
+```
 sudo hostnamectl set-hostname centosminion
+```
 
+Check the new hostname
+
+```
 hostname
+```
 
+Install GNU (GNU’s Not Unix) nano tex editor
+
+```
 yum install nano
+```
 
+Navigate inside ```/etc/hosts``` file for editing
+
+```
 sudo nano /etc/hosts
+```
 
-Add 127.0.1.1 centosminion
+Add new line ```127.0.1.1 centosminion``` inside the file
 
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
@@ -1298,9 +1325,16 @@ Add 127.0.1.1 centosminion
 127.0.1.1 centosminion
 ```
 
-sudo reboot
+Reboot the system
 
+```
+sudo reboot
+```
+
+
+```
 ssh -l root 10.208.0.55
+```
 
 ping 127.0.1.1
 
