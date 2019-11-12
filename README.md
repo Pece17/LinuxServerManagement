@@ -1605,28 +1605,28 @@ Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper lef
 
 Take VM Snapshot from ```bustergraafinen```
 
-1. Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
-2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
+- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 Take VM Snapshot from ```ubuntussh```
 
-1. Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
-2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
+- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 Take VM Snapshot from ```ubuntumaster```
 
-1. Go to ```Instances``` > ```ubuntumaster``` > ```Take VM Snapshot```
-2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Go to ```Instances``` > ```ubuntumaster``` > ```Take VM Snapshot```
+- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 Take VM Snapshot from ```centosminion```
 
-1. Go to ```Instances``` > ```centosminion``` > ```Take VM Snapshot```
-2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Go to ```Instances``` > ```centosminion``` > ```Take VM Snapshot```
+- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 Take VM Snapshot from ```ubuntuminion```
 
-1. Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
-2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
+- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` respectively > ```View Snapshots``` > check that the VM Snapshots have been created for the respective instances
 
