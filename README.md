@@ -1599,35 +1599,35 @@ sudo systemctl restart salt-minion
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
-Enter your ```Username``` > ```Password``` > ```Domain``` > press ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
+Enter your ```Username``` > ```Password``` > ```Domain``` > ```Login``` - ```Username``` and ```Password``` are the same as in your student ID, and ```Domain``` is ```ITLAB```
 
 Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper left corner
 
 Take VM Snapshot from ```bustergraafinen```
 
 - Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
-- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Enter ```Name:``` > ```Description:``` > uncheck ```Snapshot memory:``` > ```OK```
 
 Take VM Snapshot from ```ubuntussh```
 
 - Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
-- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Enter ```Name:``` > ```Description:``` > uncheck ```Snapshot memory:``` > ```OK```
 
 Take VM Snapshot from ```ubuntumaster```
 
 - Go to ```Instances``` > ```ubuntumaster``` > ```Take VM Snapshot```
-- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Enter ```Name:``` > ```Description:``` > uncheck ```Snapshot memory:``` > ```OK```
 
 Take VM Snapshot from ```centosminion```
 
 - Go to ```Instances``` > ```centosminion``` > ```Take VM Snapshot```
-- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Enter ```Name:``` > ```Description:``` > uncheck ```Snapshot memory:``` > ```OK```
 
 Take VM Snapshot from ```ubuntuminion```
 
 - Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
-- Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+- Enter ```Name:``` > ```Description:``` > uncheck ```Snapshot memory:``` > ```OK```
 
-Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` respectively > ```View Snapshots``` > check that the VM Snapshots have been created for the respective instances
+Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` respectively > ```View Snapshots``` > check that VM Snapshots have been taken for the respective instances
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
