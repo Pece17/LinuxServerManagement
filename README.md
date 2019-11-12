@@ -1429,7 +1429,7 @@ Find out the IP address of ```ubuntumaster```
 ip address
 ```
 
-After installing Salt-Minion to ```centosminion```, accept it on ```ubuntumaster``` with the following commands
+After installing Salt-Minion to ```centosminion``` and ```ubuntuminion```, accept it on ```ubuntumaster``` with the following commands
 
 List all public keys
 
@@ -1535,7 +1535,46 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P
 
-Konffaa vielä ubuntuun salt centostyyliin
+sudo nano /etc/salt/minion
+
+```
+##### Primary configuration settings #####
+##########################################
+# This configuration file is used to manage the behavior of the Salt Minion.
+# With the exception of the location of the Salt Master Server, values that are
+# commented out but have an empty line after the comment are defaults that need
+# not be set in the config. If there is no blank line after the comment, the
+# value is presented as an example and is not the default.
+
+# Per default the minion will automatically include all config files
+# from minion.d/*.conf (minion.d is a directory in the same directory
+# as the main minion config file).
+#default_include: minion.d/*.conf
+
+# Set the location of the salt master server. If the master server cannot be
+# resolved, then the minion will fail to start.
+master: salt
+
+# Set http proxy information for the minion when doing requests
+#proxy_host:
+```
+
+sudo nano /etc/hosts
+
+```
+127.0.0.1 localhost
+127.0.1.1 ubuntuminion
+10.208.0.56 salt
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
+
+sudo systemctl restart salt-minion
 
 
 
