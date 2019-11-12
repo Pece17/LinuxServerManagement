@@ -1403,9 +1403,13 @@ id: myminion
 #minion_id_caching: True
 ```
 
+Restart Salt Minion
+
 ```
 sudo service salt-minion restart
 ```
+
+Restart Salt Master
 
 ```
 sudo service salt-master restart
@@ -1483,9 +1487,6 @@ Exit back to ```bustergraafinen``` terminal
 exit
 ```
 
-
-
-
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```centosminion```
 
 ```
@@ -1538,7 +1539,7 @@ Navigate inside ```/etc/hosts``` file for editing
 sudo nano /etc/hosts
 ```
 
-Add new line ```10.208.0.56 salt```
+Add new line ```10.208.0.56 salt``` inside the file
 
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
@@ -1547,6 +1548,8 @@ Add new line ```10.208.0.56 salt```
 127.0.1.1 centosminion
 10.208.0.56 salt
 ```
+
+Restart Salt Minion
 
 ```
 sudo systemctl restart salt-minion
@@ -1557,9 +1560,6 @@ Exit back to ```bustergraafinen``` terminal
 ```
 exit
 ```
-
-
-
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntuminion```
 
@@ -1583,6 +1583,8 @@ Navigate inside ```/etc/salt/minion``` file for editing
 sudo nano /etc/salt/minion
 ```
 
+Remove the hashtag from ```# master: salt```
+
 ```
 ##### Primary configuration settings #####
 ##########################################
@@ -1605,7 +1607,13 @@ master: salt
 #proxy_host:
 ```
 
+Navigate inside ```/etc/hosts``` file for editing
+
+```
 sudo nano /etc/hosts
+```
+
+Add new line ```10.208.0.56 salt``` inside the file
 
 ```
 127.0.0.1 localhost
@@ -1620,14 +1628,19 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
+Restart Salt Minion
+
 ```
-sudo systemctl restart salt-minion
+sudo service salt-minion restart
 ```
 
+Exit back to ```bustergraafinen``` terminal
 
+```
+exit
+```
 
-
-After installing Salt-Minion to ```centosminion``` and ```ubuntuminion```, we must accept them on ```ubuntumaster```
+After installing Salt Minion to ```centosminion``` and ```ubuntuminion```, we must accept them on ```ubuntumaster``` Salt Master
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -1656,6 +1669,8 @@ centosminion
 Proceed? [n/Y] y
 ```
 
+Following text will appear
+
 ```
 Key for minion centosminion accepted.
 ```
@@ -1665,6 +1680,8 @@ Send a message to all the minions and tell them to return ```True``` to check wh
 ```
 sudo salt '*' test.ping
 ```
+
+Following text will appear
 
 ```
 ubuntuminion:
@@ -1680,6 +1697,15 @@ Add user ```pekka``` to ```ubuntumaster```, ```centosminion```, and ```ubuntumin
 ```
 sudo salt '*' user.add pekka shell=/bin/bash
 ```
+
+Exit back to ```bustergraafinen``` terminal
+
+```
+exit
+```
+
+Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
+
 
 
 
