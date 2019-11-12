@@ -1704,8 +1704,7 @@ Exit back to ```bustergraafinen``` terminal
 exit
 ```
 
-Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
-
+Salt Master is now bootstrapped and configured on ```ubuntumaster```, and Salt Minion is now bootstrapped and configured on ```centosminion``` and ```ubuntuminion```
 
 
 
