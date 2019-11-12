@@ -72,7 +72,7 @@ Navigate back to ```Network```, choose ```pekanverkko```, press ```View IP Addre
 - Add ```1009``` to ```End Port```
 - Press ```Add```
 
-Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```10.207.5.193 [Source NAT]```, press ```Configuration```, choose ```Port Forwarding```, and configure the following parameters for three different ports
+Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Addresses```, choose ```x.x.x.x [Source NAT]```, press ```Configuration```, choose ```Port Forwarding```, and configure the following parameters for three different ports
 
 - For the first port, add ```22``` ```22``` to ```Private Port``` and ```1001``` ```1001``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```ubuntussh```, and press ```Apply```
 - For the second port, add ```22``` ```22``` to ```Private Port``` and ```1002``` ```1002``` to ```Public Port```, change ```Protocol``` to ```TCP```, press ```Add```, select ```bustergraafinen```, and press ```Apply```
@@ -94,7 +94,7 @@ The instances ```bustergraafinen``` and ```ubuntussh``` are now working correctl
 First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
 
 - Open ```Remote Desktop Connection``` application and press ```Show Options```
-- Type ```10.207.5.193:1003``` to ```Computer:``` and press ```Connect```
+- Type ```x.x.x.x:1003``` to ```Computer:``` and press ```Connect```
 - A warning prompt will pop up for which you need to press ```Yes```
 - In the login window, keep ```Session``` as ```Xorg```, enter ```oppilas``` for ```username```, enter ```salainen``` for ```password```, and press ```OK```
 
