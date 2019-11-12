@@ -1291,7 +1291,6 @@ Install available upgrades for all packages currently installed
 yum upgrade
 ```
 
-
 Replace the old hostname with ```centosminion```
 
 ```
@@ -1331,31 +1330,61 @@ Reboot the system
 sudo reboot
 ```
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```centosminion```
 
 ```
 ssh -l root 10.208.0.55
 ```
 
+Ping the loopback address ```127.0.1.1```
+
+```
 ping 127.0.1.1
+```
 
+Ping ```centosminion```
+
+```
 ping centosminion
+```
 
+Exit back to ```bustergraafinen``` terminal
 
-Connect to ubuntuminion
+```
+exit
+```
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntuminion```
+
+```
 ssh -l oppilas 10.208.0.43
+```
 
+Install available upgrades for all packages currently installed
+
+```
 sudo apt-get upgrade
+```
 
-Change hostname
+Replace the old hostname with ```ubuntuminion```
 
+```
 sudo hostnamectl set-hostname ubuntuminion
+```
 
+Check the new hostname
+
+```
 hostname
+```
 
+Navigate inside ```/etc/hosts``` file for editing
+
+```
 sudo nano /etc/hosts
+```
 
-Add 127.0.1.1 ubuntuminion
+Add new line ```127.0.1.1 ubuntuminion``` inside the file
 
 ```
 127.0.0.1 localhost
@@ -1369,7 +1398,11 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
+Reboot the system
+
+```
 sudo reboot
+```
 
 The hostname is now changed permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
