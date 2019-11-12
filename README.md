@@ -1228,6 +1228,8 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ssh -l oppilas 10.208.0.56
 ```
 
+Display disk usage of the file system in human readable format
+
 ```
 df -h
 ```
@@ -1275,9 +1277,6 @@ Reboot the system
 ```
 sudo reboot
 ```
-
-
-
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```centosminion```
 
