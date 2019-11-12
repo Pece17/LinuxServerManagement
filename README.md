@@ -1344,6 +1344,8 @@ ssh -l oppilas 10.208.0.56
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 ```
 
+Install Salt Master
+
 ```
 sudo sh install_salt.sh -P -M
 ```
@@ -1490,13 +1492,23 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ssh -l root 10.208.0.55
 ```
 
+```
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
+```
 
+Install Salt Minion
+
+```
 sudo sh install_salt.sh -P
+```
 
-sudo nano /etc/salt/minion ? < I'm not sure
+Navigate inside ```/etc/salt/minion``` file for editing
 
-Remove hashtag from ```master: salt``` ? < I'm not sure
+```
+sudo nano /etc/salt/minion
+```
+
+Remove the hashtag from ```# master: salt```
 
 ```
 ##### Primary configuration settings #####
@@ -1520,9 +1532,13 @@ master: salt
 #proxy_host:
 ```
 
-sudo nano /etc/hosts ? < I'm not sure
+Navigate inside ```/etc/hosts``` file for editing
 
-Add ```10.208.0.56 salt``` ? < I'm not sure
+```
+sudo nano /etc/hosts
+```
+
+Add new line ```10.208.0.56 salt```
 
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
@@ -1532,20 +1548,40 @@ Add ```10.208.0.56 salt``` ? < I'm not sure
 10.208.0.56 salt
 ```
 
+```
 sudo systemctl restart salt-minion
+```
+
+Exit back to ```bustergraafinen``` terminal
+
+```
+exit
+```
 
 
 
 
-Connect to ubuntuminion
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntuminion```
 
+```
 ssh -l oppilas 10.208.0.43
+```
 
+```
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
+```
 
+Install Salt Minion
+
+```
 sudo sh install_salt.sh -P
+```
 
+Navigate inside ```/etc/salt/minion``` file for editing
+
+```
 sudo nano /etc/salt/minion
+```
 
 ```
 ##### Primary configuration settings #####
