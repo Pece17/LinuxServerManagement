@@ -1330,21 +1330,31 @@ The hostname is now changed permanently on ```ubuntumaster```, ```centosminion``
 
 
 
-# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
+# Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
-Connect to ubuntumaster
+SSH to ```ubuntumaster```
 
+```
 ssh -l oppilas 10.208.0.56
+```
 
+```
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
+```
 
+```
 sudo sh install_salt.sh -P -M
+```
 
+```
 sudo salt --versions-report
+```
 
+```
 sudo nano /etc/salt/minion
+```
 
 Change ```master: salt``` to ```master: localhost``` and remove the hashtag
 
