@@ -1603,12 +1603,16 @@ Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper lef
 
 1. Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
 2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
-3. Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
-4. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+1. Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
+2. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
 5. Go to ```Instances``` > ```ubuntumaster``` > ```Take VM Snapshot```
 6. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
 7. Go to ```Instances``` > ```centosminion``` > ```Take VM Snapshot```
 8. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
 9. Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
 10. Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
