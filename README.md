@@ -1529,8 +1529,6 @@ Connect to ubuntuminion
 
 ssh -l oppilas 10.208.0.43
 
-http://repo.saltstack.com/
-
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 
 sudo sh install_salt.sh -P
