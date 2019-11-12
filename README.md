@@ -1334,7 +1334,7 @@ The hostname is now changed permanently on ```ubuntumaster```, ```centosminion``
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
-SSH to ```ubuntumaster```
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
 ```
 ssh -l oppilas 10.208.0.56
@@ -1356,7 +1356,7 @@ sudo salt --versions-report
 sudo nano /etc/salt/minion
 ```
 
-Change ```master: salt``` to ```master: localhost``` and remove the hashtag
+Change ```# master: salt``` to ```master: localhost``` and remove the hashtag
 
 ```
 ##### Primary configuration settings #####
@@ -1380,7 +1380,7 @@ master: localhost
 #proxy_host:
 ```
 
-Change ```id:``` to ```id: myminion``` and remove the hashtag
+Change ```# id:``` to ```id: myminion``` and remove the hashtag
 
 ```
 # The directory to store the pki information in
@@ -1401,23 +1401,37 @@ id: myminion
 #minion_id_caching: True
 ```
 
+```
 sudo service salt-minion restart
+```
 
+```
 sudo service salt-master restart
+```
 
+```
 sudo salt-key -f myminion
+```
 
+```
 sudo salt-call --local key.finger
+```
 
+```
 sudo salt-key -L
+```
 
+```
 sudo salt-key -A
+```
 
 ```
 Proceed? [n/Y] y
 ```
 
+```
 sudo salt-key
+```
 
 Send a message to all the minions and tell them to return ```True``` to check which minions are alive
 
@@ -1425,19 +1439,33 @@ Send a message to all the minions and tell them to return ```True``` to check wh
 sudo salt '*' test.ping
 ```
 
+```
 sudo salt 'myminion' sys.list_functions test
+```
 
+```
 sudo salt '*' test.fib
+```
 
+```
 sudo salt '*' sys.doc test.fib
+```
 
+```
 sudo salt '*' test.fib 30
+```
 
+```
 sudo salt '*' sys.doc test
+```
 
+```
 sudo salt '*' sys.list_functions sys
+```
 
+```
 sudo salt '*' grains.get os
+```
 
 Find out the IP address of ```ubuntumaster```
 
