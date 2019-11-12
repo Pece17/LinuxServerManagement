@@ -143,7 +143,7 @@ Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working 
 
 # Changing the hostname permanently on ```ubuntussh```
 
-Navigate to address http://10.207.5.78/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
+Navigate to address http://x.x.x.x/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -174,8 +174,8 @@ Replace the old hostname ```saltminionweb1``` after the line ```127.0.1.1``` wit
 ```
 127.0.0.1 localhost
 127.0.1.1 salt_hamalainen
-10.207.5.78 salt
-10.207.5.78 saltgrandmaster1
+x.x.x.x salt
+x.x.x.x saltgrandmaster1
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
