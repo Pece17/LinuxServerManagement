@@ -1425,6 +1425,8 @@ sudo salt-key -L
 sudo salt-key -A
 ```
 
+Enter ```y``` to the following prompt
+
 ```
 Proceed? [n/Y] y
 ```
@@ -1487,7 +1489,7 @@ Accept all pending keys
 sudo salt-key -A
 ```
 
-Enter ```y```
+Enter ```y``` to the following prompt
 
 ```
 The following keys are going to be accepted:
