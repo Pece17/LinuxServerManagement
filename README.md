@@ -256,7 +256,7 @@ Navigate to address https://www.digitalocean.com/community/tutorials/how-to-inst
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
 ```
-ssh -I oppilas -p 1001 10.207.5.193
+ssh -l oppilas 10.208.0.83
 ```
 
 sudo apt-get update
