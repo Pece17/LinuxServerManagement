@@ -1605,8 +1605,22 @@ Go to ```Instances``` > ```bustergraafinen``` > ```Take VM Snapshot```
 
 Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
-Repeat for four other instances
+Go to ```Instances``` > ```ubuntussh``` > ```Take VM Snapshot```
 
-Go to ```Instances``` > ```bustergraafinen``` > ```View Snapshots```
+Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+Go to ```Instances``` > ```ubuntumaster``` > ```Take VM Snapshot```
+
+Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+Go to ```Instances``` > ```centosminion``` > ```Take VM Snapshot```
+
+Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+Go to ```Instances``` > ```ubuntuminion``` > ```Take VM Snapshot```
+
+Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
+
+Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` > ```View Snapshots``` > check that VM Snapshots have been created for the respective instances
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
