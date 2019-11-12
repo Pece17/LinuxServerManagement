@@ -685,7 +685,9 @@ The key's randomart image is:
 
 SSH to ```ubuntussh```
 
-ssh -I oppilas -p 1001 10.207.5.193
+```
+ssh -l oppilas 10.208.0.83
+```
 
 Create the following folder
 
@@ -715,7 +717,7 @@ exit
 
 SSH back to ```ubuntussh``` terminal from ```bustergraafinen``` terminal - now you should be able to login with SSH key-based authentication without needing to enter the password
 
-ssh -I oppilas -p 1001 10.207.5.193
+ssh -l oppilas 10.208.0.83
 
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
