@@ -1189,7 +1189,7 @@ The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are
 
 
 
-# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Write!)
+# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Connecting to ```ubuntumaster``` from ```bustergraafinen``` terminal
 
@@ -1330,7 +1330,7 @@ The hostname is now changed permanently on ```ubuntumaster```, ```centosminion``
 
 
 
-# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Write More!)
+# Bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
