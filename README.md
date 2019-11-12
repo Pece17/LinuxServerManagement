@@ -259,63 +259,121 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ssh -l oppilas 10.208.0.83
 ```
 
+```
 sudo apt-get update
+```
 
+```
 sudo apt-get install apache2
+```
 
+```
 sudo ufw app list
+```
 
+```
 sudo ufw app info "Apache Full"
+```
 
+```
 sudo ufw allow in "Apache Full"
-
-Go to address http://10.208.0.83/
+```
 
 ```
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 ````
 
+Go to address http://10.208.0.83/
+
+```
 sudo apt-get install curl
+```
 
+```
 curl http://icanhazip.com
+```
 
+```
 sudo apt-get install mysql-server
+```
 
+```
 sudo mysql_secure_installation
+```
 
+```
 VALIDATE PASSWORD PLUGIN Press y|Y for Yes, any other key for No: n
+```
 
+```
 New password: salainen
+```
 
+```
 Re-enter new password: salainen
+```
 
+```
 Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+```
 
+```
 Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+```
 
+```
 Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+```
 
+```
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+```
 
+```
 sudo mysql
+```
 
+```
 SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
 
+```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'salainen';
+```
 
+```
 FLUSH PRIVILEGES;
+```
 
+```
 SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
 
+```
 exit
+```
 
+```
 sudo mysql -p
+```
 
+```
 exit
+```
 
+Install PHP and helper packages
+
+```
 sudo apt-get install php libapache2-mod-php php-mysql
+```
 
+Navigate inside ```/etc/apache2/mods-enabled/dir.conf``` file for editing
+
+```
 sudo nano /etc/apache2/mods-enabled/dir.conf
+```
+
+Cut and move the ```index.php``` file to the first position after the ```DirectoryIndex``` specification
 
 ```
 <IfModule mod_dir.c>
@@ -325,31 +383,61 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
+```
 sudo systemctl restart apache2
+```
 
+```
 sudo systemctl status apache2
+```
 
+```
 q
+```
 
+```
 apt search php- | less
+```
 
+```
 q
+```
 
+```
 apt show package_name
+```
 
+```
 apt show php-cli
+```
 
+```
 sudo apt-get install php-cli
+```
 
+```
 sudo apt-get install package1 package2 ...
+```
 
+```
 sudo mkdir /var/www/ubuntussh
+```
 
+```
 sudo chown -R $USER:$USER /var/www/ubuntussh
+```
 
+```
 sudo chmod -R 755 /var/www/ubuntussh
+```
 
+Navigate inside ```/var/www/ubuntussh/index.html``` file for editing
+
+```
 nano /var/www/ubuntussh/index.html
+```
+
+Copy the following text inside the ```index.html``` file
 
 ```
 <html>
