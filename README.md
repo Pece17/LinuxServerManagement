@@ -1669,12 +1669,6 @@ centosminion
 Proceed? [n/Y] y
 ```
 
-Following text will appear
-
-```
-Key for minion centosminion accepted.
-```
-
 Send a message to all the minions and tell them to return ```True``` to check which minions are alive
 
 ```
