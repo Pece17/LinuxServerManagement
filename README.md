@@ -1554,6 +1554,6 @@ Change ```Project``` to ```ICT4TN 022-3006 Pekka Hämäläinen``` from upper lef
 
 Go to ```Instances``` > checkmark all five instances > ```Take VM Snapshot(s)```
 
-Enter ```Name:``` > ```Description:``` > checkmark ```Snapshot memory:``` ? > press ```OK```
+Enter ```Name:``` > ```Description:``` > remove checkmark ```Snapshot memory:``` ? > press ```OK```
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
