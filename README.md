@@ -1222,23 +1222,41 @@ ssh -l oppilas 10.208.0.43
 
 Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
-Connect to ubuntumaster
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
+```
 ssh -l oppilas 10.208.0.56
+```
 
+```
 df -h
+```
 
+Install available upgrades for all packages currently installed
+
+```
 sudo apt-get upgrade
+```
 
-Change hostname
+Replace the old hostname with ```ubuntumaster```
 
+```
 sudo hostnamectl set-hostname ubuntumaster
+```
 
+Check the new hostname
+
+```
 hostname
+```
 
+Navigate inside ```/etc/hosts``` file for editing
+
+```
 sudo nano /etc/hosts
+```
 
-Add 127.0.1.1 ubuntumaster
+Add new line ```127.0.1.1 ubuntumaster``` inside the file
 
 ```
 127.0.0.1 localhost
