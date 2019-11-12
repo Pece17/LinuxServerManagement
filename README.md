@@ -469,9 +469,13 @@ sudo cp -a /tmp/wordpress/. /var/www/ubuntussh
 sudo chown -R www-data:www-data /var/www/ubuntussh
 ```
 
+```
 sudo find /var/www/ubuntussh/ -type d -exec chmod 750 {} \;
+```
 
+```
 sudo find /var/www/ubuntussh/ -type f -exec chmod 640 {} \;
+```
 
 curl -s https://api.wordpress.org/secret-key/1.1/salt/
 
