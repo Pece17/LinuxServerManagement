@@ -1475,10 +1475,16 @@ Find out the IP address of ```ubuntumaster```
 ip address
 ```
 
+Exit back to ```bustergraafinen``` terminal
+
+```
+exit
+```
 
 
 
-Connect to centosminion
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```centosminion```
 
 ```
 ssh -l root 10.208.0.55
