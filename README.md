@@ -1475,53 +1475,6 @@ Find out the IP address of ```ubuntumaster```
 ip address
 ```
 
-After installing Salt-Minion to ```centosminion``` and ```ubuntuminion```, accept it on ```ubuntumaster``` with the following commands
-
-List all public keys
-
-```
-sudo salt-key -L
-```
-
-Accept all pending keys
-
-```
-sudo salt-key -A
-```
-
-Enter ```y``` to the following prompt
-
-```
-The following keys are going to be accepted:
-Unaccepted Keys:
-centosminion
-Proceed? [n/Y] y
-```
-
-```
-Key for minion centosminion accepted.
-```
-
-Send a message to all the minions and tell them to return ```True``` to check which minions are alive
-
-```
-sudo salt '*' test.ping
-```
-
-```
-ubuntuminion:
-    True
-myminion:
-    True
-centosminion:
-    True
-```
-
-Add user ```pekka``` to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
-
-```
-sudo salt '*' user.add pekka shell=/bin/bash
-```
 
 
 
@@ -1625,11 +1578,20 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
+```
 sudo systemctl restart salt-minion
+```
 
 
 
-After installing Salt-Minion to ```centosminion``` and ```ubuntuminion```, accept it on ```ubuntumaster``` with the following commands
+
+After installing Salt-Minion to ```centosminion``` and ```ubuntuminion```, we must accept them on ```ubuntumaster```
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
 
 List all public keys
 
