@@ -1266,6 +1266,17 @@ ff02::2 ip6-allrouters
 172.17.0.3      51ffae81496b
 ```
 
+/etc/init.d/salt-master start
+
+/etc/init.d/salt-minion start
+
+salt '*' test.ping
+
+salt '*' sys.doc saltstates
+
+salt '*' sys.list_salt_functions
+
+
 
 
 
