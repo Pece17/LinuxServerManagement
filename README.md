@@ -24,7 +24,7 @@ Pekka Hämäläinen
 
 
 
-# Initializing Rovius CP
+# 1. Initializing Rovius CP
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -89,7 +89,7 @@ The instances ```bustergraafinen``` and ```ubuntussh``` are now working correctl
 
 
 
-# Remote connections to ```bustergraafinen``` and ```ubuntussh```
+# 2. Remote connections to ```bustergraafinen``` and ```ubuntussh```
 
 First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
 
@@ -141,7 +141,7 @@ Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working 
 
 
 
-# Changing the hostname permanently on ```ubuntussh```
+# 3. Changing the hostname permanently on ```ubuntussh```
 
 Navigate to address http://x.x.x.x/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
 
@@ -204,7 +204,7 @@ The hostname is now changed permanently on ```ubuntussh```
 
 
 
-# Installing Salt Minion on ```ubuntussh```
+# 4. Installing Salt Minion on ```ubuntussh```
 
 Navigate to address http://x.x.x.x/ to view the instructions for installing Salt Minion on ```ubuntussh```
 
@@ -249,7 +249,7 @@ Salt Minion is now installed on ```ubuntussh```
 
 
 
-# Installing LAMP on ```ubuntussh``` (Work in progress < Cleanup!)
+# 5. Installing LAMP on ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -519,7 +519,7 @@ LAMP is now installed on ```ubuntussh```
 
 
 
-# Installing WordPress on ```ubuntussh``` (Work in progress < Cleanup!) 
+# 6. Installing WordPress on ```ubuntussh``` (Work in progress < Cleanup!) 
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -761,7 +761,7 @@ WordPress is now installed on ```ubuntussh```
 
 
 
-# Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress < Cleanup!)
+# 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -844,7 +844,7 @@ SSH key-based authentication is now configured on ```bustergraafinen``` and ```u
 
 
 
-# Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress < Optional!)
+# 8. Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress < Optional!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
 
@@ -857,7 +857,7 @@ Navigate to address https://www.digitalocean.com/community/tutorials/how-to-inst
 
 
 
-# Installing Docker on ```bustergraafinen```
+# 9. Installing Docker on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/ to view the instructions for installing Docker on ```bustergraafinen``` Debian 10 Buster
 
@@ -983,7 +983,7 @@ Docker is now installed and tested on ```bustergraafinen```
 
 
 
-# Installing Docker Compose on ```bustergraafinen```
+# 10. Installing Docker Compose on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/how-to-install-latest-docker-compose-on-linux/ to view the instructions for installing latest Docker Compose on ```bustergraafinen```
 
@@ -1125,7 +1125,7 @@ Docker Compose is now installed and tested on ```bustergraafinen```
 
 
 
-# Installing Portainer on ```bustergraafinen```
+# 11. Installing Portainer on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
 
@@ -1189,7 +1189,7 @@ Portainer is now installed on ```bustergraafinen```
 
 
 
-# Installing Geany IDE on ```bustergraafinen```
+# 12. Installing Geany IDE on ```bustergraafinen```
 
 Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany IDE (Integrated Development Environment) on ```bustergraafinen```
 
@@ -1222,7 +1222,7 @@ Geany IDE is now installed on ```bustergraafinen```
 
 
 
-# Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress < Write!)
+# 13. Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress < Write!)
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
 
@@ -1288,7 +1288,7 @@ salt '*' grains.get os
 
 
 
-# Initializing three more instances in Rovius CP (Work in progress < Cleanup!)
+# 14. Initializing three more instances in Rovius CP (Work in progress < Cleanup!)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1346,7 +1346,7 @@ The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are
 
 
 
-# Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 15. Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Connecting to ```ubuntumaster``` from ```bustergraafinen``` terminal
 
@@ -1375,7 +1375,7 @@ ssh -l oppilas 10.208.0.43
 
 
 
-# Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
@@ -1571,7 +1571,7 @@ The hostname is now changed permanently on ```ubuntumaster```, ```centosminion``
 
 
 
-# Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
@@ -1950,7 +1950,7 @@ Salt Master is now bootstrapped and configured on ```ubuntumaster```, and Salt M
 
 
 
-# Taking VM Snapshots in Rovius CP (Work in progress < Cleanup!)
+# 18. Taking VM Snapshots in Rovius CP (Work in progress < Cleanup!)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
