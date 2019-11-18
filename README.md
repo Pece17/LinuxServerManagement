@@ -1232,6 +1232,40 @@ Download the image and store it locally to ```bustergraafinen```
 docker pull darkdth/saltstacktesting:minsaltstackbootstrap_v03
 ```
 
+```
+docker images
+```
+
+```
+mkdir koe
+```
+
+```
+cd koe
+```
+
+```
+mkdir -p srv/salt
+```
+
+```
+docker run -v /Users/hja/koe/srv/salt/:/srv/salt -it darkdth/saltstacktesting:minsaltstackbootstrap_v03 /bin/bash
+```
+
+```
+nano /etc/hosts
+```
+
+```
+127.0.0.1       salt     
+::1     localhost ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+172.17.0.3      51ffae81496b
+```
+
 
 
 
