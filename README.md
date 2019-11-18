@@ -1276,6 +1276,8 @@ salt '*' sys.doc saltstates
 
 salt '*' sys.list_salt_functions
 
+salt '*' grains.get os
+
 
 
 
