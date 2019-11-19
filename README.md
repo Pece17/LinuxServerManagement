@@ -2115,10 +2115,73 @@ Port 8888
 #LoginGraceTime 2m
 ```
 
+Apply the state only to ```ubuntuminion```
+
 ```
 sudo salt 'ubuntuminion' state.apply sshd
 ```
 
+Following text will appear
+
+```
+ubuntuminion:
+----------
+          ID: openssh-server
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 14:27:13.524117
+    Duration: 81.499 ms
+     Changes:   
+----------
+          ID: /etc/ssh/sshd_config
+    Function: file.managed
+      Result: True
+     Comment: File /etc/ssh/sshd_config updated
+     Started: 14:27:13.610800
+    Duration: 73.37 ms
+     Changes:   
+              ----------
+              diff:
+                  --- 
+                  +++ 
+                  @@ -10,7 +10,7 @@
+                   # possible, but leave them commented.  Uncommented options override the
+                   # default value.
+                   
+                  -#Port 22
+                  +Port 8888
+                   #AddressFamily any
+                   #ListenAddress 0.0.0.0
+                   #ListenAddress ::
+----------
+          ID: sshd
+    Function: service.running
+      Result: True
+     Comment: Service restarted
+     Started: 14:27:13.784459
+    Duration: 135.649 ms
+     Changes:   
+              ----------
+              sshd:
+                  True
+
+Summary for ubuntuminion
+------------
+Succeeded: 3 (changed=2)
+Failed:    0
+------------
+Total states run:     3
+Total run time: 290.518 ms
+```
+
+```
+nc -vz ubuntuminion 8888
+```
+
+```
+ssh -p 8888 ubuntuminion@ubuntuminion
+```
 
 
 
