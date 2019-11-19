@@ -2029,5 +2029,15 @@ Visual Studio Code is now installed on ```bustergraafinen```
 
 
 
+# 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Write!)
 
-# 20. 
+
+
+
+
+
+
+
+
+
+# 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress > Write!)
