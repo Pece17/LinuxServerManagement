@@ -1996,7 +1996,7 @@ VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```
 
 
 
-# 19. Installing Visual Studio Code on ```bustergraafinen```
+# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress > Cleanup!)
 
 Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
 
@@ -2018,7 +2018,7 @@ Install Visual Studio Code
 sudo snap install code --classic
 ```
 
-Install ```SaltStack``` and ```salt-lint``` extensions via Visual Studio Code
+Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack``` and ```salt-lint```
 
 Visual Studio Code is now installed on ```bustergraafinen```
 
