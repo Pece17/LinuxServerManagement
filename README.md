@@ -2192,5 +2192,4 @@ ssh -p 8888 ubuntuminion@ubuntuminion
 
 
 
-
 # 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress > Write!)
