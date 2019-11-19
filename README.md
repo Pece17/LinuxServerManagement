@@ -2018,6 +2018,8 @@ Install Visual Studio Code
 sudo snap install code --classic
 ```
 
+Install ```SaltStack``` and ```salt-lint``` extensions via Visual Studio Code
+
 Visual Studio Code is now installed on ```bustergraafinen```
 
 
