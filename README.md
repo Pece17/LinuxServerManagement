@@ -2031,7 +2031,7 @@ Visual Studio Code is now installed on ```bustergraafinen```
 
 
 
-# 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Write!)
+# 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Cleanup!)
 
 Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port on ```ubuntuminion```
 
@@ -2115,7 +2115,7 @@ Port 8888
 #LoginGraceTime 2m
 ```
 
-Apply the state only to ```ubuntuminion```
+Apply the state ONLY to ```ubuntuminion```
 
 ```
 sudo salt 'ubuntuminion' state.apply sshd
@@ -2175,13 +2175,19 @@ Total states run:     3
 Total run time: 290.518 ms
 ```
 
+Test the previously created state using ```ubuntuminion``` as a target 
+
 ```
 nc -vz ubuntuminion 8888
 ```
 
+Establish an SSH connection to ```ubuntuminion```
+
 ```
 ssh -p 8888 ubuntuminion@ubuntuminion
 ```
+
+SSH server port is now changed on ```ubuntuminion``` and SSH
 
 
 
