@@ -1986,3 +1986,13 @@ Take VM Snapshot from ```ubuntuminion```
 Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` respectively > ```View Snapshots``` > check that VM Snapshots have been taken for the respective instances
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
+
+# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress > Cleanup!)
+
+Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
+
+```
+sudo snap install code  --classic
+```
+
+Visual Studio Code is now installed on ```bustergraafinen```
