@@ -2035,8 +2035,50 @@ Visual Studio Code is now installed on ```bustergraafinen```
 
 Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port on ```ubuntuminion```
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+```
+sudo mkdir /srv/salt/
+```
+
+```
+cd /srv/salt/
+```
+
+```
+sudo nano sshd-sls
+```
+
+```
+openssh-server:
+ pkg.installed
+/etc/ssh/sshd_config:
+ file.managed:
+   - source: salt://sshd_config
+sshd:
+ service.running:
+   - watch:
+     - file: /etc/ssh/sshd_config
+```
+
+```
+sudo cp /etc/ssh/sshd_config /srv/salt/
+```
+
+```
+cat /srv/salt/sshd.sls
+```
+
+```
+cat /srv/salt/sshd_config
+```
 
 
+sudo salt 'ubuntuminion' state.apply sshd
 
 
 
