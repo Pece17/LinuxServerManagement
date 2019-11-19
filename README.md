@@ -2033,6 +2033,8 @@ Visual Studio Code is now installed on ```bustergraafinen```
 
 # 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Write!)
 
+Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port on ```ubuntuminion```
+
 
 
 
