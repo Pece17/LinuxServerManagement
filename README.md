@@ -2050,7 +2050,7 @@ cd /srv/salt/
 ```
 
 ```
-sudo nano sshd-sls
+sudo nano sshd.sls
 ```
 
 ```
@@ -2077,8 +2077,50 @@ cat /srv/salt/sshd.sls
 cat /srv/salt/sshd_config
 ```
 
+```
+sudo nano /srv/salt/sshd_config
+```
 
+```
+#       $OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Port 8888
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+```
+
+```
 sudo salt 'ubuntuminion' state.apply sshd
+```
+
+
+
 
 
 
