@@ -1987,12 +1987,47 @@ Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster`
 
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
-# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress > Cleanup!)
+
+
+
+
+
+
+
+
+
+# 19. Installing Visual Studio Code on ```bustergraafinen```
 
 Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
 
+Open ```bustergraafinen``` terminal and update the package lists
+
 ```
-sudo snap install code  --classic
+sudo apt-get update
+```
+
+Install snapd
+
+```
+sudo apt-get install snapd
+```
+
+Install Visual Studio Code
+
+```
+sudo snap install code --classic
 ```
 
 Visual Studio Code is now installed on ```bustergraafinen```
+
+
+
+
+
+
+
+
+
+
+
+# 20. 
