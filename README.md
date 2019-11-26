@@ -1154,17 +1154,37 @@ ff02::2 ip6-allrouters
 172.17.0.3      51ffae81496b
 ```
 
+```
 /etc/init.d/salt-master start
+```
 
+```
 /etc/init.d/salt-minion start
+```
 
+```
 salt '*' test.ping
+```
 
+```
 salt '*' sys.doc saltstates
+```
 
+```
 salt '*' sys.list_salt_functions
+```
 
+```
 salt '*' grains.get os
+```
+
+```
+echo -e "nginx:\n  pkg.installed" > /srv/salt/nginx_installed.sls
+```
+
+```
+salt '*' state.apply nginx_installed
+```
 
 
 # 14. Initializing three more instances in Rovius CP (Work in progress)
