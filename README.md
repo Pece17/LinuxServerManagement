@@ -2031,5 +2031,92 @@ SSH server port is now changed and SSH connection is working on ```ubuntuminion`
 
 # 21. Configure nano text editor to support YAML and Jinja syntax highlighting (Work in progress)
 
+https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano
+
+```
+ls /usr/share/nano/
+```
+
+```
+sudo nano /usr/share/nano/yaml.nanorc
+```
+
+```
+# Supports `YAML` files
+syntax "YAML" "\.ya?ml$"
+header "^(---|===)" "%YAML"
+
+## Keys
+color magenta "^\s*[\$A-Za-z0-9_-]+\:"
+color brightmagenta "^\s*@[\$A-Za-z0-9_-]+\:"
+
+## Values
+color white ":\s.+$"
+## Booleans
+icolor brightcyan " (y|yes|n|no|true|false|on|off)$"
+## Numbers
+color brightred " [[:digit:]]+(\.[[:digit:]]+)?"
+## Arrays
+color red "\[" "\]" ":\s+[|>]" "^\s*- "
+## Reserved
+color green "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
+
+## Comments
+color brightwhite "#.*$"
+
+## Errors
+color ,red ":\w.+$"
+color ,red ":'.+$"
+color ,red ":".+$"
+color ,red "\s+$"
+
+## Non closed quote
+color ,red "['\"][^['\"]]*$"
+
+## Closed quotes
+color yellow "['\"].*['\"]"
+
+## Equal sign
+color brightgreen ":( |$)"
+```
+
+```
+sudo nano testi.yml
+```
+
+```
+# app/config/config_prod.yml
+imports:
+    - { resource: config.yml }
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: critical
+            handler:      grouped
+        grouped:
+            type:    group
+            members: [streamed, deduplicated]
+        streamed:
+            type:  stream
+            path:  '%kernel.logs_dir%/%kernel.environment%.log'
+            level: debug
+        deduplicated:
+            type:    deduplication
+            handler: swift
+        swift:
+            type:       swift_mailer
+            from_email: 'from_email@test.com'
+            # Or multiple receivers:
+            # to_email:   ['to_email1@ourcodeworld.com', 'to_email2@ourcodeworld.com']
+            to_email:   'to_email@ourcodeworld.com'
+            subject:    'An Error Occurred! %%message%%'
+            level:      debug
+            formatter:  monolog.formatter.html
+            content_type: text/html
+```
+
+
 
 # 22. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
