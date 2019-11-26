@@ -2029,9 +2029,9 @@ ssh -p 8888 oppilas@ubuntuminion
 SSH server port is now changed and SSH connection is working on ```ubuntuminion```
 
 
-# 21. Configure nano text editor to support YAML and Jinja syntax highlighting (Work in progress)
+# 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen``` (Work in progress)
 
-https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano
+Navigate to address https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano to view the instructions for configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
 ```
 ls /usr/share/nano/
@@ -2116,7 +2116,6 @@ monolog:
             formatter:  monolog.formatter.html
             content_type: text/html
 ```
-
 
 
 # 22. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
