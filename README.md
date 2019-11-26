@@ -201,7 +201,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# 5. Installing LAMP on ```ubuntussh``` (Work in progress < Cleanup!)
+# 5. Installing LAMP on ```ubuntussh``` (Work in progress)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -463,7 +463,7 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-# 6. Installing WordPress on ```ubuntussh``` (Work in progress < Cleanup!) 
+# 6. Installing WordPress on ```ubuntussh``` (Work in progress) 
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -697,7 +697,7 @@ Log Out
 WordPress is now installed on ```ubuntussh```
 
 
-# 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress < Cleanup!)
+# 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -772,7 +772,7 @@ ssh -l oppilas 10.208.0.83
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
 
-# 8. Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress < Optional!)
+# 8. Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
 
@@ -1167,7 +1167,7 @@ salt '*' sys.list_salt_functions
 salt '*' grains.get os
 
 
-# 14. Initializing three more instances in Rovius CP (Work in progress < Cleanup!)
+# 14. Initializing three more instances in Rovius CP (Work in progress)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1225,7 +1225,7 @@ The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are
 
 
 
-# 15. Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 15. Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress)
 
 Connecting to ```ubuntumaster``` from ```bustergraafinen``` terminal
 
@@ -1246,7 +1246,7 @@ ssh -l oppilas 10.208.0.43
 ```
 
 
-# 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress)
 
 Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
@@ -1434,7 +1434,7 @@ sudo reboot
 The hostname is now changed permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
-# 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
+# 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress)
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
@@ -1805,7 +1805,7 @@ exit
 Salt Master is now bootstrapped and configured on ```ubuntumaster```, and Salt Minion is now bootstrapped and configured on ```centosminion``` and ```ubuntuminion```
 
 
-# 18. Taking VM Snapshots in Rovius CP (Work in progress < Cleanup!)
+# 18. Taking VM Snapshots in Rovius CP (Work in progress)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1843,7 +1843,7 @@ Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster`
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
-# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress > Cleanup!)
+# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress)
 
 Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
 
@@ -1870,7 +1870,7 @@ Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack
 Visual Studio Code is now installed on ```bustergraafinen```
 
 
-# 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Cleanup!)
+# 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress)
 
 Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port on ```ubuntuminion```
 
@@ -2029,4 +2029,4 @@ ssh -p 8888 ubuntuminion@ubuntuminion
 SSH server port is now changed on ```ubuntuminion``` and SSH
 
 
-# 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress > Write!)
+# 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
