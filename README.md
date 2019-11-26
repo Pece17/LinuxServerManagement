@@ -1029,14 +1029,6 @@ rm -r index.html
 Docker Compose is now installed and tested on ```bustergraafinen```
 
 
-
-
-
-
-
-
-
-
 # 11. Installing Portainer on ```bustergraafinen```
 
 Navigate to address https://computingforgeeks.com/install-docker-ui-manager-portainer/ to view the instructions for installing Portainer on ```bustergraafinen```
@@ -1093,14 +1085,6 @@ Access the web dashboard on address http://127.0.0.1:9000 and perform the follow
 Portainer is now installed on ```bustergraafinen```
 
 
-
-
-
-
-
-
-
-
 # 12. Installing Geany IDE on ```bustergraafinen```
 
 Navigate to address https://tecadmin.net/install-geany-ide-ubuntu/ to view the instructions for installing Geany IDE (Integrated Development Environment) on ```bustergraafinen```
@@ -1124,14 +1108,6 @@ sudo apt-get install geany geany-plugins-common
 ```
 
 Geany IDE is now installed on ```bustergraafinen```
-
-
-
-
-
-
-
-
 
 
 # 13. Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress < Write!)
@@ -1189,15 +1165,6 @@ salt '*' sys.doc saltstates
 salt '*' sys.list_salt_functions
 
 salt '*' grains.get os
-
-
-
-
-
-
-
-
-
 
 
 # 14. Initializing three more instances in Rovius CP (Work in progress < Cleanup!)
@@ -1277,14 +1244,6 @@ Connecting to ```ubuntuminion``` from ```bustergraafinen``` terminal
 ```
 ssh -l oppilas 10.208.0.43
 ```
-
-
-
-
-
-
-
-
 
 
 # 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress < Cleanup!)
@@ -1473,14 +1432,6 @@ sudo reboot
 ```
 
 The hostname is now changed permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
-
-
-
-
-
-
-
-
 
 
 # 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress < Cleanup!)
@@ -1854,14 +1805,6 @@ exit
 Salt Master is now bootstrapped and configured on ```ubuntumaster```, and Salt Minion is now bootstrapped and configured on ```centosminion``` and ```ubuntuminion```
 
 
-
-
-
-
-
-
-
-
 # 18. Taking VM Snapshots in Rovius CP (Work in progress < Cleanup!)
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
@@ -1900,14 +1843,6 @@ Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster`
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
-
-
-
-
-
-
-
-
 # 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress > Cleanup!)
 
 Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
@@ -1933,14 +1868,6 @@ sudo snap install code --classic
 Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack``` and ```salt-lint```
 
 Visual Studio Code is now installed on ```bustergraafinen```
-
-
-
-
-
-
-
-
 
 
 # 20. Changing SSH Server Port on ```ubuntuminion``` (Work in progress > Cleanup!)
@@ -2100,14 +2027,6 @@ ssh -p 8888 ubuntuminion@ubuntuminion
 ```
 
 SSH server port is now changed on ```ubuntuminion``` and SSH
-
-
-
-
-
-
-
-
 
 
 # 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress > Write!)
