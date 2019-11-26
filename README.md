@@ -3,25 +3,9 @@
 Linux notes and instructions for a course about Linux server management in Haaga-Helia University of Applied Sciences
 
 
-
-
-
-
-
-
-
-
 # Author
 
 Pekka Hämäläinen
-
-
-
-
-
-
-
-
 
 
 # 1. Initializing Rovius CP
@@ -81,14 +65,6 @@ Lastly, navigate to ```Network```, choose ```pekanverkko```, press ```View IP Ad
 The instances ```bustergraafinen``` and ```ubuntussh``` are now working correctly, as well as the network ```pekanverkko```
 
 
-
-
-
-
-
-
-
-
 # 2. Remote connections to ```bustergraafinen``` and ```ubuntussh```
 
 First, we will establish a remote desktop connection to the RDP instance ```bustergraafinen``` using the following steps
@@ -131,14 +107,6 @@ Alternatively, you can use ```PuTTY``` to establish an SSH connection to ```ubun
 - Enter ```oppilas``` to ```login as:``` prompt and ```salainen``` to ```oppilas@x.x.x.x's password:``` prompt, after which the terminal to ```ubuntussh``` should open
 
 Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working correctly
-
-
-
-
-
-
-
-
 
 
 # 3. Changing the hostname permanently on ```ubuntussh```
@@ -196,14 +164,6 @@ sudo reboot
 The hostname is now changed permanently on ```ubuntussh```
 
 
-
-
-
-
-
-
-
-
 # 4. Installing Salt Minion on ```ubuntussh```
 
 Navigate to address http://x.x.x.x/ to view the instructions for installing Salt Minion on ```ubuntussh```
@@ -239,14 +199,6 @@ exit
 ```
 
 Salt Minion is now installed on ```ubuntussh```
-
-
-
-
-
-
-
-
 
 
 # 5. Installing LAMP on ```ubuntussh``` (Work in progress < Cleanup!)
@@ -511,14 +463,6 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-
-
-
-
-
-
-
-
 # 6. Installing WordPress on ```ubuntussh``` (Work in progress < Cleanup!) 
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
@@ -753,14 +697,6 @@ Log Out
 WordPress is now installed on ```ubuntussh```
 
 
-
-
-
-
-
-
-
-
 # 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress < Cleanup!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
@@ -836,25 +772,9 @@ ssh -l oppilas 10.208.0.83
 SSH key-based authentication is now configured on ```bustergraafinen``` and ```ubuntussh```
 
 
-
-
-
-
-
-
-
-
 # 8. Installing and securing phpMyAdmin on ```ubuntussh``` (Work in progress < Optional!)
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04 to view the instructions for installing and securing phpMyAdmin on ```ubuntussh```
-
-
-
-
-
-
-
-
 
 
 # 9. Installing Docker on ```bustergraafinen```
@@ -973,14 +893,6 @@ exit
 ```
 
 Docker is now installed and tested on ```bustergraafinen```
-
-
-
-
-
-
-
-
 
 
 # 10. Installing Docker Compose on ```bustergraafinen```
