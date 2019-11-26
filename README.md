@@ -2026,7 +2026,61 @@ Establish an SSH connection to ```ubuntuminion```
 ssh -p 8888 oppilas@ubuntuminion
 ```
 
-SSH server port is now changed and SSH connection is working on ```ubuntuminion```
+```
+exit
+```
+
+```
+sudo nano /srv/salt/sshd_config
+```
+
+```
+#       $OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+#HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_ecdsa_key
+#HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+#LoginGraceTime 2m
+```
+
+```
+sudo salt 'ubuntuminion' state.apply sshd
+```
+
+```
+nc -vz ubuntuminion 22
+```
+
+```
+ssh -l oppilas 10.208.0.43
+```
+
+SSH server port 8888 is now changed and connection is tested, after which SSH server port is reverted back to 22 on ```ubuntuminion```
 
 
 # 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen``` (Work in progress)
