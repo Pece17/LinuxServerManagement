@@ -2023,10 +2023,10 @@ nc -vz ubuntuminion 8888
 Establish an SSH connection to ```ubuntuminion```
 
 ```
-ssh -p 8888 ubuntuminion@ubuntuminion
+ssh -p 8888 oppilas@ubuntuminion
 ```
 
-SSH server port is now changed on ```ubuntuminion``` and SSH
+SSH server port is now changed and SSH connection is working on ```ubuntuminion```
 
 
 # 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
