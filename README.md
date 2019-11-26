@@ -1330,7 +1330,7 @@ Check the new hostname
 hostname
 ```
 
-Install GNU (GNU’s Not Unix) nano tex editor
+Install GNU (GNU’s Not Unix) nano text editor
 
 ```
 yum install nano
@@ -2029,4 +2029,7 @@ ssh -p 8888 oppilas@ubuntuminion
 SSH server port is now changed and SSH connection is working on ```ubuntuminion```
 
 
-# 21. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
+# 21. Configure nano text editor to support YAML and Jinja syntax highlighting (Work in progress)
+
+
+# 22. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
