@@ -2233,3 +2233,45 @@ Create ```/srv/pillar/top.sls``` file
 sudo nano /srv/pillar/top.sls
 ```
 
+Copy the following text inside ```/srv/pillar/top.sls``` file
+
+```
+base:
+  '*':
+    - apache
+```
+
+Create ```/srv/pillar/apache.sls``` file
+
+```
+sudo nano /srv/pillar/apache.sls
+```
+
+Copy the following text inside ```/srv/pillar/apache.sls``` file
+
+```
+domain: example.com
+```
+
+Create ```/srv/salt/example.com``` directory
+
+```
+sudo mkdir /srv/salt/example.com
+```
+
+Create ```/srv/salt/example.com/index.html``` file
+
+```
+sudo nano /srv/salt/example.com/index.html
+```
+
+Copy the following text inside ```/srv/salt/example.com/index.html``` file
+
+```
+<html>
+  <body>
+    <h1>Server Up and Running!</h1>
+  </body>
+</html>
+```
+
