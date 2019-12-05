@@ -2311,3 +2311,181 @@ Copy the following text inside ```/srv/salt/files/include_sites_enabled.conf``` 
 IncludeOptional sites-enabled/*.conf
 ```
 
+Create ```/srv/salt/apache-debian.sls``` file for ```ubuntuminion```
+
+```
+sudo nano /srv/salt/apache-debian.sls
+```
+
+Copy the following text inside ```/srv/salt/apache-debian.sls``` file
+
+```
+apache2:
+  pkg.installed
+
+apache2 Service:
+  service.running:
+    - name: apache2
+    - enable: True
+    - require:
+      - pkg: apache2
+
+Turn Off KeepAlive:
+  file.replace:
+    - name: /etc/apache2/apache2.conf
+    - pattern: 'KeepAlive On'
+    - repl: 'KeepAlive Off'
+    - show_changes: True
+    - require:
+      - pkg: apache2
+
+/etc/apache2/conf-available/tune_apache.conf:
+  file.managed:
+    - source: salt://files/tune_apache.conf
+    - require:
+      - pkg: apache2
+
+Enable tune_apache:
+  apache_conf.enabled:
+    - name: tune_apache
+    - require:
+      - pkg: apache2
+
+/var/www/html/{{ pillar['domain'] }}:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}/log:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}/backups:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}/public_html:
+  file.directory
+
+000-default:
+  apache_site.disabled:
+    - require:
+      - pkg: apache2
+
+/etc/apache2/sites-available/{{ pillar['domain'] }}.conf:
+  apache.configfile:
+    - config:
+      - VirtualHost:
+          this: '*:80'
+          ServerName:
+            - {{ pillar['domain'] }}
+          ServerAlias:
+            - www.{{ pillar['domain'] }}
+          DocumentRoot: /var/www/html/{{ pillar['domain'] }}/public_html
+          ErrorLog: /var/www/html/{{ pillar['domain'] }}/log/error.log
+          CustomLog: /var/www/html/{{ pillar['domain'] }}/log/access.log combined
+
+{{ pillar['domain'] }}:
+  apache_site.enabled:
+    - require:
+      - pkg: apache2
+
+/var/www/html/{{ pillar['domain'] }}/public_html/index.html:
+  file.managed:
+    - source: salt://{{ pillar['domain'] }}/index.html
+```
+
+Create ```/srv/salt/apache-centos.sls``` file for ```centosminion```
+
+```
+sudo nano /srv/salt/apache-centos.sls
+```
+
+Copy the following text inside ```/srv/salt/apache-centos.sls``` file
+
+```
+httpd:
+  pkg.installed
+
+httpd Service:
+  service.running:
+    - name: httpd
+    - enable: True
+    - require:
+      - pkg: httpd
+    - watch:
+      - file: /etc/httpd/sites-available/{{ pillar['domain'] }}.conf
+
+Turn off KeepAlive:
+  file.replace:
+    - name: /etc/httpd/conf/httpd.conf
+    - pattern: 'KeepAlive On'
+    - repl: 'KeepAlive Off'
+    - show_changes: True
+    - require:
+      - pkg: httpd
+
+Change DocumentRoot:
+  file.replace:
+    - name: /etc/httpd/conf/httpd.conf
+    - pattern: 'DocumentRoot "/var/www/html"'
+    - repl: 'DocumentRoot "/var/www/html/{{ pillar['domain'] }}/public_html"'
+    - show_changes: True
+    - require:
+      - pkg: httpd
+
+/etc/httpd/conf.d/tune_apache.conf:
+  file.managed:
+    - source: salt://files/tune_apache.conf
+    - require:
+      - pkg: httpd
+
+/etc/httpd/conf.d/include_sites_enabled.conf:
+  file.managed:
+    - source: salt://files/include_sites_enabled.conf
+    - require:
+      - pkg: httpd
+
+/etc/httpd/sites-available:
+  file.directory
+
+/etc/httpd/sites-enabled:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}/backups:
+  file.directory
+
+/var/www/html/{{ pillar['domain'] }}/public_html:
+  file.directory
+
+/etc/httpd/sites-available/{{ pillar['domain'] }}.conf:
+  apache.configfile:
+    - config:
+      - VirtualHost:
+          this: '*:80'
+          ServerName:
+            - {{ pillar['domain'] }}
+          ServerAlias:
+            - www.{{ pillar['domain'] }}
+          DocumentRoot: /var/www/html/{{ pillar['domain'] }}/public_html
+  file.symlink:
+    - target: /etc/httpd/sites-enabled/{{ pillar['domain'] }}.conf
+    - force: True
+
+/var/www/html/{{ pillar['domain'] }}/public_html/index.html:
+  file.managed:
+    - source: salt://{{ pillar['domain'] }}/index.html
+
+Configure Firewall:
+  firewalld.present:
+    - name: public
+    - ports:
+      - 22/tcp
+      - 80/tcp
+      - 443/tcp
+```
+
+Apply the created states to ```ubuntuminion``` and ```centosminion```
+
+```
+sudo salt '*' state.apply
+```
