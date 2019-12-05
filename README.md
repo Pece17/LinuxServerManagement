@@ -2194,4 +2194,6 @@ monolog:
 
 # 22. Installing Apache, PHP, and WordPress on ```ubuntuminion``` and MySQL on ```centosminion``` (Work in progress)
 
-https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/
+Go to address https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/ to view the instructions for installing Apache to ```ubuntuminion```
+
+I managed to install Apache to ```ubuntuminion``` from ```ubuntumaster```, I'll write the instructions soon.
