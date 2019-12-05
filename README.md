@@ -2184,8 +2184,52 @@ monolog:
 ```
 
 
-# 22. Installing LAMP on ```ubuntuminion``` and ```centosminion``` with Salt (Work in progress)
+# 22. Installing Apache on ```ubuntuminion``` and ```centosminion``` with Salt (Work in progress)
 
 Go to address https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/ to view the instructions for installing LAMP on ```ubuntuminion``` and ```centosminion``` with Salt
 
 I managed to install Apache to ```ubuntuminion``` from ```ubuntumaster```, I'll write the instructions soon.
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Create ```/srv/salt``` directory if it does not already exist
+
+```
+sudo mkdir /srv/salt
+```
+
+Create ```/srv/salt/top.sls``` file
+
+```
+sudo nano /srv/salt/top.sls
+```
+
+Copy the following text inside ```/srv/salt/top.sls``` file
+
+```
+base:
+  'G@os_family:Debian':
+    - match: compound
+    - apache-debian
+
+  'G@os:CentOS':
+    - match: compound
+    - apache-centos
+```
+
+Create ```/srv/pillar``` directory
+
+```
+sudo mkdir /srv/pillar
+```
+
+Create ```/srv/pillar/top.sls``` file
+
+```
+sudo nano /srv/pillar/top.sls
+```
+
