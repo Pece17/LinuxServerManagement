@@ -2489,3 +2489,5 @@ Apply the created states to ```ubuntuminion``` and ```centosminion```
 ```
 sudo salt '*' state.apply
 ```
+
+Apache was installed successfully on ```ubuntuminion```, but for some reason the installation failed on ```centosminion``` - to be continued
