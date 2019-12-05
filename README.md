@@ -201,7 +201,7 @@ exit
 Salt Minion is now installed on ```ubuntussh```
 
 
-# 5. Installing LAMP on ```ubuntussh``` (Work in progress)
+# 5. Installing LAMP on ```ubuntussh```
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
 
@@ -463,7 +463,7 @@ sudo rm /var/www/ubuntussh/info.php
 LAMP is now installed on ```ubuntussh```
 
 
-# 6. Installing WordPress on ```ubuntussh``` (Work in progress) 
+# 6. Installing WordPress on ```ubuntussh```
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
@@ -697,7 +697,7 @@ Log Out
 WordPress is now installed on ```ubuntussh```
 
 
-# 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh``` (Work in progress)
+# 7. Configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-freebsd-server to view the instructions for configuring SSH key-based authentication on ```bustergraafinen``` and ```ubuntussh```
 
@@ -1110,7 +1110,7 @@ sudo apt-get install geany geany-plugins-common
 Geany IDE is now installed on ```bustergraafinen```
 
 
-# 13. Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress < Write!)
+# 13. Pulling Harri's ready-to-run Salt Master and Salt Minion container on ```bustergraafinen``` (Work in progress)
 
 For testing purposes, navigate to address https://hub.docker.com/r/darkdth/saltstacktesting/tags and check the command for pulling the latest Salt Master and Salt Minion container
 
@@ -1187,7 +1187,7 @@ salt '*' state.apply nginx_installed
 ```
 
 
-# 14. Initializing three more instances in Rovius CP (Work in progress)
+# 14. Initializing three more instances in Rovius CP
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1237,15 +1237,7 @@ Lastly, navigate to ```Network``` > ```pekanverkko``` > ```View IP Addresses``` 
 The instances ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now working correctly
 
 
-
-
-
-
-
-
-
-
-# 15. Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress)
+# 15. Remote connections to ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 Connecting to ```ubuntumaster``` from ```bustergraafinen``` terminal
 
@@ -1266,7 +1258,7 @@ ssh -l oppilas 10.208.0.43
 ```
 
 
-# 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` (Work in progress)
+# 16. Changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 Navigate to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the hostname permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
@@ -1454,7 +1446,7 @@ sudo reboot
 The hostname is now changed permanently on ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
-# 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion``` (Work in progress)
+# 17. Bootstrapping and configuring Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
 Navigate to address http://repo.saltstack.com/ to view the instructions for bootstrapping Salt Master on ```ubuntumaster```, and Salt Minion on ```centosminion``` and ```ubuntuminion```
 
@@ -1825,7 +1817,7 @@ exit
 Salt Master is now bootstrapped and configured on ```ubuntumaster```, and Salt Minion is now bootstrapped and configured on ```centosminion``` and ```ubuntuminion```
 
 
-# 18. Taking VM Snapshots in Rovius CP (Work in progress)
+# 18. Taking VM Snapshots in Rovius CP
 
 Open VDI from address https://vdi.haaga-helia.fi if you are working outside of Haaga-Helia lab environment, and navigate to Rovius CP in address https://vdi-lab.cp.haaga-helia.fi/client/
 
@@ -1863,7 +1855,7 @@ Go to ```Instances``` > ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster`
 VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```, ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
 
 
-# 19. Installing Visual Studio Code on ```bustergraafinen``` (Work in progress)
+# 19. Installing Visual Studio Code on ```bustergraafinen```
 
 Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
 
@@ -1890,7 +1882,7 @@ Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack
 Visual Studio Code is now installed on ```bustergraafinen```
 
 
-# 20. Changing SSH Server Port with Salt on ```ubuntuminion``` (Work in progress)
+# 20. Changing SSH Server Port with Salt on ```ubuntuminion```
 
 Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port with Salt on ```ubuntuminion```
 
@@ -2103,7 +2095,7 @@ ssh -l oppilas 10.208.0.43
 SSH server port 8888 is now changed with Salt and connection is tested, after which SSH server port is reverted back to 22 with Salt on ```ubuntuminion```
 
 
-# 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen``` (Work in progress)
+# 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
 Navigate to address https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano to view the instructions for configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
