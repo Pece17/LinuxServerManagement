@@ -2275,3 +2275,39 @@ Copy the following text inside ```/srv/salt/example.com/index.html``` file
 </html>
 ```
 
+Create ```/srv/salt/files``` directory
+
+```
+sudo mkdir /srv/salt/files
+```
+
+Create ```/srv/salt/files/tune_apache.conf``` file
+
+```
+sudo nano /srv/salt/files/tune_apache.conf
+```
+
+Copy the following text inside ```/srv/salt/files/tune_apache.conf``` file
+
+```
+<IfModule mpm_prefork_module>
+StartServers 4
+MinSpareServers 20
+MaxSpareServers 40
+MaxClients 200
+MaxRequestsPerChild 4500
+</IfModule>
+```
+
+Create ```/srv/salt/files/include_sites_enabled.conf``` file
+
+```
+sudo nano /srv/salt/files/include_sites_enabled.conf
+```
+
+Copy the following text inside ```/srv/salt/files/include_sites_enabled.conf``` file
+
+```
+IncludeOptional sites-enabled/*.conf
+```
+
