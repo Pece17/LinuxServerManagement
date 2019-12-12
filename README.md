@@ -2849,22 +2849,59 @@ Total run time:  19.525 s
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 
-# 27. Installing MySQL on ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
+# 27. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
 
-Go to address http://www.mysqltutorial.org/install-mysql-centos/ to view the instructions for installing MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
+I didn't find a workable way to install MySQL on ```centosminion```, so instead, I installed MariaDB which is a commercially supported fork of MySQL
 
-```
-sudo salt 'centosminion' cmd.run 'rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm'
-```
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
 ```
-sudo salt 'centosminion' cmd.run 'sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/mysql-community.repo'
+ssh -l oppilas 10.208.0.56
 ```
 
-```
-sudo salt 'centosminion' cmd.run 'yum --enablerepo=mysql80-community install mysql-community-server'
-```
+Create ```/srv/salt/SQL.sls``` file
 
 ```
-sudo salt 'centosminion' cmd.run 'service mysqld start'
+sudo nano /srv/salt/SQL.sls
+```
+
+Copy the following text inside ```/srv/salt/SQL.sls``` file
+
+```
+mariadb:
+  pkg.installed
+```
+
+Apply ```/srv/salt/SQL.sls``` state
+
+```
+sudo salt 'centosminion' state.apply SQL
+```
+
+The following output appears
+
+```
+centosminion:
+----------
+          ID: mariadb
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 21:22:33.202503
+    Duration: 3527.107 ms
+     Changes:
+
+Summary for centosminion
+------------
+Succeeded: 1
+Failed:    0
+------------
+Total states run:     1
+Total run time:   3.527 s
+```
+
+Start MariaDB
+
+```
+sudo salt 'centosminion' cmd.run 'systemctl start mariadb'
 ```
