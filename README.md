@@ -2775,3 +2775,31 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ```
 ssh -l oppilas 10.208.0.56
 ```
+
+Create ```/srv/salt/DeployToAllVMs.sls``` file
+
+```
+sudo nano /srv/salt/DeployToAllVMs.sls
+```
+
+Copy the following text inside ```/srv/salt/DeployToAllVMs.sls``` file
+
+```sls
+apache2:
+  pkg.installed
+
+vim:
+  pkg.installed
+
+links:
+  pkg.installed
+
+wget:
+  pkg.installed
+
+curl:
+  pkg.installed
+
+tmux:
+  pkg.installed
+```
