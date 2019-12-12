@@ -2551,6 +2551,12 @@ Check the new hostname
 hostname
 ```
 
+Edit ```/etc/hosts``` file
+
+```
+sudo nano /etc/hosts
+```
+
 Replace the old hostname ```deb10xfcews1``` after the line ```127.0.1.1``` with the new hostname ```bustergraafinen``` 
 
 ```
