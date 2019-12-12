@@ -2905,3 +2905,16 @@ Start MariaDB
 ```
 sudo salt 'centosminion' cmd.run 'systemctl start mariadb'
 ```
+
+Establish an SSH connection to ```centosminion```
+
+```
+ssh -l root 10.208.0.55
+```
+
+Open MariaDB
+
+```
+sudo mysql
+```
+
