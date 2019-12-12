@@ -1935,11 +1935,11 @@ ssh -l oppilas 10.208.0.56
 ```
 
 ```
-sudo mkdir /srv/salt/
+sudo mkdir /srv/salt
 ```
 
 ```
-cd /srv/salt/
+cd /srv/salt
 ```
 
 ```
@@ -2580,8 +2580,6 @@ The hostname is now changed permanently on ```bustergraafinen```
 
 # 24. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
-Description here
-
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
 ```
@@ -2609,4 +2607,29 @@ The following output appears
 └── pekka
 
 2 directories, 1 file
+```
+
+Create ```/srv/salt/cowsanoopi.sls``` file
+
+```
+sudo nano /srv/salt/cowsanoopi.sls
+```
+
+Copy the following text inside ```/srv/salt/cowsanoopi.sls``` file 
+
+```
+cowsay:
+  pkg.installed
+```
+
+Apply ```/srv/salt/cowsanoopi.sls``` state
+
+```
+sudo salt '*' state.apply cowsanoopi test=True
+```
+
+Execute ```/srv/salt/cowsanoopi.sls``` state
+
+```
+sudo salt '*' cmd.run 'cowsay "Kukkuu -salttia pukkaa"'
 ```
