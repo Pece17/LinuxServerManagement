@@ -2667,3 +2667,65 @@ centosminion:
 ```
 
 cowsay is now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
+
+
+# 25. Adding the roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` into the grains
+
+Go to address https://docs.saltstack.com/en/latest/topics/grains/ to view the instructions for adding the roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` into the grains
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Create ```/etc/salt/grains``` file
+
+```
+sudo nano /etc/salt/grains
+```
+
+Copy the following text inside ```/etc/salt/grains``` file
+
+```
+roles:
+  - SaltMaster1
+```
+
+Establish an SSH connection to ```centosminion```
+
+```
+ssh -l root 10.208.0.55
+```
+
+Create ```/etc/salt/grains``` file
+
+```
+sudo nano /etc/salt/grains
+```
+
+Copy the following text inside ```/etc/salt/grains``` file
+
+```
+roles:
+  - DB_tier
+```
+
+Establish an SSH connection to ```ubuntuminion```
+
+```
+ssh -l oppilas 10.208.0.43
+```
+
+Create ```/etc/salt/grains``` file
+
+```
+sudo nano /etc/salt/grains
+```
+
+Copy the following text inside ```/etc/salt/grains``` file
+
+```
+roles:
+  - Web_tier
+```
