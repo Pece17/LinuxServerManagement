@@ -2628,7 +2628,7 @@ Apply ```/srv/salt/cowsanoopi.sls``` state
 sudo salt '*' state.apply cowsanoopi test=True
 ```
 
-Execute ```/srv/salt/cowsanoopi.sls``` state
+Execute cowsay on Salt Minions
 
 ```
 sudo salt '*' cmd.run 'cowsay "Kukkuu -salttia pukkaa"'
