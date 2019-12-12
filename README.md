@@ -2851,3 +2851,20 @@ Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``
 
 # 27. Installing MySQL on ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
 
+Go to address http://www.mysqltutorial.org/install-mysql-centos/ to view the instructions for installing MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
+
+```
+sudo salt 'centosminion' cmd.run 'rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm'
+```
+
+```
+sudo salt 'centosminion' cmd.run 'sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/mysql-community.repo'
+```
+
+```
+sudo salt 'centosminion' cmd.run 'yum --enablerepo=mysql80-community install mysql-community-server'
+```
+
+```
+sudo salt 'centosminion' cmd.run 'service mysqld start'
+```
