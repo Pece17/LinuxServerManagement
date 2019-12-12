@@ -111,7 +111,7 @@ Remote connections to ```bustergraafinen``` and ```ubuntussh``` are now working 
 
 # 3. Changing the hostname permanently on ```ubuntussh```
 
-Navigate to address http://x.x.x.x/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```ubuntussh``` Ubuntu server hostname permanently
+Navigate to address http://x.x.x.x/ first and then open the link from there to https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing ```ubuntussh``` Ubuntu server hostname permanently
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -2537,7 +2537,7 @@ Apache was installed successfully on ```ubuntuminion```, but for some reason the
 
 # 23. Changing the hostname permanently on ```bustergraafinen```
 
-Go to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```bustergraafinen``` hostname permanently
+Go to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing ```bustergraafinen``` hostname permanently
 
 Replace the old hostname ```deb10xfcews1``` with ```bustergraafinen``` 
 
