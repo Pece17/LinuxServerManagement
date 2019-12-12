@@ -2834,7 +2834,7 @@ Total states run:     6
 Total run time: 582.659 ms
 ```
 
-The output shows that four installations succeeded on ```centosminion```, and two installations failed - this is fine because we don't need Apache2 on ```centosminion```
+The output shows that four installations succeeded on ```centosminion```, and two installations failed - this is fine because we don't need Apache2 or Vim on ```centosminion```
 
 ```
 Summary for centosminion
