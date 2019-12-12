@@ -2784,7 +2784,7 @@ sudo nano /srv/salt/DeployToAllVMs.sls
 
 Copy the following text inside ```/srv/salt/DeployToAllVMs.sls``` file
 
-```sls
+```
 apache2:
   pkg.installed
 
