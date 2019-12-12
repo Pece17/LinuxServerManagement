@@ -2532,4 +2532,41 @@ Apply the created states to ```ubuntuminion``` and ```centosminion```
 sudo salt '*' state.apply
 ```
 
-Apache was installed successfully on ```ubuntuminion```, but for some reason the installation failed on ```centosminion``` - to be continued
+Apache was installed successfully on ```ubuntuminion```, but for some reason the installation failed on ```centosminion``` - to be continued - httpd instead of Apache2?
+
+
+# 23. Changing the hostname permanently on ```bustergraafinen```
+
+Go to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing the ```bustergraafinen``` hostname permanently
+
+Replace the old hostname ```deb10xfcews1``` with ```bustergraafinen``` 
+
+```
+sudo hostnamectl set-hostname bustergraafinen
+```
+
+Check the new hostname
+
+```
+hostname
+```
+
+Replace the old hostname ```deb10xfcews1``` after the line ```127.0.1.1``` with the new hostname ```bustergraafinen``` 
+
+```
+127.0.0.1       localhost
+127.0.1.1       deb10xfcews1.haagahelia.amk     bustergraafinen
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
+
+Reboot the system
+
+```
+sudo reboot
+```
+
+The hostname is now changed permanently on ```bustergraafinen```
