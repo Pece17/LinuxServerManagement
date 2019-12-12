@@ -2628,7 +2628,7 @@ Apply ```/srv/salt/cowsanoopi.sls``` state
 sudo salt '*' state.apply cowsanoopi test=True
 ```
 
-Execute cowsay on Salt Minions
+Execute cowsay on Salt Minions, but replace ```runas=pekka``` with your own user on Salt Minions
 
 ```
 sudo salt '*' cmd.run 'cowsay "Kukkuu -salttia pukkaa"' runas=pekka
