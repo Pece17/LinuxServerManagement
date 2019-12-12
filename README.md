@@ -2578,7 +2578,7 @@ sudo reboot
 The hostname is now changed permanently on ```bustergraafinen```
 
 
-# 24. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
+# 24. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -2766,3 +2766,12 @@ centosminion:
 ```
 
 The roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now added into the grains
+
+
+# 26. Installing Apache2, Vim, Links, Wget, cURL, and tmux on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
