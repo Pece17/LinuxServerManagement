@@ -2803,3 +2803,195 @@ curl:
 tmux:
   pkg.installed
 ```
+
+Apply ```/srv/salt/DeployToAllVMs.sls``` state
+
+```
+sudo salt '*' state.apply DeployToAllVMs
+```
+
+```
+ubuntuminion:
+----------
+          ID: apache2
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.053870
+    Duration: 80.25 ms
+     Changes:
+----------
+          ID: vim
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.134549
+    Duration: 38.614 ms
+     Changes:
+----------
+          ID: links
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.173555
+    Duration: 37.146 ms
+     Changes:
+----------
+          ID: wget
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.211086
+    Duration: 34.522 ms
+     Changes:
+----------
+          ID: curl
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.245926
+    Duration: 36.66 ms
+     Changes:
+----------
+          ID: tmux
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:01.282918
+    Duration: 35.592 ms
+     Changes:
+
+Summary for ubuntuminion
+------------
+Succeeded: 6
+Failed:    0
+------------
+Total states run:     6
+Total run time: 262.784 ms
+myminion:
+----------
+          ID: apache2
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.081513
+    Duration: 189.423 ms
+     Changes:
+----------
+          ID: vim
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.271727
+    Duration: 84.423 ms
+     Changes:
+----------
+          ID: links
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.357111
+    Duration: 83.42 ms
+     Changes:
+----------
+          ID: wget
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.441250
+    Duration: 71.735 ms
+     Changes:
+----------
+          ID: curl
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.513649
+    Duration: 76.563 ms
+     Changes:
+----------
+          ID: tmux
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:03.590795
+    Duration: 77.095 ms
+     Changes:
+
+Summary for myminion
+------------
+Succeeded: 6
+Failed:    0
+------------
+Total states run:     6
+Total run time: 582.659 ms
+centosminion:
+----------
+          ID: apache2
+    Function: pkg.installed
+      Result: False
+     Comment: Error occurred installing package(s). Additional info follows:
+
+              errors:
+                  - Running scope as unit run-21294.scope.
+                    Loaded plugins: fastestmirror
+                    Loading mirror speeds from cached hostfile
+                     * base: ftp.funet.fi
+                     * epel: epel.mirror.far.fi
+                     * extras: ftp.funet.fi
+                     * updates: ftp.funet.fi
+                    No package apache2 available.
+                    Error: Nothing to do
+     Started: 19:50:07.955725
+    Duration: 13165.448 ms
+     Changes:
+----------
+          ID: vim
+    Function: pkg.installed
+      Result: False
+     Comment: The following packages failed to install/update: vim
+     Started: 19:50:21.122235
+    Duration: 6027.605 ms
+     Changes:
+----------
+          ID: links
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:27.150628
+    Duration: 78.67 ms
+     Changes:
+----------
+          ID: wget
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:27.229975
+    Duration: 85.609 ms
+     Changes:
+----------
+          ID: curl
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:27.316318
+    Duration: 83.535 ms
+     Changes:
+----------
+          ID: tmux
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 19:50:27.400644
+    Duration: 84.476 ms
+     Changes:
+
+Summary for centosminion
+------------
+Succeeded: 4
+Failed:    2
+------------
+Total states run:     6
+Total run time:  19.525 s
+ERROR: Minions returned with non-zero exit code
+```
