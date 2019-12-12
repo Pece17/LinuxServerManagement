@@ -2729,3 +2729,40 @@ Copy the following text inside ```/etc/salt/grains``` file
 roles:
   - Web_tier
 ```
+
+Establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Restart Salt Minions
+
+```
+sudo salt '*' cmd.run 'systemctl restart salt-minion'
+```
+
+Check the roles of Salt Minions
+
+```
+sudo salt '*' grains.item roles
+```
+
+The following output appears
+
+```
+ubuntuminion:
+    ----------
+    roles:
+        - Web_tier
+myminion:
+    ----------
+    roles:
+        - SaltMaster1
+centosminion:
+    ----------
+    roles:
+        - DB_tier
+```
+
+The roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now added into the grains
