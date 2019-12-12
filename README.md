@@ -2847,3 +2847,7 @@ Total run time:  19.525 s
 ```
 
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+
+
+# 27. Installing MySQL on ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
+
