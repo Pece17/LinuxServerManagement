@@ -467,23 +467,41 @@ LAMP is now installed on ```ubuntussh```
 
 Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-ubuntu-18-04 to view the instructions for installing WordPress on ```ubuntussh```
 
+```
 mysql -u root -p
+```
 
+```
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
 
+```
 GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' IDENTIFIED BY 'salainen';
+```
 
+```
 FLUSH PRIVILEGES;
+```
 
+```
 EXIT;
+```
 
+```
 sudo apt-get update
+```
 
+```
 sudo apt-get install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+```
 
+```
 sudo systemctl restart apache2
+```
 
+```
 sudo nano /etc/apache2/sites-available/ubuntussh.conf
+```
 
 ```
 <VirtualHost *:80>
@@ -499,25 +517,45 @@ sudo nano /etc/apache2/sites-available/ubuntussh.conf
 </VirtualHost>
 ```
 
+```
 sudo a2enmod rewrite
+```
 
+```
 sudo apache2ctl configtest
+```
 
+```
 sudo systemctl restart apache2
+```
 
+```
 cd /tmp
+```
 
+```
 curl -O https://wordpress.org/latest.tar.gz
+```
 
+```
 tar xzvf latest.tar.gz
+```
 
+```
 touch /tmp/wordpress/.htaccess
+```
 
+```
 cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+```
 
+```
 mkdir /tmp/wordpress/wp-content/upgrade
+```
 
+```
 sudo cp -a /tmp/wordpress/. /var/www/ubuntussh
+```
 
 ```
 sudo chown -R www-data:www-data /var/www/ubuntussh
@@ -531,7 +569,9 @@ sudo find /var/www/ubuntussh/ -type d -exec chmod 750 {} \;
 sudo find /var/www/ubuntussh/ -type f -exec chmod 640 {} \;
 ```
 
+```
 curl -s https://api.wordpress.org/secret-key/1.1/salt/
+```
 
 ```
 define('AUTH_KEY',         '%8CNX`|py%-^Fk$QhU>o0FpSk2Ul*fTdeTIfnV:=}<(*v@)!]`gH<]=dRK)[+i6T');
@@ -544,7 +584,9 @@ define('LOGGED_IN_SALT',   'd:BC*5TWlq{Mo<NK5XWa()<ok,JU#o{U+I^+R j}w%_3/WHC-F6|
 define('NONCE_SALT',       '| ,[ke$,=4f|FTft]29|=|q[<Gn1N4nusycSv+bzJP[@MaUt T2^^P7 +!^czRI-');
 ```
 
+```
 sudo nano /var/www/ubuntussh/wp-config.php
+```
 
 ```
 <?php
