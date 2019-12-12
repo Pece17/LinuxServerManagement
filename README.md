@@ -2631,5 +2631,39 @@ sudo salt '*' state.apply cowsanoopi test=True
 Execute cowsay on Salt Minions
 
 ```
-sudo salt '*' cmd.run 'cowsay "Kukkuu -salttia pukkaa"'
+sudo salt '*' cmd.run 'cowsay "Kukkuu -salttia pukkaa"' runas=pekka
 ```
+
+The following output appears
+
+```
+ubuntuminion:
+     ________________________
+    < Kukkuu -salttia pukkaa >
+     ------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+myminion:
+     ________________________
+    < Kukkuu -salttia pukkaa >
+     ------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+centosminion:
+     ________________________
+    < Kukkuu -salttia pukkaa >
+     ------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+```
+
+cowsay is now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
