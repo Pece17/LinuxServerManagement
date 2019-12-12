@@ -2226,9 +2226,9 @@ monolog:
 ```
 
 
-# 22. Installing Apache on ```ubuntuminion``` and ```centosminion``` with Salt (Work in progress)
+# 22. Installing Apache on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states (Work in progress)
 
-Go to address https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/ to view the instructions for installing LAMP on ```ubuntuminion``` and ```centosminion``` with Salt
+Go to address https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/ to view the instructions for installing LAMP on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 I managed to install Apache to ```ubuntuminion``` from ```ubuntumaster```, I'll write the instructions soon.
 
@@ -2576,3 +2576,37 @@ sudo reboot
 ```
 
 The hostname is now changed permanently on ```bustergraafinen```
+
+
+# 24. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
+
+Description here
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Install Tree, a recursive directory listing program that produces a depth-indented listing of files
+
+```
+sudo apt-get install tree
+```
+
+Test Tree
+
+```
+tree /home/
+```
+
+The following output appears
+
+```
+/home/
+├── oppilas
+│   └── install_salt.sh
+└── pekka
+
+2 directories, 1 file
+```
