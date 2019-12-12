@@ -203,7 +203,7 @@ Salt Minion is now installed on ```ubuntussh```
 
 # 5. Installing LAMP on ```ubuntussh```
 
-Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache, MySQL, PHP) on ```ubuntussh```
+Navigate to address https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 to view the instructions for installing LAMP (Linux, Apache2, MySQL, PHP) on ```ubuntussh```
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntussh```
 
@@ -2226,7 +2226,7 @@ monolog:
 ```
 
 
-# 22. Installing Apache on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states (Work in progress)
+# 22. Installing Apache2 on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states (Work in progress)
 
 Go to address https://www.linode.com/docs/applications/configuration-management/configure-apache-with-salt-stack/ to view the instructions for installing LAMP on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
