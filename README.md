@@ -3032,122 +3032,410 @@ ubuntuminion:
           ID: Bob
     Function: user.present
       Result: True
-     Comment: User Bob is present and up to date
-     Started: 18:09:36.705683
-    Duration: 25.788 ms
+     Comment: New user Bob created
+     Started: 18:13:13.790408
+    Duration: 170.692 ms
      Changes:
+              ----------
+              fullname:
+                  Bob Orr
+              gid:
+                  1001
+              groups:
+                  - Bob
+              home:
+                  /home/Bob
+              homephone:
+              name:
+                  Bob
+              other:
+                  Web Administrator and front end Developer
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1001
+              workphone:
 ----------
           ID: Mary
     Function: user.present
       Result: True
-     Comment: User Mary is present and up to date
-     Started: 18:09:36.731795
-    Duration: 6.243 ms
+     Comment: New user Mary created
+     Started: 18:13:13.961645
+    Duration: 159.948 ms
      Changes:
+              ----------
+              fullname:
+                  Mary Jane
+              gid:
+                  1002
+              groups:
+                  - Mary
+              home:
+                  /home/Mary
+              homephone:
+              name:
+                  Mary
+              other:
+                  DB Administrator and back end specialist
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1002
+              workphone:
 ----------
           ID: Kevin
     Function: user.present
       Result: True
-     Comment: User Kevin is present and up to date
-     Started: 18:09:36.738264
-    Duration: 6.545 ms
+     Comment: New user Kevin created
+     Started: 18:13:14.121940
+    Duration: 159.442 ms
      Changes:
+              ----------
+              fullname:
+                  Kevin Malone
+              gid:
+                  1003
+              groups:
+                  - Kevin
+              home:
+                  /home/Kevin
+              homephone:
+              name:
+                  Kevin
+              other:
+                  Old times Network and UNIX/Linux infra and systems Administrator
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1003
+              workphone:
 ----------
           ID: Pekka
     Function: user.present
       Result: True
-     Comment: User Pekka is present and up to date
-     Started: 18:09:36.745108
-    Duration: 5.984 ms
+     Comment: New user Pekka created
+     Started: 18:13:14.281716
+    Duration: 170.669 ms
      Changes:
+              ----------
+              fullname:
+                  Pekka Hamalainen
+              gid:
+                  1004
+              groups:
+                  - Pekka
+              home:
+                  /home/Pekka
+              homephone:
+              name:
+                  Pekka
+              other:
+                  A junior Systems Integrator and Salt Configuration & Automatization Padawan
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1004
+              workphone:
 
 Summary for ubuntuminion
 ------------
-Succeeded: 4
+Succeeded: 4 (changed=4)
 Failed:    0
 ------------
 Total states run:     4
-Total run time:  44.560 ms
+Total run time: 660.751 ms
 myminion:
 ----------
           ID: Bob
     Function: user.present
       Result: True
-     Comment: User Bob is present and up to date
-     Started: 18:09:37.465715
-    Duration: 61.083 ms
+     Comment: New user Bob created
+     Started: 18:13:14.350216
+    Duration: 289.924 ms
      Changes:
+              ----------
+              fullname:
+                  Bob Orr
+              gid:
+                  1001
+              groups:
+                  - Bob
+              home:
+                  /home/Bob
+              homephone:
+              name:
+                  Bob
+              other:
+                  Web Administrator and front end Developer
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1001
+              workphone:
 ----------
           ID: Mary
     Function: user.present
       Result: True
-     Comment: User Mary is present and up to date
-     Started: 18:09:37.527447
-    Duration: 14.856 ms
+     Comment: New user Mary created
+     Started: 18:13:14.641080
+    Duration: 260.647 ms
      Changes:
+              ----------
+              fullname:
+                  Mary Jane
+              gid:
+                  1002
+              groups:
+                  - Mary
+              home:
+                  /home/Mary
+              homephone:
+              name:
+                  Mary
+              other:
+                  DB Administrator and back end specialist
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1002
+              workphone:
 ----------
           ID: Kevin
     Function: user.present
       Result: True
-     Comment: User Kevin is present and up to date
-     Started: 18:09:37.542988
-    Duration: 18.158 ms
+     Comment: New user Kevin created
+     Started: 18:13:14.902560
+    Duration: 268.296 ms
      Changes:
+              ----------
+              fullname:
+                  Kevin Malone
+              gid:
+                  1003
+              groups:
+                  - Kevin
+              home:
+                  /home/Kevin
+              homephone:
+              name:
+                  Kevin
+              other:
+                  Old times Network and UNIX/Linux infra and systems Administrator
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1003
+              workphone:
 ----------
           ID: Pekka
     Function: user.present
       Result: True
-     Comment: User Pekka is present and up to date
-     Started: 18:09:37.561914
-    Duration: 20.871 ms
+     Comment: New user Pekka created
+     Started: 18:13:15.171620
+    Duration: 267.46 ms
      Changes:
+              ----------
+              fullname:
+                  Pekka Hamalainen
+              gid:
+                  1004
+              groups:
+                  - Pekka
+              home:
+                  /home/Pekka
+              homephone:
+              name:
+                  Pekka
+              other:
+                  A junior Systems Integrator and Salt Configuration & Automatization Padawan
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1004
+              workphone:
 
 Summary for myminion
 ------------
-Succeeded: 4
+Succeeded: 4 (changed=4)
 Failed:    0
 ------------
 Total states run:     4
-Total run time: 114.968 ms
+Total run time:   1.086 s
 centosminion:
 ----------
           ID: Bob
     Function: user.present
       Result: True
-     Comment: User Bob is present and up to date
-     Started: 18:09:41.344608
-    Duration: 139.654 ms
+     Comment: New user Bob created
+     Started: 18:13:18.050532
+    Duration: 362.755 ms
      Changes:
+              ----------
+              fullname:
+                  Bob Orr
+              gid:
+                  1000
+              groups:
+                  - Bob
+              home:
+                  /home/Bob
+              homephone:
+              name:
+                  Bob
+              other:
+                  Web Administrator and front end Developer
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1000
+              workphone:
 ----------
           ID: Mary
     Function: user.present
       Result: True
-     Comment: User Mary is present and up to date
-     Started: 18:09:41.485016
-    Duration: 20.007 ms
+     Comment: New user Mary created
+     Started: 18:13:18.414226
+    Duration: 254.94 ms
      Changes:
+              ----------
+              fullname:
+                  Mary Jane
+              gid:
+                  1001
+              groups:
+                  - Mary
+              home:
+                  /home/Mary
+              homephone:
+              name:
+                  Mary
+              other:
+                  DB Administrator and back end specialist
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1001
+              workphone:
 ----------
           ID: Kevin
     Function: user.present
       Result: True
-     Comment: User Kevin is present and up to date
-     Started: 18:09:41.505667
-    Duration: 19.912 ms
+     Comment: New user Kevin created
+     Started: 18:13:18.670005
+    Duration: 276.332 ms
      Changes:
+              ----------
+              fullname:
+                  Kevin Malone
+              gid:
+                  1002
+              groups:
+                  - Kevin
+              home:
+                  /home/Kevin
+              homephone:
+              name:
+                  Kevin
+              other:
+                  Old times Network and UNIX/Linux infra and systems Administrator
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1002
+              workphone:
 ----------
           ID: Pekka
     Function: user.present
       Result: True
-     Comment: User Pekka is present and up to date
-     Started: 18:09:41.526314
-    Duration: 20.355 ms
+     Comment: New user Pekka created
+     Started: 18:13:18.947286
+    Duration: 263.151 ms
      Changes:
+              ----------
+              fullname:
+                  Pekka Hamalainen
+              gid:
+                  1003
+              groups:
+                  - Pekka
+              home:
+                  /home/Pekka
+              homephone:
+              name:
+                  Pekka
+              other:
+                  A junior Systems Integrator and Salt Configuration & Automatization Padawan
+              passwd:
+                  x
+              password:
+                  XXX-REDACTED-XXX
+              roomnumber:
+              shell:
+                  /bin/bash
+              uid:
+                  1003
+              workphone:
 
 Summary for centosminion
 ------------
-Succeeded: 4
+Succeeded: 4 (changed=4)
 Failed:    0
 ------------
 Total states run:     4
-Total run time: 199.928 ms
+Total run time:   1.157 s
 ```
