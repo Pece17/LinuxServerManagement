@@ -2565,10 +2565,10 @@ Total states run:     6
 Total run time:   3.850 s
 ```
 
-Restart httpd i.e. Apache2 on ```centosminion```
+Start httpd i.e. Apache2 on ```centosminion```
 
 ```
-sudo salt 'centosminion' cmd.run 'systemctl restart httpd'
+sudo salt 'centosminion' cmd.run 'systemctl start httpd'
 ```
 
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
