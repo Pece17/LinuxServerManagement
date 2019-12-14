@@ -2976,3 +2976,178 @@ Check that user ```pekka``` was deleted
 sudo salt '*' user.info pekka
 ```
 
+Create ```/srv/salt/FourUsers.sls``` file
+
+```
+sudo nano /srv/salt/FourUsers.sls
+```
+
+Copy the following text inside ```/srv/salt/FourUsers.sls``` file
+
+```
+Bob:
+  user.present:
+    - fullname: Bob Orr
+    - shell: /bin/bash
+    - password: Bob
+    - hash_password: True
+    - other: Web Administrator and front end Developer
+
+Mary:
+  user.present:
+    - fullname: Mary Jane
+    - shell: /bin/bash
+    - password: Mary
+    - hash_password: True
+    - other: DB Administrator and back end specialist
+
+Kevin:
+  user.present:
+    - fullname: Kevin Malone
+    - shell: /bin/bash
+    - password: Kevin
+    - hash_password: True
+    - other: Old times Network and UNIX/Linux infra and systems Administrator
+
+Pekka:
+  user.present:
+    - fullname: Pekka Hamalainen
+    - shell: /bin/bash
+    - password: Pekka
+    - hash_password: True
+    - other: A junior Systems Integrator and Salt Configuration & Automatization Padawan
+```
+
+Apply ```/srv/salt/FourUsers.sls``` state
+
+```
+sudo salt '*' state.apply FourUsers
+```
+
+The following output appears
+
+```
+ubuntuminion:
+----------
+          ID: Bob
+    Function: user.present
+      Result: True
+     Comment: User Bob is present and up to date
+     Started: 18:09:36.705683
+    Duration: 25.788 ms
+     Changes:
+----------
+          ID: Mary
+    Function: user.present
+      Result: True
+     Comment: User Mary is present and up to date
+     Started: 18:09:36.731795
+    Duration: 6.243 ms
+     Changes:
+----------
+          ID: Kevin
+    Function: user.present
+      Result: True
+     Comment: User Kevin is present and up to date
+     Started: 18:09:36.738264
+    Duration: 6.545 ms
+     Changes:
+----------
+          ID: Pekka
+    Function: user.present
+      Result: True
+     Comment: User Pekka is present and up to date
+     Started: 18:09:36.745108
+    Duration: 5.984 ms
+     Changes:
+
+Summary for ubuntuminion
+------------
+Succeeded: 4
+Failed:    0
+------------
+Total states run:     4
+Total run time:  44.560 ms
+myminion:
+----------
+          ID: Bob
+    Function: user.present
+      Result: True
+     Comment: User Bob is present and up to date
+     Started: 18:09:37.465715
+    Duration: 61.083 ms
+     Changes:
+----------
+          ID: Mary
+    Function: user.present
+      Result: True
+     Comment: User Mary is present and up to date
+     Started: 18:09:37.527447
+    Duration: 14.856 ms
+     Changes:
+----------
+          ID: Kevin
+    Function: user.present
+      Result: True
+     Comment: User Kevin is present and up to date
+     Started: 18:09:37.542988
+    Duration: 18.158 ms
+     Changes:
+----------
+          ID: Pekka
+    Function: user.present
+      Result: True
+     Comment: User Pekka is present and up to date
+     Started: 18:09:37.561914
+    Duration: 20.871 ms
+     Changes:
+
+Summary for myminion
+------------
+Succeeded: 4
+Failed:    0
+------------
+Total states run:     4
+Total run time: 114.968 ms
+centosminion:
+----------
+          ID: Bob
+    Function: user.present
+      Result: True
+     Comment: User Bob is present and up to date
+     Started: 18:09:41.344608
+    Duration: 139.654 ms
+     Changes:
+----------
+          ID: Mary
+    Function: user.present
+      Result: True
+     Comment: User Mary is present and up to date
+     Started: 18:09:41.485016
+    Duration: 20.007 ms
+     Changes:
+----------
+          ID: Kevin
+    Function: user.present
+      Result: True
+     Comment: User Kevin is present and up to date
+     Started: 18:09:41.505667
+    Duration: 19.912 ms
+     Changes:
+----------
+          ID: Pekka
+    Function: user.present
+      Result: True
+     Comment: User Pekka is present and up to date
+     Started: 18:09:41.526314
+    Duration: 20.355 ms
+     Changes:
+
+Summary for centosminion
+------------
+Succeeded: 4
+Failed:    0
+------------
+Total states run:     4
+Total run time: 199.928 ms
+```
