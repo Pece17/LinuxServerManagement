@@ -2951,7 +2951,7 @@ MariaDB [(none)]>
 MariaDB is now installed on ```centosminion``` with ```ubuntumaster``` Salt state
 
 
-# 28. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
+# 28. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 Delete the previously created user with your first name, ```pekka```, because it will be created again with its first letter as a capital letter
 
@@ -3456,3 +3456,5 @@ myminion:
 centosminion:
     False
 ```
+
+Four users are now created on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
