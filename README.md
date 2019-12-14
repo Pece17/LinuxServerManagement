@@ -2170,13 +2170,13 @@ color yellow "['\"].*['\"]"
 color brightgreen ":( |$)"
 ```
 
-Create ```/srv/salt/testi.sls``` file
+Create ```/srv/salt/testi.yml``` file
 
 ```
-sudo nano /srv/salt/testi.sls
+sudo nano /srv/salt/testi.yml
 ```
 
-Copy the following text inside ```/srv/salt/testi.sls``` file
+Copy the following text inside ```/srv/salt/testi.yml``` file
 
 ```
 # app/config/config_prod.yml
@@ -2210,6 +2210,14 @@ monolog:
             formatter:  monolog.formatter.html
             content_type: text/html
 ```
+
+Delete ```/srv/salt/testi.yml``` file
+
+```
+sudo rm -r /srv/salt/testi.yml
+```
+
+nano text editor is now configured to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
 
 # 22. Changing the hostname permanently on ```bustergraafinen```
