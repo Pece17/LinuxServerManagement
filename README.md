@@ -1972,6 +1972,8 @@ Edit ```/srv/salt/sshd_config``` file
 sudo nano /srv/salt/sshd_config
 ```
 
+Change line ```#Port 22``` to ```Port 8888```
+
 ```
 #       $OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
 
@@ -1989,30 +1991,15 @@ Port 8888
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
-
-#HostKey /etc/ssh/ssh_host_rsa_key
-#HostKey /etc/ssh/ssh_host_ecdsa_key
-#HostKey /etc/ssh/ssh_host_ed25519_key
-
-# Ciphers and keying
-#RekeyLimit default none
-
-# Logging
-#SyslogFacility AUTH
-#LogLevel INFO
-
-# Authentication:
-
-#LoginGraceTime 2m
 ```
 
-Apply the state ONLY to ```ubuntuminion```
+Apply ```/srv/salt/sshd.sls``` state ONLY to ```ubuntuminion```
 
 ```
 sudo salt 'ubuntuminion' state.apply sshd
 ```
 
-Following text will appear
+The following output appears
 
 ```
 ubuntuminion:
