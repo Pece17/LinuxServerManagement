@@ -1934,17 +1934,19 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ssh -l oppilas 10.208.0.56
 ```
 
+Create ```/srv/salt``` directory
+
 ```
 sudo mkdir /srv/salt
 ```
 
-```
-cd /srv/salt
-```
+Create ```/srv/salt/sshd.sls``` file
 
 ```
-sudo nano sshd.sls
+sudo nano /srv/salt/sshd.sls
 ```
+
+Copy the following text inside ```/srv/salt/sshd.sls``` file
 
 ```
 openssh-server:
@@ -1958,17 +1960,13 @@ sshd:
      - file: /etc/ssh/sshd_config
 ```
 
-```
-sudo cp /etc/ssh/sshd_config /srv/salt/
-```
+Copy ```/etc/ssh/sshd_config``` file to ```/srv/salt``` directory
 
 ```
-cat /srv/salt/sshd.sls
+sudo cp /etc/ssh/sshd_config /srv/salt
 ```
 
-```
-cat /srv/salt/sshd_config
-```
+Edit ```/srv/salt/sshd_config``` file
 
 ```
 sudo nano /srv/salt/sshd_config
