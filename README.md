@@ -2849,7 +2849,7 @@ Total run time:  19.525 s
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 
-# 27. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
+# 27. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
 
 I didn't find a workable way to install MySQL on ```centosminion```, so instead, I installed MariaDB which is a commercially supported fork of MySQL
 
@@ -2931,3 +2931,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]>
 ```
+
+MariaDB is now installed on ```centosminion``` with ```ubuntumaster``` Salt state
+
+
+# 28. (Work in progress)
