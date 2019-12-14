@@ -2599,7 +2599,7 @@ mariadb:
   pkg.installed
 ```
 
-Apply ```/srv/salt/SQL.sls``` state
+Apply ```/srv/salt/SQL.sls``` state on ```centosminion```
 
 ```
 sudo salt 'centosminion' state.apply SQL
@@ -3214,8 +3214,16 @@ php-mysql:
   pkg.installed
 ```
 
-Apply ```/srv/salt/PHP.sls``` state
+Apply ```/srv/salt/PHP.sls``` state on the local Salt Minion of ```ubuntumaster```
 
 ```
+sudo salt 'myminion' state.apply PHP
+```
+
+Apply ```/srv/salt/PHP.sls``` state on ```ubuntuminion```
 
 ```
+sudo salt 'ubuntuminion' state.apply PHP
+```
+
+PHP and PHP modules are now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
