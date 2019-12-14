@@ -1899,7 +1899,7 @@ VM Snapshots are now taken from instances ```bustergraafinen```, ```ubuntussh```
 
 # 19. Installing Visual Studio Code on ```bustergraafinen```
 
-Navigate to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
+Go to address https://snapcraft.io/install/code/ubuntu to view the instructions for installing Visual Studio Code on ```bustergraafinen```
 
 Open ```bustergraafinen``` terminal and update the package lists
 
@@ -1907,7 +1907,7 @@ Open ```bustergraafinen``` terminal and update the package lists
 sudo apt-get update
 ```
 
-Install snapd
+Install snapd, a background service that manages and maintains installed snaps
 
 ```
 sudo apt-get install snapd
@@ -1919,7 +1919,7 @@ Install Visual Studio Code
 sudo snap install code --classic
 ```
 
-Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack``` and ```salt-lint```
+Go to ```Programming``` > ```Visual Studio Code``` > ```Extensions``` > Install ```SaltStack``` and ```salt-lint```
 
 Visual Studio Code is now installed on ```bustergraafinen```
 
@@ -2121,15 +2121,15 @@ SSH server port 8888 is now changed on ```ubuntuminion``` with ```ubuntumaster``
 
 # 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
-Navigate to address https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano to view the instructions for configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
+Go to address https://ourcodeworld.com/articles/read/796/how-to-enable-syntax-highlighting-for-yaml-yml-files-in-gnu-nano to view the instructions for configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
 
-```
-ls /usr/share/nano/
-```
+Create ```/usr/share/nano/yaml.nanorc``` file
 
 ```
 sudo nano /usr/share/nano/yaml.nanorc
 ```
+
+Copy the following text inside ```/usr/share/nano/yaml.nanorc``` file
 
 ```
 # Supports `YAML` files
@@ -2170,9 +2170,13 @@ color yellow "['\"].*['\"]"
 color brightgreen ":( |$)"
 ```
 
+Create ```/srv/salt/testi.sls``` file
+
 ```
-sudo nano testi.yml
+sudo nano /srv/salt/testi.sls
 ```
+
+Copy the following text inside ```/srv/salt/testi.sls``` file
 
 ```
 # app/config/config_prod.yml
