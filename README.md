@@ -2768,7 +2768,7 @@ centosminion:
 The roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now added into the grains
 
 
-# 26. Installing Apache2, Vim, Links, Wget, cURL, and tmux on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+# 26. Installing Apache2, Vim, Links, Wget, cURL, and tmux on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -2834,9 +2834,53 @@ Total states run:     6
 Total run time: 635.518 ms
 ```
 
+Create ```/srv/salt/DeployToCentos.sls``` file
 
+```
+sudo nano /srv/salt/DeployToCentos.sls
+```
 
-Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+Copy the following text inside ```/srv/salt/DeployToCentos.sls``` file
+
+```
+httpd:
+  pkg.installed
+
+vim-enhanced:
+  pkg.installed
+
+links:
+  pkg.installed
+
+wget:
+  pkg.installed
+
+curl:
+  pkg.installed
+
+tmux:
+  pkg.installed
+```
+
+Apply ```/srv/salt/DeployToCentos.sls``` state
+
+```
+sudo salt '*' state.apply DeployToCentos
+```
+
+The output shows that all installations succeeded on ```centosminion```
+
+```
+Summary for centosminion
+------------
+Succeeded: 6
+Failed:    0
+------------
+Total states run:     6
+Total run time:   3.850 s
+```
+
+Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 
 # 27. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
