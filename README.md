@@ -3439,3 +3439,20 @@ Failed:    0
 Total states run:     4
 Total run time:   1.157 s
 ```
+
+Add user ```Pekka```, i.e. the administrator, to group ```sudo```
+
+```
+sudo salt '*' group.adduser sudo Pekka
+```
+
+The following output appears - ```centosminion``` says ```False``` because it does not have ```sudo``` group created, which is fine
+
+```
+ubuntuminion:
+    True
+myminion:
+    True
+centosminion:
+    False
+```
