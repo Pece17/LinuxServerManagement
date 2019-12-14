@@ -1924,9 +1924,9 @@ Go to Programming > ```Visual Studio Code``` > Extensions > Install ```SaltStack
 Visual Studio Code is now installed on ```bustergraafinen```
 
 
-# 20. Changing SSH Server Port with Salt on ```ubuntuminion```
+# 20. Changing SSH server port on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
-Navigate to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port with Salt on ```ubuntuminion```
+Go to address http://terokarvinen.com/2018/pkg-file-service-control-daemons-with-salt-change-ssh-server-port to view the instructions for changing SSH server port on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -2116,7 +2116,7 @@ Establish an SSH connection to ```ubuntuminion```
 ssh -l oppilas 10.208.0.43
 ```
 
-SSH server port 8888 is now changed with ```ubuntumaster``` Salt state and connection is tested, after which SSH server port is reverted back to 22 with ```ubuntumaster``` Salt state on ```ubuntuminion```
+SSH server port 8888 is now changed on ```ubuntuminion``` with ```ubuntumaster``` Salt state, and connection is tested, after which SSH server port is reverted back to 22 on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 
 # 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
