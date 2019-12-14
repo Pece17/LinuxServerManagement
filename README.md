@@ -1993,7 +1993,7 @@ Port 8888
 #ListenAddress ::
 ```
 
-Apply ```/srv/salt/sshd.sls``` state ONLY to ```ubuntuminion```
+Apply ```/srv/salt/sshd.sls``` state ONLY on ```ubuntuminion```
 
 ```
 sudo salt 'ubuntuminion' state.apply sshd
@@ -2053,7 +2053,7 @@ Total states run:     3
 Total run time: 290.518 ms
 ```
 
-Test the previously created state using ```ubuntuminion``` as a target 
+Test ```/srv/salt/sshd.sls``` state using ```ubuntuminion``` as a target 
 
 ```
 nc -vz ubuntuminion 8888
@@ -2065,13 +2065,19 @@ Establish an SSH connection to ```ubuntuminion```
 ssh -p 8888 oppilas@ubuntuminion
 ```
 
+Exit back to ```ubuntumaster```
+
 ```
 exit
 ```
 
+Edit ```/srv/salt/sshd_config``` file
+
 ```
 sudo nano /srv/salt/sshd_config
 ```
+
+Change line ```Port 8888``` to ```Port 22```
 
 ```
 #       $OpenBSD: sshd_config,v 1.101 2017/03/14 07:19:07 djm Exp $
@@ -2090,36 +2096,27 @@ Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
-
-#HostKey /etc/ssh/ssh_host_rsa_key
-#HostKey /etc/ssh/ssh_host_ecdsa_key
-#HostKey /etc/ssh/ssh_host_ed25519_key
-
-# Ciphers and keying
-#RekeyLimit default none
-
-# Logging
-#SyslogFacility AUTH
-#LogLevel INFO
-
-# Authentication:
-
-#LoginGraceTime 2m
 ```
+
+Apply ```/srv/salt/sshd.sls``` state ONLY on ```ubuntuminion```
 
 ```
 sudo salt 'ubuntuminion' state.apply sshd
 ```
 
+Test ```/srv/salt/sshd.sls``` state using ```ubuntuminion``` as a target 
+
 ```
 nc -vz ubuntuminion 22
 ```
+
+Establish an SSH connection to ```ubuntuminion```
 
 ```
 ssh -l oppilas 10.208.0.43
 ```
 
-SSH server port 8888 is now changed with Salt and connection is tested, after which SSH server port is reverted back to 22 with Salt on ```ubuntuminion```
+SSH server port 8888 is now changed with ```ubuntumaster``` Salt state and connection is tested, after which SSH server port is reverted back to 22 with ```ubuntumaster``` Salt state on ```ubuntuminion```
 
 
 # 21. Configuring nano text editor to support YAML and Jinja syntax highlighting on ```bustergraafinen```
