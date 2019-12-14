@@ -2208,7 +2208,7 @@ monolog:
 ```
 
 
-# 23. Changing the hostname permanently on ```bustergraafinen```
+# 22. Changing the hostname permanently on ```bustergraafinen```
 
 Go to address https://www.cyberciti.biz/faq/ubuntu-18-04-lts-change-hostname-permanently/ to view the instructions for changing ```bustergraafinen``` hostname permanently
 
@@ -2251,7 +2251,7 @@ sudo reboot
 The hostname is now changed permanently on ```bustergraafinen```
 
 
-# 24. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+# 23. Installing cowsay on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -2342,7 +2342,7 @@ centosminion:
 cowsay is now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 
-# 25. Adding the roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` into the grains
+# 24. Adding the roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` into the grains
 
 Go to address https://docs.saltstack.com/en/latest/topics/grains/ to view the instructions for adding the roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` into the grains
 
@@ -2441,7 +2441,7 @@ centosminion:
 The roles of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion``` are now added into the grains
 
 
-# 26. Installing Apache2, Vim, Links, Wget, cURL, and tmux on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
+# 25. Installing Apache2, Vim, Links, Wget, cURL, and tmux on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
@@ -2556,7 +2556,7 @@ Total run time:   3.850 s
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 
-# 27. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
+# 26. Installing MariaDB instead of MySQL on ```centosminion``` with ```ubuntumaster``` Salt state
 
 I didn't find a workable way to install MySQL on ```centosminion```, so instead, I installed MariaDB which is a commercially supported fork of MySQL
 
@@ -2642,7 +2642,7 @@ MariaDB [(none)]>
 MariaDB is now installed on ```centosminion``` with ```ubuntumaster``` Salt state
 
 
-# 28. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+# 27. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
 Delete the previously created user with your first name, ```pekka```, because it will be created again with its first letter as a capital letter
 
