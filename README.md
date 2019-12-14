@@ -2662,6 +2662,12 @@ MariaDB is now installed on ```centosminion``` with ```ubuntumaster``` Salt stat
 
 # 27. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
 Delete the previously created user with your first name, ```pekka```, because it will be created again with its first letter as a capital letter
 
 ```
@@ -3177,3 +3183,12 @@ centosminion:
 ```
 
 Four users are now created on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
+
+
+# 28. Installing PHP and PHP modules on ```ubuntuminion``` with ```ubuntumaster``` Salt state
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
