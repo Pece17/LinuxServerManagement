@@ -3024,7 +3024,7 @@ Apply ```/srv/salt/FourUsers.sls``` state
 sudo salt '*' state.apply FourUsers
 ```
 
-The following output appears
+The output shows that all four users were created on ```ubuntuminion```
 
 ```
 ubuntuminion:
@@ -3164,6 +3164,11 @@ Failed:    0
 ------------
 Total states run:     4
 Total run time: 660.751 ms
+```
+
+The output shows that all four users were created on the local Salt Minion of ```ubuntumaster```
+
+```
 myminion:
 ----------
           ID: Bob
@@ -3301,6 +3306,11 @@ Failed:    0
 ------------
 Total states run:     4
 Total run time:   1.086 s
+```
+
+The output shows that all four users were created on ```centosminion```
+
+```
 centosminion:
 ----------
           ID: Bob
