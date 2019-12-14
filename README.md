@@ -2776,13 +2776,13 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 ssh -l oppilas 10.208.0.56
 ```
 
-Create ```/srv/salt/DeployToAllVMs.sls``` file
+Create ```/srv/salt/DeployToUbuntu.sls``` file
 
 ```
-sudo nano /srv/salt/DeployToAllVMs.sls
+sudo nano /srv/salt/DeployToUbuntu.sls
 ```
 
-Copy the following text inside ```/srv/salt/DeployToAllVMs.sls``` file
+Copy the following text inside ```/srv/salt/DeployToUbuntu.sls``` file
 
 ```
 apache2:
@@ -2804,10 +2804,10 @@ tmux:
   pkg.installed
 ```
 
-Apply ```/srv/salt/DeployToAllVMs.sls``` state
+Apply ```/srv/salt/DeployToUbuntu.sls``` state
 
 ```
-sudo salt '*' state.apply DeployToAllVMs
+sudo salt '*' state.apply DeployToUbuntu
 ```
 
 The output shows that all installations succeeded on ```ubuntuminion```
@@ -2819,7 +2819,7 @@ Succeeded: 6
 Failed:    0
 ------------
 Total states run:     6
-Total run time: 262.784 ms
+Total run time: 248.056 ms
 ```
 
 The output shows that all installations succeeded on the local Salt Minion of ```ubuntumaster```
@@ -2831,20 +2831,10 @@ Succeeded: 6
 Failed:    0
 ------------
 Total states run:     6
-Total run time: 582.659 ms
+Total run time: 635.518 ms
 ```
 
-The output shows that four installations succeeded on ```centosminion```, and two installations failed - this is fine because we don't need Apache2 or Vim on ```centosminion```
 
-```
-Summary for centosminion
-------------
-Succeeded: 4
-Failed:    2
-------------
-Total states run:     6
-Total run time:  19.525 s
-```
 
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state
 
