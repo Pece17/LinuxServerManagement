@@ -2977,6 +2977,17 @@ Delete the previously created user with your first name, ```pekka```, because it
 sudo salt '*' user.delete pekka remove=True force=True
 ```
 
+The following output appears
+
+```
+ubuntuminion:
+    True
+myminion:
+    True
+centosminion:
+    True
+```
+
 Check that user ```pekka``` was deleted
 
 ```
