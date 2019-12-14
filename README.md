@@ -2571,6 +2571,8 @@ Start httpd i.e. Apache2 on ```centosminion```
 sudo salt 'centosminion' cmd.run 'systemctl start httpd'
 ```
 
+Go to addresses http://10.208.0.56, http://10.208.0.55, and http://10.208.0.43 with ```bustergraafinen``` to check that Apache2 is working on the local Salt Minion of ```ubuntumaster```, ```centosminion```, and ```ubuntuminion```
+
 Apache2, Vim, Links, Wget, cURL, and tmux are now installed on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt states
 
 
@@ -3191,4 +3193,29 @@ Open the terminal in ```bustergraafinen``` and establish an SSH connection to ``
 
 ```
 ssh -l oppilas 10.208.0.56
+```
+
+Create ```/srv/salt/PHP.sls``` file
+
+```
+sudo nano /srv/salt/PHP.sls
+```
+
+Copy the following text inside ```/srv/salt/PHP.sls``` file
+
+```
+php:
+  pkg.installed
+
+libapache2-mod-php:
+  pkg.installed
+
+php-mysql:
+  pkg.installed
+```
+
+Apply ```/srv/salt/PHP.sls``` state
+
+```
+
 ```
