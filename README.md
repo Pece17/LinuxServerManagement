@@ -2935,4 +2935,18 @@ MariaDB [(none)]>
 MariaDB is now installed on ```centosminion``` with ```ubuntumaster``` Salt state
 
 
-# 28. (Work in progress)
+# 28. Creating four users on ```ubuntuminion``` and ```centosminion``` with ```ubuntumaster``` Salt state (Work in progress)
+
+Links here
+
+Delete the previously created user with your first name, ```pekka```, because it will be created again with its first letter as a capital letter
+
+```
+sudo salt '*' user.delete pekka remove=True force=True
+```
+
+Check that user ```pekka``` was deleted
+
+```
+sudo salt '*' user.info pekka
+```
