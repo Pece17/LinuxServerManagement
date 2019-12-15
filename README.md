@@ -3255,3 +3255,10 @@ Create ```centos``` database on ```centosminion```
 ```
 sudo salt 'centosminion' mysql.db_create 'centos'
 ```
+
+The following output appears
+
+```
+centosminion:
+    True
+```
