@@ -3240,9 +3240,9 @@ sudo salt 'ubuntuminion' state.apply PHP
 PHP and PHP modules are now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 
-# 29. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster```
+# 29. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt (Work in progress)
 
-Go to addresses https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.mysql.html#module-salt.modules.mysql and https://docs.saltstack.com/en/latest/ref/states/all/salt.states.mysql_query.html to view the instructions for remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster```
+Go to addresses https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.mysql.html#module-salt.modules.mysql and https://docs.saltstack.com/en/latest/ref/states/all/salt.states.mysql_query.html to view the instructions for remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
