@@ -2597,6 +2597,9 @@ Copy the following text inside ```/srv/salt/SQL.sls``` file
 ```
 mariadb:
   pkg.installed
+
+MySQL-python:
+  pkg.installed
 ```
 
 Apply ```/srv/salt/SQL.sls``` state on ```centosminion```
@@ -2614,17 +2617,25 @@ centosminion:
     Function: pkg.installed
       Result: True
      Comment: All specified packages are already installed
-     Started: 21:22:33.202503
-    Duration: 3527.107 ms
+     Started: 00:29:03.615136
+    Duration: 3667.161 ms
+     Changes:
+----------
+          ID: MySQL-python
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 00:29:07.283275
+    Duration: 83.641 ms
      Changes:
 
 Summary for centosminion
 ------------
-Succeeded: 1
+Succeeded: 2
 Failed:    0
 ------------
-Total states run:     1
-Total run time:   3.527 s
+Total states run:     2
+Total run time:   3.751 s
 ```
 
 Start MariaDB
