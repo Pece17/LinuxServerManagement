@@ -3240,50 +3240,12 @@ sudo salt 'ubuntuminion' state.apply PHP
 PHP and PHP modules are now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 
-# 29. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt (Work in progress)
-
-Go to addresses https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.mysql.html#module-salt.modules.mysql and https://docs.saltstack.com/en/latest/ref/states/all/salt.states.mysql_query.html to view the instructions for remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt
+# 29. Installing MariaDB client on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
 
 ```
 ssh -l oppilas 10.208.0.56
-```
-
-Create ```centos``` database on ```centosminion```
-
-```
-sudo salt 'centosminion' mysql.db_create 'centos'
-```
-
-The following output appears
-
-```
-centosminion:
-    True
-```
-
-Check all databases on ```centosminion```
-
-```
-sudo salt 'centosminion' mysql.db_list
-```
-
-The following output appears
-
-```
-centosminion:
-    - information_schema
-    - centos
-    - mysql
-    - performance_schema
-    - test
-```
-
-Delete ```test``` database on ```centosminion```
-
-```
-sudo salt 'centosminion' mysql.db_remove 'test'
 ```
 
 Create ```/srv/salt/ClientSQL.sls``` file
@@ -3361,3 +3323,51 @@ Establish an SSH connection to ```ubuntuminion```
 ssh -l oppilas 10.208.0.43
 ```
 
+MariaDB client is now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
+
+
+# 30. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt (Work in progress)
+
+Go to addresses https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.mysql.html#module-salt.modules.mysql and https://docs.saltstack.com/en/latest/ref/states/all/salt.states.mysql_query.html to view the instructions for remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt
+
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
+Create ```centos``` database on ```centosminion```
+
+```
+sudo salt 'centosminion' mysql.db_create 'centos'
+```
+
+The following output appears
+
+```
+centosminion:
+    True
+```
+
+Check all databases on ```centosminion```
+
+```
+sudo salt 'centosminion' mysql.db_list
+```
+
+The following output appears
+
+```
+centosminion:
+    - information_schema
+    - centos
+    - mysql
+    - performance_schema
+    - test
+```
+
+Delete ```test``` database on ```centosminion```
+
+```
+sudo salt 'centosminion' mysql.db_remove 'test'
+```
