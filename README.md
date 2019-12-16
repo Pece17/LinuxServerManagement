@@ -3317,12 +3317,6 @@ Total states run:     1
 Total run time: 242.064 ms
 ```
 
-Establish an SSH connection to ```ubuntuminion```
-
-```
-ssh -l oppilas 10.208.0.43
-```
-
 MariaDB client is now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 
