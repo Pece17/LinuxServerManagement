@@ -3326,3 +3326,32 @@ Failed:    0
 Total states run:     1
 Total run time:  88.013 ms
 ```
+
+Apply ```/srv/salt/ClientSQL.sls``` state on the local Salt Minion of ```ubuntumaster```
+
+```
+sudo salt 'myminion' state.apply ClientSQL
+```
+
+The following output appears
+
+```
+myminion:
+----------
+          ID: mariadb-client
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 15:58:14.085677
+    Duration: 242.064 ms
+     Changes:
+
+Summary for myminion
+------------
+Succeeded: 1
+Failed:    0
+------------
+Total states run:     1
+Total run time: 242.064 ms
+```
+
