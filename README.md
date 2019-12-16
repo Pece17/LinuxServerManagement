@@ -3262,3 +3262,9 @@ The following output appears
 centosminion:
     True
 ```
+
+Check all databases ```centosminion```
+
+```
+sudo salt 'centosminion' mysql.db_list
+```
