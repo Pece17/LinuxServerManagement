@@ -3263,7 +3263,7 @@ centosminion:
     True
 ```
 
-Check all databases ```centosminion```
+Check all databases on ```centosminion```
 
 ```
 sudo salt 'centosminion' mysql.db_list
