@@ -3285,3 +3285,44 @@ Delete ```test``` database on ```centosminion```
 ```
 sudo salt 'centosminion' mysql.db_remove 'test'
 ```
+
+Create ```/srv/salt/ClientSQL.sls``` file
+
+```
+sudo nano /srv/salt/ClientSQL.sls
+```
+
+Copy the following text inside ```/srv/salt/ClientSQL.sls``` file
+
+```
+mariadb-client:
+  pkg.installed
+```
+
+Apply ```/srv/salt/ClientSQL.sls``` state on ```ubuntuminion```
+
+```
+sudo salt 'ubuntuminion' state.apply ClientSQL
+```
+
+The following output appears
+
+```
+ubuntuminion:
+----------
+          ID: mariadb-client
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 15:49:43.844347
+    Duration: 88.013 ms
+     Changes:
+
+Summary for ubuntuminion
+------------
+Succeeded: 1
+Failed:    0
+------------
+Total states run:     1
+Total run time:  88.013 ms
+```
