@@ -3320,7 +3320,7 @@ Total run time: 242.064 ms
 MariaDB client is now installed on ```ubuntuminion``` with ```ubuntumaster``` Salt state
 
 
-# 30. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt (Work in progress)
+# 30. Remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` using Salt
 
 Go to addresses https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.mysql.html#module-salt.modules.mysql and https://docs.saltstack.com/en/latest/ref/states/all/salt.states.mysql_query.html to view the instructions for remote executing MariaDB queries on ```centosminion``` with ```ubuntumaster``` and ```ubuntuminion``` using Salt
 
@@ -3343,7 +3343,7 @@ centosminion:
     True
 ```
 
-Check all databases on ```centosminion```
+List all databases on ```centosminion```
 
 ```
 sudo salt 'centosminion' mysql.db_list
@@ -3396,7 +3396,7 @@ hot_chocolate VARCHAR(30)
 );
 ```
 
-List all tables on ```centos``` database
+List all tables
 
 ```
 SHOW TABLES;
@@ -3419,8 +3419,17 @@ Exit back to ```ubuntumaster```
 exit
 ```
 
-List all tables on ```centos``` database
+List all tables in ```centos``` database on ```centosminion```
 
 ```
 sudo salt 'centosminion' mysql.db_tables 'centos'
 ```
+
+The following output appears
+
+```
+centosminion:
+    - coffeetable
+```
+
+MariaDB queries are now remotely executed on ```centosminion``` with ```ubuntumaster``` using Salt
