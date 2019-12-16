@@ -3268,3 +3268,20 @@ Check all databases ```centosminion```
 ```
 sudo salt 'centosminion' mysql.db_list
 ```
+
+The following output appears
+
+```
+centosminion:
+    - information_schema
+    - centos
+    - mysql
+    - performance_schema
+    - test
+```
+
+Delete ```test``` database on ```centosminion```
+
+```
+sudo salt 'centosminion' mysql.db_remove 'test'
+```
