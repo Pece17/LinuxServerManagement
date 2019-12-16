@@ -3396,3 +3396,31 @@ hot_chocolate VARCHAR(30)
 );
 ```
 
+List all tables on ```centos``` database
+
+```
+SHOW TABLES;
+```
+
+The following output appears
+
+```
++------------------+
+| Tables_in_centos |
++------------------+
+| coffeetable      |
++------------------+
+1 row in set (0.00 sec)
+```
+
+Exit back to ```ubuntumaster```
+
+```
+exit
+```
+
+List all tables on ```centos``` database
+
+```
+sudo salt 'centosminion' mysql.db_tables 'centos'
+```
