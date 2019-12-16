@@ -3365,3 +3365,34 @@ Delete ```test``` database on ```centosminion```
 ```
 sudo salt 'centosminion' mysql.db_remove 'test'
 ```
+
+Establish an SSH connection to ```centosminion```
+
+```
+ssh -l root 10.208.0.55
+```
+
+Open MariaDB
+
+```
+sudo mysql
+```
+
+Use ```centos``` database
+
+```
+USE centos;
+```
+
+Create ```coffeetable``` table
+
+```
+CREATE TABLE coffeetable (
+
+coffee VARCHAR(30),
+tea VARCHAR(30),
+hot_chocolate VARCHAR(30)
+
+);
+```
+
