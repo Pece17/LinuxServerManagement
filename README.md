@@ -3491,3 +3491,45 @@ base:
     - ClientSQL
     - sshd
 ```
+
+Apply `````` state
+
+```
+sudo salt '*' state.apply
+```
+
+The output shows that all installations succeeded on ```ubuntuminion```
+
+```
+Summary for ubuntuminion
+-------------
+Succeeded: 18
+Failed:     0
+-------------
+Total states run:     18
+Total run time:  648.451 ms
+```
+
+The output shows that all installations succeeded on the local Salt Minion of ```ubuntumaster```
+
+```
+Summary for myminion
+-------------
+Succeeded: 18
+Failed:     0
+-------------
+Total states run:     18
+Total run time:    1.635 s
+```
+
+The output shows that all installations succeeded on ```centosminion```
+
+```
+Summary for centosminion
+-------------
+Succeeded: 13
+Failed:     0
+-------------
+Total states run:     13
+Total run time:    4.268 s
+```
