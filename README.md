@@ -3437,3 +3437,57 @@ MariaDB queries are now remotely executed on ```centosminion``` with ```ubuntuma
 
 # 31. Creating a top file for all Salt states on ```ubuntumaster```
 
+List ```/srv/salt``` directory recursively
+
+```
+tree /srv/salt
+```
+
+The following output appears
+
+```
+/srv/salt
+├── ClientSQL.sls
+├── cowsanoopi.sls
+├── DeployToCentos.sls
+├── DeployToUbuntu.sls
+├── FourUsers.sls
+├── PHP.sls
+├── SQL.sls
+├── sshd_config
+├── sshd.sls
+└── top.sls
+
+0 directories, 10 files
+```
+
+Create ```/srv/salt/top.sls``` file
+
+```
+sudo nano /srv/salt/top.sls
+```
+
+Copy the following text inside ```/srv/salt/top.sls``` file
+
+```
+base:
+  '*':
+    - cowsanoopi
+    - FourUsers
+
+  'centosminion':
+    - DeployToCentos
+    - SQL
+
+  'ubuntuminion':
+    - DeployToUbuntu
+    - PHP
+    - ClientSQL
+    - sshd
+
+  'myminion':
+    - DeployToUbuntu
+    - PHP
+    - ClientSQL
+    - sshd
+```
