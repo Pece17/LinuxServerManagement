@@ -3437,6 +3437,12 @@ MariaDB queries are now remotely executed on ```centosminion``` with ```ubuntuma
 
 # 31. Creating a top file for all Salt states on ```ubuntumaster```
 
+Open the terminal in ```bustergraafinen``` and establish an SSH connection to ```ubuntumaster```
+
+```
+ssh -l oppilas 10.208.0.56
+```
+
 List ```/srv/salt``` directory recursively
 
 ```
@@ -3455,10 +3461,9 @@ The following output appears
 ├── PHP.sls
 ├── SQL.sls
 ├── sshd_config
-├── sshd.sls
-└── top.sls
+└── sshd.sls
 
-0 directories, 10 files
+0 directories, 9 files
 ```
 
 Create ```/srv/salt/top.sls``` file
@@ -3492,7 +3497,7 @@ base:
     - sshd
 ```
 
-Apply `````` state
+Apply ```/srv/salt/top.sls``` state
 
 ```
 sudo salt '*' state.apply
@@ -3533,3 +3538,5 @@ Failed:     0
 Total states run:     13
 Total run time:    4.268 s
 ```
+
+A top file is now created for all Salt states on ```ubuntumaster```
